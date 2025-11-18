@@ -1,0 +1,5 @@
+# Crawled URLs
+# Website: https://kyngcapitalmanagement.com
+# Total URLs: 1
+
+https://kyngcapitalmanagement.com

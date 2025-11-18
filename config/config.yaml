@@ -1,0 +1,104 @@
+app:
+  name: "accessibility-audit-tool"
+  version: "1.0.0"
+  debug: false
+
+# Target website configuration
+website:
+  url: "https://kyngcapitalmanagement.com"  # Change this to your target website
+  name: "Example Website"     # Display name for reports
+  max_pages: 1000             # Maximum pages to crawl
+  enable_sitemap_validation: true
+
+crawler:
+  max_depth: 5
+  request_timeout: 30
+  delay_between_requests: 1
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  allowed_domains: []
+  respect_robots_txt: true
+  file_extensions_to_avoid:
+    - ".pdf"
+    - ".doc"
+    - ".docx"
+    - ".ppt"
+    - ".pptx"
+    - ".xls"
+    - ".xlsx"
+    - ".zip"
+    - ".tar"
+    - ".gz"
+    - ".mp4"
+    - ".mp3"
+    - ".avi"
+    - ".mov"
+
+anti_blocking:
+  enable_stealth_mode: true
+  use_proxies: false
+  proxy_list: []
+  cloudflare_timeout: 60
+  retry_attempts: 3
+
+enhanced_features:
+  enable_performance_monitoring: true
+  enable_content_analysis: true
+  enable_seo_insights: true
+  generate_performance_report: true
+  max_retries: 3
+  retry_delay: 1.0
+
+content_analysis:
+  check_titles: true
+  check_meta_descriptions: true
+  check_heading_structure: true
+  check_images_alt: true
+  check_canonical_urls: true
+  
+axe:
+  timeout: 45000
+  include_iframes: true
+  rules:
+    tags:
+      - "wcag2a"
+      - "wcag2aa"
+      - "wcag21a"
+      - "wcag21aa"
+      - "best-practice"
+  custom_rules: {}
+  concurrency: 2
+  wait_for_stability: true
+  stability_timeout: 10
+
+analyzer:
+  batch_size: 3
+  timeout: 60000
+  enable_screenshot_analysis: false
+  enable_performance_tracking: true
+  rules:
+    focus_on_productivity: true
+    skip_basic_checks: true
+    include_cognitive_analysis: true
+
+llm:
+  provider: "groq"
+  api_key: "${GROQ_API_KEY}"
+  model: "llama3-70b-8192"
+  max_tokens: 4000
+  temperature: 0.3
+  timeout: 60
+  enable_business_insights: true
+  enable_roi_calculations: true
+
+reporting:
+  excel:
+    include_screenshots: false
+    include_html_snippets: true
+    summary_sheet: true
+    detailed_sheet: true
+  output_directory: "storage/reports"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_path: "storage/logs/audit_tool.log"

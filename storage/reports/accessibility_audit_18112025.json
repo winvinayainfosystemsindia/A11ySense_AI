@@ -1,0 +1,1524 @@
+{
+  "summary": {
+    "total_pages": 20,
+    "pages_audited": 20,
+    "total_violations": 140,
+    "violations_by_level": {
+      "critical": 25,
+      "serious": 58,
+      "moderate": 53,
+      "minor": 4
+    },
+    "violations_by_rule": {
+      "empty-heading": 2,
+      "frame-title": 20,
+      "landmark-one-main": 20,
+      "link-name": 20,
+      "meta-viewport": 20,
+      "page-has-heading-one": 5,
+      "region": 20,
+      "color-contrast": 16,
+      "heading-order": 8,
+      "duplicate-id": 1,
+      "aria-allowed-role": 1,
+      "label-title-only": 1,
+      "label": 5,
+      "autocomplete-valid": 1
+    },
+    "average_score": 74.68,
+    "worst_score": 69.23,
+    "best_score": 81.58,
+    "pages_with_errors": [],
+    "audit_duration": 105.27
+  },
+  "categorization": {
+    "by_level": {
+      "critical": 25,
+      "serious": 58,
+      "moderate": 53,
+      "minor": 4
+    },
+    "by_rule": {
+      "empty-heading": 2,
+      "frame-title": 20,
+      "landmark-one-main": 20,
+      "link-name": 20,
+      "meta-viewport": 20,
+      "page-has-heading-one": 5,
+      "region": 20,
+      "color-contrast": 16,
+      "heading-order": 8,
+      "duplicate-id": 1,
+      "aria-allowed-role": 1,
+      "label-title-only": 1,
+      "label": 5,
+      "autocomplete-valid": 1
+    },
+    "by_wcag": {
+      "wcag2a": 46,
+      "wcag2aa": 36,
+      "wcag21aa": 1
+    },
+    "by_category": {
+      "Other": 99,
+      "Navigation": 20,
+      "Visual Design": 16,
+      "Forms": 5
+    }
+  },
+  "page_results": [
+    {
+      "url": "https://kyngcapitalmanagement.com",
+      "score": 70.83333333333334,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 8.39,
+      "violations": [
+        {
+          "id": "empty-heading",
+          "impact": "minor",
+          "level": "minor",
+          "description": "Ensures headings have discernible text",
+          "help": "Headings must not be empty",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/empty-heading?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 3
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+          "help": "Page must contain a level-one heading",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/privacy-policy",
+      "score": 72.0,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 10.89,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/offerings",
+      "score": 75.0,
+      "violation_count": 6,
+      "error": null,
+      "load_time": 7.59,
+      "violations": [
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/insights",
+      "score": 72.0,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 8.93,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 10
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/promotors",
+      "score": 75.0,
+      "violation_count": 6,
+      "error": null,
+      "load_time": 7.95,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 3
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/faqs",
+      "score": 69.23076923076923,
+      "violation_count": 8,
+      "error": null,
+      "load_time": 7.85,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 4
+        },
+        {
+          "id": "duplicate-id",
+          "impact": "minor",
+          "level": "minor",
+          "description": "Ensures every id attribute value is unique",
+          "help": "id attribute value must be unique",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 3
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/investment-philosophy",
+      "score": 75.0,
+      "violation_count": 6,
+      "error": null,
+      "load_time": 8.04,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 4
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 3
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/about-us",
+      "score": 78.26086956521739,
+      "violation_count": 5,
+      "error": null,
+      "load_time": 7.64,
+      "violations": [
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/investment-charter",
+      "score": 75.86206896551724,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 9.02,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+          "help": "Page must contain a level-one heading",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/contact",
+      "score": 73.80952380952381,
+      "violation_count": 11,
+      "error": null,
+      "load_time": 8.41,
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "level": "minor",
+          "description": "Ensures role attribute has an appropriate value for the element",
+          "help": "ARIA role must be appropriate for the element",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/aria-allowed-role?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 14
+        },
+        {
+          "id": "empty-heading",
+          "impact": "minor",
+          "level": "minor",
+          "description": "Ensures headings have discernible text",
+          "help": "Headings must not be empty",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/empty-heading?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "label-title-only",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures that every form element is not solely labeled using the title or aria-describedby attributes",
+          "help": "Form elements should have a visible label",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/label-title-only?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures every form element has a label",
+          "help": "Form elements must have labels",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI",
+          "nodes_count": 3
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/kyng-calculator",
+      "score": 75.75757575757575,
+      "violation_count": 8,
+      "error": null,
+      "load_time": 7.87,
+      "violations": [
+        {
+          "id": "autocomplete-valid",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+          "help": "autocomplete attribute must be used correctly",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/autocomplete-valid?application=axeAPI",
+          "nodes_count": 10
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures every form element has a label",
+          "help": "Form elements must have labels",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI",
+          "nodes_count": 16
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+          "help": "Page must contain a level-one heading",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun",
+      "score": 72.0,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 7.87,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/playing-with-fire",
+      "score": 72.0,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 7.58,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/investment",
+      "score": 76.92307692307693,
+      "violation_count": 6,
+      "error": null,
+      "load_time": 8.62,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 7
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india",
+      "score": 72.0,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 7.36,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 7
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets",
+      "score": 75.0,
+      "violation_count": 6,
+      "error": null,
+      "load_time": 7.78,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 2
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession",
+      "score": 81.57894736842105,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 8.59,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures every form element has a label",
+          "help": "Form elements must have labels",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/nearing-the-crisis",
+      "score": 81.57894736842105,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 7.55,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures every form element has a label",
+          "help": "Form elements must have labels",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/author/siddharth-k-j",
+      "score": 78.94736842105263,
+      "violation_count": 8,
+      "error": null,
+      "load_time": 7.62,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures every form element has a label",
+          "help": "Form elements must have labels",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+          "help": "Page must contain a level-one heading",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://kyngcapitalmanagement.com/category/others",
+      "score": 70.83333333333334,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 8.51,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+          "help": "Elements must have sufficient color contrast",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI",
+          "nodes_count": 8
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+          "help": "Page must contain a level-one heading",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "timestamp": "2025-11-18 15:48:01",
+    "axe_rules_used": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa",
+      "best-practice"
+    ],
+    "total_pages_analyzed": 20,
+    "successful_analyses": 20,
+    "failed_analyses": 0
+  }
+}
