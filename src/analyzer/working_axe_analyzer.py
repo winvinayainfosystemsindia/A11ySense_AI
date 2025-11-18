@@ -1,16 +1,15 @@
-#src\analyzer\working_axe_analyzer.py
+# src/analyzer/working_axe_analyzer.py
 import time
 import asyncio
-import tempfile
-import os
+import random
 from concurrent.futures import ThreadPoolExecutor
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from webdriver_manager.chrome import ChromeDriverManager
 from axe_selenium_python import Axe
-from bs4 import BeautifulSoup
 from ..core.exceptions import AnalysisException
 from ..utils.logger import setup_logger
 from .models.audit_models import PageAuditResult, Violation
@@ -21,74 +20,110 @@ class WorkingAxeAnalyzer:
         self.config = config
         self.logger = setup_logger(__name__)
         self.categorizer = ViolationCategorizer()
-        self.thread_pool = ThreadPoolExecutor(max_workers=2)
+        
+        # Enhanced configuration with retry settings
+        self.max_workers = config.get('analysis', {}).get('max_workers', 3)
+        self.timeout_per_page = config.get('analysis', {}).get('timeout_per_page', 90)
+        self.max_retries = config.get('analysis', {}).get('max_retries', 2)
+        self.retry_delay = config.get('analysis', {}).get('retry_delay', 5)
+        
+        self.thread_pool = ThreadPoolExecutor(max_workers=self.max_workers)
         self._shutdown_registered = False
     
-    def _run_selenium_axe_analysis(self, url: str) -> PageAuditResult:
-        """Run axe analysis using Selenium (PROVEN WORKING APPROACH)"""
+    def _setup_driver(self) -> webdriver.Chrome:
+        """Setup Chrome driver with optimized settings"""
+        chrome_options = Options()
+        
+        # Essential options
+        chrome_options.add_argument('--headless=new')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+        chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+        
+        # Performance optimizations
+        chrome_options.add_argument('--disable-extensions')
+        chrome_options.add_argument('--disable-plugins')
+        chrome_options.add_argument('--disable-images')  # Disable images for faster loading
+        chrome_options.add_argument('--blink-settings=imagesEnabled=false')
+        
+        # Timeout settings
+        chrome_options.add_argument('--page-load-strategy=eager')  # Don't wait for full page load
+        
+        # Initialize driver with service
+        service = Service(ChromeDriverManager().install())
+        
+        driver = webdriver.Chrome(
+            service=service,
+            options=chrome_options
+        )
+        
+        # Set timeouts
+        driver.set_page_load_timeout(30)  # 30 seconds for page load
+        driver.implicitly_wait(10)  # 10 seconds for element finding
+        
+        return driver
+    
+    def _run_selenium_axe_analysis(self, url: str, retry_count: int = 0) -> PageAuditResult:
+        """Run axe analysis with retry logic"""
         start_time = time.time()
+        driver = None
         
         try:
-            self.logger.info(f"Starting Selenium axe analysis for: {url}")
+            self.logger.info(f"Starting analysis for: {url} (attempt {retry_count + 1})")
             
-            # Setup Chrome options
-            chrome_options = Options()
-            chrome_options.add_argument('--headless')
-            chrome_options.add_argument('--no-sandbox')
-            chrome_options.add_argument('--disable-dev-shm-usage')
-            chrome_options.add_argument('--disable-gpu')
-            chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-            chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+            driver = self._setup_driver()
             
-            # Initialize driver
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
-                options=chrome_options
+            # Navigate to URL with timeout
+            self.logger.info(f"Navigating to: {url}")
+            driver.get(url)
+            
+            # Wait for page to be interactive
+            time.sleep(2)  # Reduced wait time
+            
+            # Initialize and run axe
+            self.logger.info(f"Running axe-core analysis for: {url}")
+            axe = Axe(driver)
+            axe.inject()
+            results = axe.run()
+            
+            load_time = time.time() - start_time
+            
+            # Parse results
+            violations = self._parse_violations(results.get('violations', []))
+            passes = results.get('passes', [])
+            incomplete = results.get('incomplete', [])
+            inapplicable = results.get('inapplicable', [])
+            
+            audit_result = PageAuditResult(
+                url=url,
+                timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
+                violations=violations,
+                passes=passes,
+                incomplete=incomplete,
+                inapplicable=inapplicable,
+                load_time=load_time
             )
             
-            try:
-                # Navigate to URL
-                self.logger.info(f"Navigating to: {url}")
-                driver.get(url)
-                
-                # Wait for page to load
-                driver.implicitly_wait(10)
-                time.sleep(3)  # Additional wait for stability
-                
-                # Initialize and run axe
-                self.logger.info("Running axe-core analysis...")
-                axe = Axe(driver)
-                axe.inject()  # Inject axe-core into the page
-                results = axe.run()  # Run analysis
-                
-                load_time = time.time() - start_time
-                
-                # Parse results
-                violations = self._parse_violations(results.get('violations', []))
-                passes = results.get('passes', [])
-                incomplete = results.get('incomplete', [])
-                inapplicable = results.get('inapplicable', [])
-                
-                audit_result = PageAuditResult(
-                    url=url,
-                    timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
-                    violations=violations,
-                    passes=passes,
-                    incomplete=incomplete,
-                    inapplicable=inapplicable,
-                    load_time=load_time
-                )
-                
-                self.logger.info(
-                    f"Selenium analysis completed for {url}: "
-                    f"{len(violations)} violations, "
-                    f"score: {audit_result.score:.1f}"
-                )
-                
-                return audit_result
-                
-            except Exception as e:
-                self.logger.error(f"Selenium analysis failed for {url}: {e}")
+            self.logger.info(
+                f"Analysis completed for {url}: "
+                f"{len(violations)} violations, "
+                f"score: {audit_result.score:.1f}, "
+                f"time: {load_time:.2f}s"
+            )
+            
+            return audit_result
+            
+        except TimeoutException:
+            self.logger.warning(f"Page load timeout for {url} (attempt {retry_count + 1})")
+            
+            # Retry logic
+            if retry_count < self.max_retries:
+                self.logger.info(f"Retrying {url} after {self.retry_delay}s delay...")
+                time.sleep(self.retry_delay + random.uniform(1, 3))  # Add jitter
+                return self._run_selenium_axe_analysis(url, retry_count + 1)
+            else:
                 return PageAuditResult(
                     url=url,
                     timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
@@ -96,17 +131,31 @@ class WorkingAxeAnalyzer:
                     passes=[],
                     incomplete=[],
                     inapplicable=[],
-                    error=str(e),
+                    error=f"Page load timeout after {self.max_retries + 1} attempts",
                     load_time=time.time() - start_time
                 )
-            finally:
-                try:
-                    driver.quit()
-                except Exception as e:
-                    self.logger.warning(f"Error quitting driver: {e}")
+                
+        except WebDriverException as e:
+            self.logger.error(f"WebDriver error for {url}: {e}")
+            
+            if retry_count < self.max_retries:
+                self.logger.info(f"Retrying {url} after WebDriver error...")
+                time.sleep(self.retry_delay)
+                return self._run_selenium_axe_analysis(url, retry_count + 1)
+            else:
+                return PageAuditResult(
+                    url=url,
+                    timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
+                    violations=[],
+                    passes=[],
+                    incomplete=[],
+                    inapplicable=[],
+                    error=f"WebDriver error: {str(e)}",
+                    load_time=time.time() - start_time
+                )
                 
         except Exception as e:
-            self.logger.error(f"Browser initialization failed for {url}: {e}")
+            self.logger.error(f"Unexpected error analyzing {url}: {e}")
             return PageAuditResult(
                 url=url,
                 timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
@@ -114,9 +163,16 @@ class WorkingAxeAnalyzer:
                 passes=[],
                 incomplete=[],
                 inapplicable=[],
-                error=str(e),
+                error=f"Analysis failed: {str(e)}",
                 load_time=time.time() - start_time
             )
+            
+        finally:
+            if driver:
+                try:
+                    driver.quit()
+                except Exception as e:
+                    self.logger.warning(f"Error quitting driver: {e}")
     
     def _parse_violations(self, axe_violations: List[Dict[str, Any]]) -> List[Violation]:
         """Convert axe violations to our Violation model"""
@@ -141,18 +197,23 @@ class WorkingAxeAnalyzer:
         return violations
     
     async def analyze_page(self, url: str) -> PageAuditResult:
-        """Analyze a single page using Selenium in thread pool"""
+        """Analyze a single page with timeout protection"""
         loop = asyncio.get_event_loop()
         
         try:
+            # Use run_in_executor with timeout
             result = await asyncio.wait_for(
-                loop.run_in_executor(self.thread_pool, self._run_selenium_axe_analysis, url),
-                timeout=120  # 2 minute timeout
+                loop.run_in_executor(
+                    self.thread_pool, 
+                    self._run_selenium_axe_analysis, 
+                    url
+                ),
+                timeout=self.timeout_per_page
             )
             return result
             
         except asyncio.TimeoutError:
-            self.logger.error(f"Analysis timed out for {url}")
+            self.logger.error(f"Analysis timed out for {url} (overall timeout)")
             return PageAuditResult(
                 url=url,
                 timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
@@ -160,96 +221,88 @@ class WorkingAxeAnalyzer:
                 passes=[],
                 incomplete=[],
                 inapplicable=[],
-                error="Analysis timed out (120 seconds)",
+                error=f"Analysis timed out after {self.timeout_per_page}s",
+                load_time=0
+            )
+        except Exception as e:
+            self.logger.error(f"Unexpected error in analyze_page for {url}: {e}")
+            return PageAuditResult(
+                url=url,
+                timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
+                violations=[],
+                passes=[],
+                incomplete=[],
+                inapplicable=[],
+                error=f"Analysis failed: {str(e)}",
                 load_time=0
             )
     
     async def analyze_multiple_pages(self, urls: List[str]) -> List[PageAuditResult]:
-        """Analyze multiple pages - FIXED to ensure all complete before returning"""
-        self.logger.info(f"Starting Selenium analysis for {len(urls)} pages")
+        """Analyze multiple pages with improved concurrency control"""
+        self.logger.info(f"Starting analysis for {len(urls)} pages with {self.max_workers} workers")
         
-        # Create all tasks
-        tasks = [self.analyze_page(url) for url in urls]
+        # Process URLs in batches to avoid overwhelming the system
+        batch_size = self.max_workers * 2
+        all_results = []
         
-        # Wait for ALL tasks to complete (even if some fail)
-        results = await asyncio.gather(*tasks, return_exceptions=True)
-        
-        # Process results after ALL are complete
-        processed_results = []
-        failed_count = 0
-        
-        for i, result in enumerate(results):
-            if isinstance(result, Exception):
-                self.logger.error(f"Analysis task failed for {urls[i]}: {result}")
-                failed_count += 1
-                # Create a failed result for the URL
-                processed_results.append(PageAuditResult(
-                    url=urls[i],
-                    timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
-                    violations=[],
-                    passes=[],
-                    incomplete=[],
-                    inapplicable=[],
-                    error=str(result),
-                    load_time=0
-                ))
-            else:
-                processed_results.append(result)
-        
-        self.logger.info(f"Completed Selenium analysis for {len(processed_results)} pages "
-                        f"({failed_count} failed, {len(processed_results) - failed_count} successful)")
-        
-        # Verify we have results for all URLs
-        if len(processed_results) != len(urls):
-            self.logger.warning(f"Result count mismatch: expected {len(urls)}, got {len(processed_results)}")
-            # Add missing URLs as failed results
-            processed_urls = {r.url for r in processed_results if hasattr(r, 'url')}
-            for url in urls:
-                if url not in processed_urls:
-                    self.logger.error(f"Missing result for URL: {url}")
-                    processed_results.append(PageAuditResult(
-                        url=url,
+        for i in range(0, len(urls), batch_size):
+            batch = urls[i:i + batch_size]
+            self.logger.info(f"Processing batch {i//batch_size + 1}/{(len(urls)-1)//batch_size + 1} ({len(batch)} URLs)")
+            
+            # Create tasks for current batch
+            tasks = [self.analyze_page(url) for url in batch]
+            
+            # Wait for all tasks in batch to complete
+            batch_results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            # Process batch results
+            for j, result in enumerate(batch_results):
+                if isinstance(result, Exception):
+                    self.logger.error(f"Analysis task failed for {batch[j]}: {result}")
+                    all_results.append(PageAuditResult(
+                        url=batch[j],
                         timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                         violations=[],
                         passes=[],
                         incomplete=[],
                         inapplicable=[],
-                        error="Analysis result missing - possible race condition",
+                        error=str(result),
                         load_time=0
                     ))
+                else:
+                    all_results.append(result)
+            
+            # Small delay between batches to avoid overwhelming the system
+            if i + batch_size < len(urls):
+                await asyncio.sleep(1)
         
-        return processed_results
+        # Final statistics
+        successful = len([r for r in all_results if not r.error])
+        failed = len([r for r in all_results if r.error])
+        
+        self.logger.info(
+            f"Completed analysis for {len(all_results)} pages: "
+            f"{successful} successful, {failed} failed"
+        )
+        
+        return all_results
     
     def generate_audit_report(self, audit_results: List[PageAuditResult]) -> Dict[str, Any]:
         """Generate comprehensive audit report"""
-        # Filter out failed analyses
         successful_results = [r for r in audit_results if not r.error]
         failed_results = [r for r in audit_results if r.error]
         
-        # Generate summary using the categorizer
         summary = self.categorizer.generate_summary(audit_results)
         
-        # Get detailed categorization from successful results
+        # Get detailed categorization
         all_violations = []
         for result in successful_results:
             all_violations.extend(result.violations)
         
         categorization = self.categorizer.categorize_violations(all_violations)
         
-        # Build the report
         report = {
-            'summary': summary.to_dict() if hasattr(summary, 'to_dict') else {
-                'total_pages': len(audit_results),
-                'pages_audited': len(successful_results),
-                'total_violations': sum(len(r.violations) for r in successful_results),
-                'violations_by_level': {},
-                'violations_by_rule': {},
-                'average_score': sum(r.score for r in successful_results) / len(successful_results) if successful_results else 0,
-                'worst_score': min(r.score for r in successful_results) if successful_results else 0,
-                'best_score': max(r.score for r in successful_results) if successful_results else 100,
-                'pages_with_errors': [r.url for r in failed_results],
-                'audit_duration': 0  # Will be set by audit runner
-            },
+            'summary': summary.to_dict(),
             'categorization': categorization,
             'page_results': [
                 {
@@ -273,10 +326,14 @@ class WorkingAxeAnalyzer:
             ],
             'metadata': {
                 'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
-                'axe_rules_used': self.config['axe']['rules']['tags'],
                 'total_pages_analyzed': len(audit_results),
                 'successful_analyses': len(successful_results),
-                'failed_analyses': len(failed_results)
+                'failed_analyses': len(failed_results),
+                'analysis_config': {
+                    'max_workers': self.max_workers,
+                    'timeout_per_page': self.timeout_per_page,
+                    'max_retries': self.max_retries
+                }
             }
         }
         
@@ -285,15 +342,13 @@ class WorkingAxeAnalyzer:
     def shutdown(self):
         """Properly shutdown the thread pool"""
         if hasattr(self, 'thread_pool') and self.thread_pool:
-            self.thread_pool.shutdown(wait=False)
+            self.thread_pool.shutdown(wait=True)
             self._shutdown_registered = True
     
     def __del__(self):
-        """Clean up thread pool - FIXED VERSION"""
+        """Clean up thread pool"""
         if hasattr(self, 'thread_pool') and self.thread_pool and not self._shutdown_registered:
             try:
-                # Don't wait for threads to complete during destruction
                 self.thread_pool.shutdown(wait=False)
-            except Exception as e:
-                # Ignore errors during destruction
+            except Exception:
                 pass

@@ -3021,3 +3021,180 @@ Symbols not available. Dumping unresolved backtrace:
 2025-11-18 21:29:21,899 - src.analyzer.working_axe_analyzer - INFO - Selenium analysis completed for https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india: 7 violations, score: 72.0
 2025-11-18 21:29:22,467 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis...
 2025-11-18 21:29:23,289 - src.analyzer.working_axe_analyzer - INFO - Selenium analysis completed for https://kyngcapitalmanagement.com/author/siddharth-k-j: 8 violations, score: 78.9
+2025-11-18 22:06:53,286 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 22:06:55,159 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 22:06:55,354 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 22:06:56,211 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 22:06:56,324 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 22:06:56,324 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 22:06:56,324 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 5
+2025-11-18 22:06:59,980 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:00,265 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:00,310 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 22:07:01,317 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 22:07:01,947 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:02,165 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:02,288 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/promotors (Depth: 1, Total: 2)
+2025-11-18 22:07:03,967 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:04,283 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:04,395 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/insights (Depth: 1, Total: 3)
+2025-11-18 22:07:06,074 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:06,311 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:06,495 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/kyng-calculator (Depth: 1, Total: 4)
+2025-11-18 22:07:08,054 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:08,252 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:08,418 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/privacy-policy (Depth: 1, Total: 5)
+2025-11-18 22:07:10,228 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:10,403 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:10,499 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/offerings (Depth: 1, Total: 6)
+2025-11-18 22:07:12,305 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:12,581 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:12,731 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment-philosophy (Depth: 1, Total: 7)
+2025-11-18 22:07:14,681 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:15,016 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:15,187 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/contact (Depth: 1, Total: 8)
+2025-11-18 22:07:17,175 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:17,417 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:17,541 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/faqs (Depth: 1, Total: 9)
+2025-11-18 22:07:19,046 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:19,297 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:19,427 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/about-us (Depth: 1, Total: 10)
+2025-11-18 22:07:21,001 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:21,330 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:21,440 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment-charter (Depth: 1, Total: 11)
+2025-11-18 22:07:22,441 - src.crawler.base_crawler - INFO - Completed depth 2. Found 67 new URLs for next depth
+2025-11-18 22:07:22,941 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:23,214 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:23,331 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun (Depth: 2, Total: 12)
+2025-11-18 22:07:25,417 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:25,698 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:25,837 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment (Depth: 2, Total: 13)
+2025-11-18 22:07:27,615 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:27,906 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:27,960 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/playing-with-fire (Depth: 2, Total: 14)
+2025-11-18 22:07:29,377 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:29,568 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:29,692 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets (Depth: 2, Total: 15)
+2025-11-18 22:07:32,053 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:32,279 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:32,399 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india (Depth: 2, Total: 16)
+2025-11-18 22:07:34,757 - src.crawler.error_handler - WARNING - HTTP 404 (Page not found): https://kyngcapitalmanagement.com/nearing-the-crisis
+2025-11-18 22:07:34,759 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:34,977 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:35,124 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/nearing-the-crisis (Depth: 2, Total: 17)
+2025-11-18 22:07:38,091 - src.crawler.error_handler - WARNING - HTTP 404 (Page not found): https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession
+2025-11-18 22:07:38,091 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:38,412 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:38,669 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession (Depth: 2, Total: 18)
+2025-11-18 22:07:39,686 - src.crawler.base_crawler - INFO - Completed depth 3. Found 14 new URLs for next depth
+2025-11-18 22:07:40,179 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:40,438 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:40,567 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/author/siddharth-k-j (Depth: 3, Total: 19)
+2025-11-18 22:07:43,527 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:07:43,890 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:07:43,974 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/category/others (Depth: 3, Total: 20)
+2025-11-18 22:07:44,982 - src.crawler.base_crawler - INFO - Completed depth 4. Found 2 new URLs for next depth
+2025-11-18 22:07:45,010 - src.crawler.base_crawler - INFO - Completed depth 5. Found 0 new URLs for next depth
+2025-11-18 22:07:45,010 - src.crawler.base_crawler - INFO - Crawling completed. Found 20 URLs
+2025-11-18 22:07:45,010 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-18 22:07:45,010 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-18 22:07:45,143 - src.analyzer.audit_runner - INFO - Starting accessibility audit for 20 URLs
+2025-11-18 22:07:45,143 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 20 pages with 3 workers
+2025-11-18 22:07:45,143 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/4 (6 URLs)
+2025-11-18 22:07:45,147 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-18 22:07:45,151 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/promotors (attempt 1)
+2025-11-18 22:07:45,151 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/insights (attempt 1)
+2025-11-18 22:07:48,471 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/promotors
+2025-11-18 22:07:48,476 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/insights
+2025-11-18 22:07:48,527 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-18 22:07:51,782 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/insights
+2025-11-18 22:07:52,306 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-18 22:07:52,641 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/insights: 7 violations, score: 72.0, time: 7.49s
+2025-11-18 22:07:53,192 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 8.05s
+2025-11-18 22:07:54,474 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/promotors
+2025-11-18 22:07:54,885 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/kyng-calculator (attempt 1)
+2025-11-18 22:07:55,289 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/promotors: 6 violations, score: 75.0, time: 10.14s
+2025-11-18 22:07:55,410 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/privacy-policy (attempt 1)
+2025-11-18 22:07:57,560 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/offerings (attempt 1)
+2025-11-18 22:07:58,440 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/privacy-policy
+2025-11-18 22:07:58,446 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/kyng-calculator
+2025-11-18 22:08:00,906 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/offerings
+2025-11-18 22:08:01,959 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/privacy-policy
+2025-11-18 22:08:02,801 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/privacy-policy: 7 violations, score: 72.0, time: 7.39s
+2025-11-18 22:08:05,170 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/kyng-calculator
+2025-11-18 22:08:05,531 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/offerings
+2025-11-18 22:08:06,405 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/offerings: 6 violations, score: 75.0, time: 8.84s
+2025-11-18 22:08:06,734 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/kyng-calculator: 8 violations, score: 75.8, time: 11.85s
+2025-11-18 22:08:10,007 - src.analyzer.working_axe_analyzer - INFO - Processing batch 2/4 (6 URLs)
+2025-11-18 22:08:10,008 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/investment-philosophy (attempt 1)
+2025-11-18 22:08:10,008 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/contact (attempt 1)
+2025-11-18 22:08:10,008 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/faqs (attempt 1)
+2025-11-18 22:08:13,235 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/faqs
+2025-11-18 22:08:13,269 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/investment-philosophy
+2025-11-18 22:08:13,284 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/contact
+2025-11-18 22:08:16,946 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/faqs
+2025-11-18 22:08:17,307 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/investment-philosophy
+2025-11-18 22:08:17,777 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/faqs: 8 violations, score: 69.2, time: 7.77s
+2025-11-18 22:08:18,144 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/investment-philosophy: 6 violations, score: 75.0, time: 8.14s
+2025-11-18 22:08:19,950 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/about-us (attempt 1)
+2025-11-18 22:08:20,241 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/contact
+2025-11-18 22:08:20,345 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/investment-charter (attempt 1)
+2025-11-18 22:08:21,279 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/contact: 11 violations, score: 73.8, time: 11.27s
+2025-11-18 22:08:23,083 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/about-us
+2025-11-18 22:08:23,582 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun (attempt 1)
+2025-11-18 22:08:24,190 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/investment-charter
+2025-11-18 22:08:26,914 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun
+2025-11-18 22:08:27,657 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/investment-charter
+2025-11-18 22:08:28,661 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/investment-charter: 7 violations, score: 75.9, time: 8.32s
+2025-11-18 22:08:33,583 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun
+2025-11-18 22:08:34,352 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun: 7 violations, score: 72.0, time: 10.77s
+2025-11-18 22:08:36,654 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/about-us
+2025-11-18 22:08:37,431 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/about-us: 5 violations, score: 78.3, time: 17.48s
+2025-11-18 22:08:40,734 - src.analyzer.working_axe_analyzer - INFO - Processing batch 3/4 (6 URLs)
+2025-11-18 22:08:40,734 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/investment (attempt 1)
+2025-11-18 22:08:40,736 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/playing-with-fire (attempt 1)
+2025-11-18 22:08:40,736 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets (attempt 1)
+2025-11-18 22:08:44,115 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets
+2025-11-18 22:08:44,154 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/playing-with-fire
+2025-11-18 22:08:44,158 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/investment
+2025-11-18 22:08:47,869 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets
+2025-11-18 22:08:48,125 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/investment
+2025-11-18 22:08:48,256 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/playing-with-fire
+2025-11-18 22:08:48,664 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets: 6 violations, score: 75.0, time: 7.93s
+2025-11-18 22:08:49,051 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/investment: 6 violations, score: 76.9, time: 8.32s
+2025-11-18 22:08:49,107 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/playing-with-fire: 7 violations, score: 72.0, time: 8.37s
+2025-11-18 22:08:50,897 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india (attempt 1)
+2025-11-18 22:08:51,272 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/nearing-the-crisis (attempt 1)
+2025-11-18 22:08:51,410 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession (attempt 1)
+2025-11-18 22:08:54,483 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india
+2025-11-18 22:08:54,580 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/nearing-the-crisis
+2025-11-18 22:08:54,670 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession
+2025-11-18 22:08:58,163 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession
+2025-11-18 22:08:58,499 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/nearing-the-crisis
+2025-11-18 22:08:58,940 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession: 7 violations, score: 81.6, time: 7.53s
+2025-11-18 22:08:59,034 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india
+2025-11-18 22:08:59,332 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/nearing-the-crisis: 7 violations, score: 81.6, time: 8.06s
+2025-11-18 22:08:59,828 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india: 7 violations, score: 72.0, time: 8.93s
+2025-11-18 22:09:03,105 - src.analyzer.working_axe_analyzer - INFO - Processing batch 4/4 (2 URLs)
+2025-11-18 22:09:03,106 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/author/siddharth-k-j (attempt 1)
+2025-11-18 22:09:03,106 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/category/others (attempt 1)
+2025-11-18 22:09:06,280 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/category/others
+2025-11-18 22:09:06,299 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/author/siddharth-k-j
+2025-11-18 22:09:10,167 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/author/siddharth-k-j
+2025-11-18 22:09:10,960 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/author/siddharth-k-j: 8 violations, score: 78.9, time: 7.85s
+2025-11-18 22:09:11,696 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/category/others
+2025-11-18 22:09:12,467 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/category/others: 7 violations, score: 70.8, time: 9.36s
+2025-11-18 22:09:14,707 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 20 pages: 20 successful, 0 failed
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - AUDIT SUMMARY
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - Total URLs: 20
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - Successfully analyzed: 20
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - Failed analyses: 0
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - Total violations: 140
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - Average score: 74.7%
+2025-11-18 22:09:14,709 - src.analyzer.audit_runner - INFO - Best score: 81.6%
+2025-11-18 22:09:14,711 - src.analyzer.audit_runner - INFO - Worst score: 69.2%
+2025-11-18 22:09:14,711 - src.analyzer.audit_runner - INFO - Audit duration: 89.57s
+2025-11-18 22:09:14,711 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-18 22:09:14,769 - src.analyzer.result_processor - INFO - Audit results saved to: storage\reports\accessibility_audit.json

@@ -69,6 +69,12 @@ axe:
   concurrency: 2
   wait_for_stability: true
   stability_timeout: 10
+  
+analysis:
+  max_workers: 3
+  timeout_per_page: 90
+  max_retries: 2
+  retry_delay: 5
 
 analyzer:
   batch_size: 3
