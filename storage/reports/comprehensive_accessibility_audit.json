@@ -1,0 +1,782 @@
+{
+  "summary": {
+    "total_pages": 1,
+    "pages_audited": 1,
+    "total_violations": 7,
+    "violations_by_level": {
+      "critical": 1,
+      "serious": 2,
+      "moderate": 3,
+      "minor": 1
+    },
+    "violations_by_rule": {
+      "empty-heading": 1,
+      "frame-title": 1,
+      "landmark-one-main": 1,
+      "link-name": 1,
+      "meta-viewport": 1,
+      "page-has-heading-one": 1,
+      "region": 1
+    },
+    "average_score": 70.83,
+    "worst_score": 70.83,
+    "best_score": 70.83,
+    "pages_with_errors": [],
+    "audit_duration": 453.54,
+    "total_extended_defects": 77,
+    "extended_defects_by_category": {
+      "keyboard": 12,
+      "screen_reader": 58,
+      "landmark": 3,
+      "skip_links": 4
+    },
+    "extended_defects_by_severity": {
+      "critical": 66,
+      "high": 7,
+      "medium": 4,
+      "low": 0
+    }
+  },
+  "categorization": {
+    "by_level": {
+      "critical": 1,
+      "serious": 2,
+      "moderate": 3,
+      "minor": 1
+    },
+    "by_rule": {
+      "empty-heading": 1,
+      "frame-title": 1,
+      "landmark-one-main": 1,
+      "link-name": 1,
+      "meta-viewport": 1,
+      "page-has-heading-one": 1,
+      "region": 1
+    },
+    "by_wcag": {
+      "wcag2a": 2,
+      "wcag2aa": 1
+    },
+    "by_category": {
+      "Other": 6,
+      "Navigation": 1
+    }
+  },
+  "page_results": [
+    {
+      "url": "https://kyngcapitalmanagement.com",
+      "score": 70.83333333333334,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 6.11,
+      "violations": [
+        {
+          "id": "empty-heading",
+          "impact": "minor",
+          "level": "minor",
+          "description": "Ensures headings have discernible text",
+          "help": "Headings must not be empty",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/empty-heading?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 3
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+          "help": "Page must contain a level-one heading",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=axeAPI",
+          "nodes_count": 1
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1
+        }
+      ],
+      "extended_audit": {
+        "total_defects": 77,
+        "defects_by_category": {
+          "keyboard": 12,
+          "screen_reader": 58,
+          "landmark": 3,
+          "skip_links": 4
+        },
+        "defects_by_severity": {
+          "critical": 66,
+          "high": 7,
+          "medium": 4,
+          "low": 0
+        },
+        "keyboard_defects": [
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et_pb_button",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a.et_pb_button.et_pb_button_0_tb_header.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et_pb_button.et_pb_more_button.et_pb_button_one"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et_pb_button.et_pb_more_button.et_pb_button_one"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Learn More",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et_pb_button.et_pb_button_0.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Learn More",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et_pb_button.et_pb_button_0.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-prev",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a.et-pb-arrow-prev"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-next",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a.et-pb-arrow-next"
+          },
+          {
+            "element_type": "a",
+            "element_description": "1",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et-pb-active-control"
+          },
+          {
+            "element_type": "a",
+            "element_description": "1",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et-pb-active-control"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et_pb_button.et_pb_button_1.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et_pb_button.et_pb_button_1.et_pb_bg_layout_light"
+          }
+        ],
+        "screen_reader_defects": [
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et_pb_button",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a.et_pb_button.et_pb_button_0_tb_header.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-prev",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a.et-pb-arrow-prev"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-next",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a.et-pb-arrow-next"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "img",
+            "element_description": "img.wp-image-170",
+            "issue": "Image missing alt text or aria-label",
+            "severity": "critical",
+            "recommendation": "Add descriptive alt text or aria-label for screen readers",
+            "selector": "img.wp-image-170"
+          },
+          {
+            "element_type": "img",
+            "element_description": "img.wp-image-170",
+            "issue": "Image missing alt text or aria-label",
+            "severity": "critical",
+            "recommendation": "Add descriptive alt text or aria-label for screen readers",
+            "selector": "img.wp-image-170"
+          }
+        ],
+        "landmark_defects": [
+          {
+            "landmark_type": "region",
+            "element_description": "Risk comes from not knowing\nwhat you’re doing\n– Warren Buffet\nContact Us",
+            "issue": "Landmark missing accessible label",
+            "severity": "medium",
+            "recommendation": "Add aria-label or aria-labelledby to describe landmark purpose",
+            "selector": "section.et_pb_module.et_pb_fullwidth_header.et_pb_fullwidth_header_0.et_pb_text_align_left.et_pb_bg_layout_dark"
+          },
+          {
+            "landmark_type": "main",
+            "element_description": "Page structure",
+            "issue": "Missing main landmark",
+            "severity": "high",
+            "recommendation": "Add <main> element or role='main' to identify main content area",
+            "selector": null
+          },
+          {
+            "landmark_type": "navigation",
+            "element_description": "Page structure",
+            "issue": "Multiple navigation landmarks without distinguishing labels",
+            "severity": "medium",
+            "recommendation": "Add aria-label to distinguish between multiple navigation landmarks",
+            "selector": null
+          }
+        ],
+        "skip_link_defects": [
+          {
+            "issue": "Skip link target not found",
+            "severity": "high",
+            "recommendation": "Ensure target element with id='' exists on the page",
+            "target_id": ""
+          },
+          {
+            "issue": "Skip link is not visible when focused",
+            "severity": "medium",
+            "recommendation": "Ensure skip link becomes visible when it receives keyboard focus",
+            "target_id": ""
+          },
+          {
+            "issue": "Skip link target not found",
+            "severity": "high",
+            "recommendation": "Ensure target element with id='' exists on the page",
+            "target_id": ""
+          },
+          {
+            "issue": "Skip link is not visible when focused",
+            "severity": "medium",
+            "recommendation": "Ensure skip link becomes visible when it receives keyboard focus",
+            "target_id": ""
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "2025-11-18 23:36:55",
+    "total_pages_analyzed": 1,
+    "successful_analyses": 1,
+    "failed_analyses": 0,
+    "analysis_config": {
+      "max_workers": 3,
+      "timeout_per_page": 90,
+      "max_retries": 2
+    },
+    "audit_type": "comprehensive"
+  }
+}

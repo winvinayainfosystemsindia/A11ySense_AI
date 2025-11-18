@@ -3198,3 +3198,3310 @@ Symbols not available. Dumping unresolved backtrace:
 2025-11-18 22:09:14,711 - src.analyzer.audit_runner - INFO - Audit duration: 89.57s
 2025-11-18 22:09:14,711 - src.analyzer.audit_runner - INFO - ============================================================
 2025-11-18 22:09:14,769 - src.analyzer.result_processor - INFO - Audit results saved to: storage\reports\accessibility_audit.json
+2025-11-18 22:29:31,794 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 22:29:36,940 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 22:29:37,160 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 22:29:37,240 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 22:29:37,715 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 22:29:37,719 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 22:29:37,719 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 5
+2025-11-18 22:29:41,584 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:29:41,864 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:29:41,942 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 22:29:42,948 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 22:29:43,739 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:29:43,982 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:29:44,060 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment-charter (Depth: 1, Total: 2)
+2025-11-18 22:29:45,611 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:29:45,914 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:29:45,969 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/offerings (Depth: 1, Total: 3)
+2025-11-18 22:29:47,425 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:29:47,710 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:29:47,800 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/privacy-policy (Depth: 1, Total: 4)
+2025-11-18 22:29:49,293 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:29:49,528 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:29:49,646 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/faqs (Depth: 1, Total: 5)
+2025-11-18 22:29:51,114 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:29:51,320 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:29:51,387 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/promotors (Depth: 1, Total: 6)
+2025-11-18 22:29:54,752 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:29:55,022 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:29:55,166 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment-philosophy (Depth: 1, Total: 7)
+2025-11-18 22:30:00,194 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:00,529 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:00,712 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/contact (Depth: 1, Total: 8)
+2025-11-18 22:30:02,428 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:02,675 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:02,784 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/about-us (Depth: 1, Total: 9)
+2025-11-18 22:30:05,500 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:05,740 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:05,841 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/insights (Depth: 1, Total: 10)
+2025-11-18 22:30:07,449 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:07,694 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:07,830 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/kyng-calculator (Depth: 1, Total: 11)
+2025-11-18 22:30:08,834 - src.crawler.base_crawler - INFO - Completed depth 2. Found 67 new URLs for next depth
+2025-11-18 22:30:09,312 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:09,571 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:09,679 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment (Depth: 2, Total: 12)
+2025-11-18 22:30:11,172 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:11,422 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:11,554 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets (Depth: 2, Total: 13)
+2025-11-18 22:30:16,859 - src.crawler.error_handler - WARNING - HTTP 404 (Page not found): https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession
+2025-11-18 22:30:16,859 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:17,144 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:17,233 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession (Depth: 2, Total: 14)
+2025-11-18 22:30:20,051 - src.crawler.error_handler - WARNING - HTTP 404 (Page not found): https://kyngcapitalmanagement.com/nearing-the-crisis
+2025-11-18 22:30:20,054 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:20,333 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:20,460 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/nearing-the-crisis (Depth: 2, Total: 15)
+2025-11-18 22:30:22,227 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:22,467 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:22,558 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun (Depth: 2, Total: 16)
+2025-11-18 22:30:24,072 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:24,291 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:24,412 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/playing-with-fire (Depth: 2, Total: 17)
+2025-11-18 22:30:26,393 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:26,644 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:26,730 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india (Depth: 2, Total: 18)
+2025-11-18 22:30:27,740 - src.crawler.base_crawler - INFO - Completed depth 3. Found 20 new URLs for next depth
+2025-11-18 22:30:29,094 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:29,302 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:29,409 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/author/siddharth-k-j (Depth: 3, Total: 19)
+2025-11-18 22:30:31,369 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:30:31,664 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:30:31,747 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/category/others (Depth: 3, Total: 20)
+2025-11-18 22:30:32,751 - src.crawler.base_crawler - INFO - Completed depth 4. Found 2 new URLs for next depth
+2025-11-18 22:30:32,752 - src.crawler.base_crawler - INFO - Completed depth 5. Found 0 new URLs for next depth
+2025-11-18 22:30:32,752 - src.crawler.base_crawler - INFO - Crawling completed. Found 20 URLs
+2025-11-18 22:30:32,752 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-18 22:30:32,752 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-18 22:36:50,129 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 22:36:52,579 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 22:36:54,009 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 22:36:55,707 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 22:36:57,905 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 22:36:57,905 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 22:36:57,905 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 5
+2025-11-18 22:36:59,726 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:36:59,895 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:36:59,944 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 22:37:00,949 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 22:37:16,439 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 22:37:18,011 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 22:37:18,468 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 22:37:19,261 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 22:37:19,378 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 22:37:19,379 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 22:37:19,379 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 5
+2025-11-18 22:37:20,400 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:20,710 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:20,791 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 22:37:21,807 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 22:37:22,389 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:22,617 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:22,682 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/about-us (Depth: 1, Total: 2)
+2025-11-18 22:37:24,141 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:24,351 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:24,420 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/privacy-policy (Depth: 1, Total: 3)
+2025-11-18 22:37:26,035 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:26,257 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:26,368 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/faqs (Depth: 1, Total: 4)
+2025-11-18 22:37:28,275 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:28,536 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:28,577 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/offerings (Depth: 1, Total: 5)
+2025-11-18 22:37:30,473 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:30,693 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:30,804 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment-charter (Depth: 1, Total: 6)
+2025-11-18 22:37:33,340 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:33,454 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:33,507 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/contact (Depth: 1, Total: 7)
+2025-11-18 22:37:36,343 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:36,575 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:36,677 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/kyng-calculator (Depth: 1, Total: 8)
+2025-11-18 22:37:38,358 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:38,539 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:38,666 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/promotors (Depth: 1, Total: 9)
+2025-11-18 22:37:40,551 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:40,765 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:40,880 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment-philosophy (Depth: 1, Total: 10)
+2025-11-18 22:37:43,470 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:43,715 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:43,807 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/insights (Depth: 1, Total: 11)
+2025-11-18 22:37:44,819 - src.crawler.base_crawler - INFO - Completed depth 2. Found 67 new URLs for next depth
+2025-11-18 22:37:46,435 - src.crawler.error_handler - WARNING - HTTP 404 (Page not found): https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession
+2025-11-18 22:37:46,435 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:46,640 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:46,758 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession (Depth: 2, Total: 12)
+2025-11-18 22:37:48,813 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:49,044 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:49,102 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/investment (Depth: 2, Total: 13)
+2025-11-18 22:37:50,869 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:51,133 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:51,240 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets (Depth: 2, Total: 14)
+2025-11-18 22:37:54,236 - src.crawler.error_handler - WARNING - HTTP 404 (Page not found): https://kyngcapitalmanagement.com/nearing-the-crisis
+2025-11-18 22:37:54,239 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:54,513 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:54,600 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/nearing-the-crisis (Depth: 2, Total: 15)
+2025-11-18 22:37:57,755 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:37:57,971 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:37:58,033 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun (Depth: 2, Total: 16)
+2025-11-18 22:38:00,467 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:38:00,717 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:38:00,803 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/playing-with-fire (Depth: 2, Total: 17)
+2025-11-18 22:38:02,332 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:38:02,563 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:38:02,653 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india (Depth: 2, Total: 18)
+2025-11-18 22:38:03,659 - src.crawler.base_crawler - INFO - Completed depth 3. Found 22 new URLs for next depth
+2025-11-18 22:38:04,676 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:38:04,855 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:38:04,988 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/author/siddharth-k-j (Depth: 3, Total: 19)
+2025-11-18 22:38:07,959 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:38:08,203 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:38:08,246 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com/category/others (Depth: 3, Total: 20)
+2025-11-18 22:38:09,259 - src.crawler.base_crawler - INFO - Completed depth 4. Found 2 new URLs for next depth
+2025-11-18 22:38:09,259 - src.crawler.base_crawler - INFO - Completed depth 5. Found 0 new URLs for next depth
+2025-11-18 22:38:09,261 - src.crawler.base_crawler - INFO - Crawling completed. Found 20 URLs
+2025-11-18 22:38:09,261 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-18 22:38:09,261 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-18 22:38:09,406 - src.analyzer.integrated_audit_runner - INFO - Starting comprehensive audit for 20 URLs
+2025-11-18 22:38:09,406 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 20 pages with 3 workers
+2025-11-18 22:38:09,406 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/4 (6 URLs)
+2025-11-18 22:38:09,406 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-18 22:38:09,406 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/about-us (attempt 1)
+2025-11-18 22:38:09,406 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/privacy-policy (attempt 1)
+2025-11-18 22:38:13,350 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/about-us
+2025-11-18 22:38:13,353 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-18 22:38:13,394 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/privacy-policy
+2025-11-18 22:38:17,453 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-18 22:38:17,567 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/privacy-policy
+2025-11-18 22:38:18,387 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 8.98s
+2025-11-18 22:38:18,471 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/privacy-policy: 7 violations, score: 72.0, time: 9.06s
+2025-11-18 22:38:19,025 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/about-us
+2025-11-18 22:38:19,826 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/about-us: 5 violations, score: 78.3, time: 10.42s
+2025-11-18 22:38:20,615 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/faqs (attempt 1)
+2025-11-18 22:38:20,734 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/offerings (attempt 1)
+2025-11-18 22:38:22,070 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/investment-charter (attempt 1)
+2025-11-18 22:38:23,753 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/faqs
+2025-11-18 22:38:23,833 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/offerings
+2025-11-18 22:38:25,223 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/investment-charter
+2025-11-18 22:38:27,776 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/offerings
+2025-11-18 22:38:28,689 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/offerings: 6 violations, score: 75.0, time: 7.96s
+2025-11-18 22:38:28,808 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/faqs
+2025-11-18 22:38:29,650 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/faqs: 8 violations, score: 69.2, time: 9.03s
+2025-11-18 22:38:33,017 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/investment-charter
+2025-11-18 22:38:33,989 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/investment-charter: 7 violations, score: 75.9, time: 11.92s
+2025-11-18 22:38:37,272 - src.analyzer.working_axe_analyzer - INFO - Processing batch 2/4 (6 URLs)
+2025-11-18 22:38:37,273 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/contact (attempt 1)
+2025-11-18 22:38:37,273 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/kyng-calculator (attempt 1)
+2025-11-18 22:38:37,273 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/promotors (attempt 1)
+2025-11-18 22:38:40,542 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/kyng-calculator
+2025-11-18 22:38:40,587 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/contact
+2025-11-18 22:38:40,601 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/promotors
+2025-11-18 22:38:47,322 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/promotors
+2025-11-18 22:38:48,170 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/promotors: 6 violations, score: 75.0, time: 10.90s
+2025-11-18 22:38:49,171 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/kyng-calculator
+2025-11-18 22:38:50,381 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/investment-philosophy (attempt 1)
+2025-11-18 22:38:50,700 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/contact
+2025-11-18 22:38:50,730 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/kyng-calculator: 8 violations, score: 75.8, time: 13.46s
+2025-11-18 22:38:51,731 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/contact: 11 violations, score: 73.8, time: 14.46s
+2025-11-18 22:38:53,009 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/insights (attempt 1)
+2025-11-18 22:38:53,984 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession (attempt 1)
+2025-11-18 22:38:54,001 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/investment-philosophy
+2025-11-18 22:38:56,257 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/insights
+2025-11-18 22:38:57,100 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession
+2025-11-18 22:38:57,990 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/investment-philosophy
+2025-11-18 22:38:58,880 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/investment-philosophy: 6 violations, score: 75.0, time: 8.50s
+2025-11-18 22:39:00,788 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession
+2025-11-18 22:39:01,604 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/the-case-for-a-prolonged-recession: 7 violations, score: 81.6, time: 7.62s
+2025-11-18 22:39:02,253 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/insights
+2025-11-18 22:39:03,074 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/insights: 7 violations, score: 72.0, time: 10.06s
+2025-11-18 22:39:06,349 - src.analyzer.working_axe_analyzer - INFO - Processing batch 3/4 (6 URLs)
+2025-11-18 22:39:06,351 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/investment (attempt 1)
+2025-11-18 22:39:06,351 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets (attempt 1)
+2025-11-18 22:39:06,351 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/nearing-the-crisis (attempt 1)
+2025-11-18 22:39:09,615 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets
+2025-11-18 22:39:09,626 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/investment
+2025-11-18 22:39:09,720 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/nearing-the-crisis
+2025-11-18 22:39:14,866 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/investment
+2025-11-18 22:39:15,725 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/investment: 6 violations, score: 76.9, time: 9.37s
+2025-11-18 22:39:17,267 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets
+2025-11-18 22:39:17,961 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun (attempt 1)
+2025-11-18 22:39:18,051 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/nearing-the-crisis
+2025-11-18 22:39:18,126 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/why-it-makes-sense-to-stay-out-of-this-bubble-in-indian-markets: 6 violations, score: 75.0, time: 11.78s
+2025-11-18 22:39:18,882 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/nearing-the-crisis: 7 violations, score: 81.6, time: 12.53s
+2025-11-18 22:39:20,400 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/playing-with-fire (attempt 1)
+2025-11-18 22:39:21,161 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india (attempt 1)
+2025-11-18 22:39:21,530 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun
+2025-11-18 22:39:23,528 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/playing-with-fire
+2025-11-18 22:39:24,211 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india
+2025-11-18 22:39:27,668 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india
+2025-11-18 22:39:27,816 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/playing-with-fire
+2025-11-18 22:39:28,551 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/closer-look-at-the-financial-sector-risks-in-india: 7 violations, score: 72.0, time: 7.39s
+2025-11-18 22:39:28,660 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/playing-with-fire: 7 violations, score: 72.0, time: 8.26s
+2025-11-18 22:39:30,789 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun
+2025-11-18 22:39:31,560 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/the-deleveraging-may-have-begun: 7 violations, score: 72.0, time: 13.60s
+2025-11-18 22:39:34,835 - src.analyzer.working_axe_analyzer - INFO - Processing batch 4/4 (2 URLs)
+2025-11-18 22:39:34,835 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/author/siddharth-k-j (attempt 1)
+2025-11-18 22:39:34,835 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com/category/others (attempt 1)
+2025-11-18 22:39:38,069 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/category/others
+2025-11-18 22:39:38,071 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com/author/siddharth-k-j
+2025-11-18 22:39:41,973 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/category/others
+2025-11-18 22:39:41,989 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com/author/siddharth-k-j
+2025-11-18 22:39:42,817 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/category/others: 7 violations, score: 70.8, time: 7.98s
+2025-11-18 22:39:42,863 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com/author/siddharth-k-j: 8 violations, score: 78.9, time: 8.03s
+2025-11-18 22:39:45,133 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 20 pages: 20 successful, 0 failed
+2025-11-18 22:39:45,134 - src.analyzer.extended_audit_runner - INFO - Starting extended audit for: https://kyngcapitalmanagement.com
+2025-11-18 22:41:47,766 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,771 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,774 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,780 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,782 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,786 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,792 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,799 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,801 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,807 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,811 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,815 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,820 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,827 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,832 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,832 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,842 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,847 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,858 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,863 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,868 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,872 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,877 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,882 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,882 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,891 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,895 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,901 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,905 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,910 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,915 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,919 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,922 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,928 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,931 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,932 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,940 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,944 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,944 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,952 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:41:47,955 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 22:45:16,476 - src.analyzer.extended_audit_runner - INFO - Extended audit completed for https://kyngcapitalmanagement.com: Keyboard: 0.0%, Screen Reader: 1.4%, Structure: 57.1%
+2025-11-18 22:45:18,793 - src.analyzer.extended_audit_runner - INFO - Starting extended audit for: https://kyngcapitalmanagement.com/about-us
+2025-11-18 22:46:10,703 - src.analyzer.extended_audit_runner - ERROR - Keyboard navigation test failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-11-18 22:58:03,415 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 22:58:04,967 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 22:58:05,708 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 22:58:07,674 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 22:58:08,707 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 22:58:08,711 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 22:58:08,712 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 1
+2025-11-18 22:58:12,407 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 22:58:12,771 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 22:58:12,909 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 22:58:13,911 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 22:58:13,912 - src.crawler.base_crawler - INFO - Crawling completed. Found 1 URLs
+2025-11-18 22:58:13,912 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-18 22:58:13,912 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-18 22:58:14,068 - src.analyzer.integrated_audit_runner - INFO - Starting comprehensive audit for 1 URLs
+2025-11-18 22:58:14,068 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 1 pages with 3 workers
+2025-11-18 22:58:14,068 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/1 (1 URLs)
+2025-11-18 22:58:14,070 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-18 22:58:16,995 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-18 22:58:23,706 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-18 22:58:24,576 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 10.51s
+2025-11-18 22:58:26,803 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 1 pages: 1 successful, 0 failed
+2025-11-18 22:58:26,803 - src.analyzer.extended_audit_runner - INFO - Starting extended audit for: https://kyngcapitalmanagement.com
+2025-11-18 23:00:28,887 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,889 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,894 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,898 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,905 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,911 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,915 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,923 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,934 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,938 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,943 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,946 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,952 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,957 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,963 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:28,974 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,038 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,092 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,096 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,103 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,109 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,118 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,131 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,136 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,144 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,148 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,153 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,158 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,164 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,164 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,176 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,176 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,184 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,189 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,193 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,201 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,203 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,211 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,214 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,218 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:00:29,223 - src.analyzer.extended_audit_runner - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:03:57,556 - src.analyzer.extended_audit_runner - INFO - Extended audit completed for https://kyngcapitalmanagement.com: Keyboard: 0.0%, Screen Reader: 1.4%, Structure: 57.1%
+2025-11-18 23:03:59,870 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:03:59,871 - src.analyzer.integrated_audit_runner - INFO - COMPREHENSIVE ACCESSIBILITY AUDIT SUMMARY
+2025-11-18 23:03:59,871 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:03:59,871 - src.analyzer.integrated_audit_runner - INFO - Total URLs: 1
+2025-11-18 23:03:59,871 - src.analyzer.integrated_audit_runner - INFO - Successfully analyzed: 1
+2025-11-18 23:03:59,872 - src.analyzer.integrated_audit_runner - INFO - Axe-Core Score: 70.8%
+2025-11-18 23:03:59,872 - src.analyzer.integrated_audit_runner - INFO - Keyboard Navigation: 0.0%
+2025-11-18 23:03:59,872 - src.analyzer.integrated_audit_runner - INFO - Screen Reader Support: 1.4%
+2025-11-18 23:03:59,872 - src.analyzer.integrated_audit_runner - INFO - Structure & Semantics: 57.1%
+2025-11-18 23:03:59,872 - src.analyzer.integrated_audit_runner - INFO - Overall Comprehensive Score: 32.4%
+2025-11-18 23:03:59,873 - src.analyzer.integrated_audit_runner - INFO - Audit Duration: 345.8s
+2025-11-18 23:03:59,873 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:03:59,879 - src.analyzer.result_processor - INFO - Audit results saved to: storage\reports\comprehensive_accessibility_audit.json
+2025-11-18 23:20:31,030 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 23:20:34,952 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 23:20:35,343 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 23:20:35,616 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 23:20:35,712 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 23:20:35,712 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 23:20:35,712 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 1
+2025-11-18 23:20:39,443 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 23:20:39,770 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 23:20:39,891 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 23:20:40,895 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 23:20:40,895 - src.crawler.base_crawler - INFO - Crawling completed. Found 1 URLs
+2025-11-18 23:20:40,896 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-18 23:20:40,897 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-18 23:20:41,057 - src.analyzer.integrated_audit_runner - INFO - Starting comprehensive audit for 1 URLs
+2025-11-18 23:20:41,057 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 1 pages with 3 workers
+2025-11-18 23:20:41,057 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/1 (1 URLs)
+2025-11-18 23:20:41,064 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-18 23:20:44,417 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-18 23:20:48,026 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-18 23:20:48,929 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 7.86s
+2025-11-18 23:20:51,204 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 1 pages: 1 successful, 0 failed
+2025-11-18 23:20:51,204 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting extended audit for: https://kyngcapitalmanagement.com
+2025-11-18 23:22:56,655 - KeyboardAudit - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:22:56,657 - KeyboardAudit - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:22:56,659 - KeyboardAudit - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:22:56,661 - KeyboardAudit - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:22:56,663 - KeyboardAudit - WARNING - Failed to test element keyboard navigation: Message: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.163); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10d4103
+	0x10d4144
+	0xede71d
+	0xef0b61
+	0xeefc30
+	0xee5f6c
+	0xee4303
+	0xee7864
+	0xee78f8
+	0xf24fe7
+	0xf4c90c
+	0xf1f7c4
+	0xf4cac4
+	0xf6ee17
+	0xf4c706
+	0xf1da30
+	0xf1ed54
+	0x13457b4
+	0x134098a
+	0x10fc392
+	0x10ec4c8
+	0x10f324d
+	0x10dc478
+	0x10dc63c
+	0x10c67ca
+	0x765f5d49
+	0x77bad6db
+	0x77bad661
+
+2025-11-18 23:25:53,338 - src.analyzer.extended_audits.extended_audit_runner - INFO - Extended audit completed for https://kyngcapitalmanagement.com: Found 51 defects (Keyboard: 3, Screen Reader: 45, Landmark: 2, Skip Links: 1)
+2025-11-18 23:25:53,339 - src.analyzer.extended_audits.extended_audit_runner - INFO -   CRITICAL: 47 defects
+2025-11-18 23:25:53,339 - src.analyzer.extended_audits.extended_audit_runner - INFO -   HIGH: 2 defects
+2025-11-18 23:25:53,339 - src.analyzer.extended_audits.extended_audit_runner - INFO -   MEDIUM: 2 defects
+2025-11-18 23:25:55,508 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:25:55,508 - src.analyzer.integrated_audit_runner - INFO - COMPREHENSIVE ACCESSIBILITY AUDIT SUMMARY
+2025-11-18 23:25:55,508 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:25:55,508 - src.analyzer.integrated_audit_runner - INFO - Total URLs: 1
+2025-11-18 23:25:55,509 - src.analyzer.integrated_audit_runner - INFO - Successfully analyzed: 1
+2025-11-18 23:25:55,509 - src.analyzer.integrated_audit_runner - INFO - Axe-Core Score: 70.8%
+2025-11-18 23:25:55,509 - src.analyzer.integrated_audit_runner - INFO - Extended Audit Defects: 51
+2025-11-18 23:25:55,510 - src.analyzer.integrated_audit_runner - INFO - Extended Defects by Category:
+2025-11-18 23:25:55,510 - src.analyzer.integrated_audit_runner - INFO -   - Keyboard: 3
+2025-11-18 23:25:55,510 - src.analyzer.integrated_audit_runner - INFO -   - Screen Reader: 45
+2025-11-18 23:25:55,510 - src.analyzer.integrated_audit_runner - INFO -   - Landmark: 2
+2025-11-18 23:25:55,510 - src.analyzer.integrated_audit_runner - INFO -   - Skip Links: 1
+2025-11-18 23:25:55,510 - src.analyzer.integrated_audit_runner - INFO - Extended Defects by Severity:
+2025-11-18 23:25:55,510 - src.analyzer.integrated_audit_runner - INFO -   - CRITICAL: 47
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO -   - HIGH: 2
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO -   - MEDIUM: 2
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO - Axe-Core Violations: 7
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO - Axe Violations by Level:
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO -   - CRITICAL: 1
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO -   - SERIOUS: 2
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO -   - MODERATE: 3
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO -   - MINOR: 1
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO - Audit Duration: 314.45s
+2025-11-18 23:25:55,511 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:25:55,518 - src.analyzer.result_processor - INFO - Audit results saved to: storage\reports\comprehensive_accessibility_audit.json
+2025-11-18 23:31:16,268 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 23:31:17,216 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 23:31:17,381 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 23:31:17,705 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 23:31:17,786 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 23:31:17,788 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 23:31:17,788 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 1
+2025-11-18 23:31:18,626 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 23:31:18,730 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 23:31:18,790 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 23:31:19,794 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 23:31:19,794 - src.crawler.base_crawler - INFO - Crawling completed. Found 1 URLs
+2025-11-18 23:31:19,794 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-18 23:31:19,794 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-18 23:31:19,865 - src.analyzer.integrated_audit_runner - INFO - Starting comprehensive audit for 1 URLs
+2025-11-18 23:31:19,865 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 1 pages with 3 workers
+2025-11-18 23:31:19,866 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/1 (1 URLs)
+2025-11-18 23:31:19,867 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-18 23:31:22,215 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-18 23:31:26,282 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-18 23:31:26,967 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 7.10s
+2025-11-18 23:31:29,075 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 1 pages: 1 successful, 0 failed
+2025-11-18 23:31:29,076 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting extended audit for: https://kyngcapitalmanagement.com
+2025-11-18 23:31:35,660 - KeyboardAudit - ERROR - Keyboard navigation test failed: 'KeyboardAudit' object has no attribute '_find_elements_safe'
+2025-11-18 23:31:44,422 - ScreenReaderAudit - WARNING - Failed to process selector button: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-11-18 23:36:43,355 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-18 23:36:44,722 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-18 23:36:45,027 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-18 23:36:45,375 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-18 23:36:45,462 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-18 23:36:45,462 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-18 23:36:45,462 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 1
+2025-11-18 23:36:46,115 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-18 23:36:46,230 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-18 23:36:46,261 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-18 23:36:47,269 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-18 23:36:47,269 - src.crawler.base_crawler - INFO - Crawling completed. Found 1 URLs
+2025-11-18 23:36:47,269 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-18 23:36:47,270 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-18 23:36:47,336 - src.analyzer.integrated_audit_runner - INFO - Starting comprehensive audit for 1 URLs
+2025-11-18 23:36:47,336 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 1 pages with 3 workers
+2025-11-18 23:36:47,336 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/1 (1 URLs)
+2025-11-18 23:36:47,339 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-18 23:36:49,593 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-18 23:36:52,735 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-18 23:36:53,449 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 6.11s
+2025-11-18 23:36:55,582 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 1 pages: 1 successful, 0 failed
+2025-11-18 23:36:55,582 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting extended audit for: https://kyngcapitalmanagement.com
+2025-11-18 23:36:58,488 - src.analyzer.extended_audits.extended_audit_runner - INFO - Browser setup completed
+2025-11-18 23:36:58,488 - src.analyzer.extended_audits.extended_audit_runner - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-18 23:37:00,669 - src.analyzer.extended_audits.extended_audit_runner - INFO - Waiting for page to stabilize...
+2025-11-18 23:37:05,675 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting keyboard navigation audit...
+2025-11-18 23:38:57,005 - KeyboardAudit - INFO - Testing 8 unique focusable elements
+2025-11-18 23:38:58,824 - KeyboardAudit - INFO - Successfully tested 8/8 elements
+2025-11-18 23:38:58,824 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting screen reader audit...
+2025-11-18 23:41:26,925 - ScreenReaderAudit - INFO - Screen reader audit: tested 69/69 elements
+2025-11-18 23:41:26,925 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting landmark audit...
+2025-11-18 23:42:57,630 - LandmarkAudit - INFO - Landmark audit: found 3 defects across 8 landmark types
+2025-11-18 23:42:57,631 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting skip link audit...
+2025-11-18 23:44:18,600 - SkipLinkAudit - INFO - Skip link audit: checked 10 elements, found 4 skip links
+2025-11-18 23:44:18,601 - src.analyzer.extended_audits.extended_audit_runner - INFO - Extended audit completed for https://kyngcapitalmanagement.com in 443.02s: Found 77 defects (Keyboard: 12, Screen Reader: 58, Landmark: 3, Skip Links: 4)
+2025-11-18 23:44:18,601 - src.analyzer.extended_audits.extended_audit_runner - INFO - Defects by severity:
+2025-11-18 23:44:18,601 - src.analyzer.extended_audits.extended_audit_runner - INFO -   CRITICAL: 66 defects
+2025-11-18 23:44:18,602 - src.analyzer.extended_audits.extended_audit_runner - INFO -   HIGH: 7 defects
+2025-11-18 23:44:18,602 - src.analyzer.extended_audits.extended_audit_runner - INFO -   MEDIUM: 4 defects
+2025-11-18 23:44:20,874 - src.analyzer.extended_audits.extended_audit_runner - INFO - Browser closed successfully
+2025-11-18 23:44:20,874 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:44:20,875 - src.analyzer.integrated_audit_runner - INFO - COMPREHENSIVE ACCESSIBILITY AUDIT SUMMARY
+2025-11-18 23:44:20,875 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:44:20,876 - src.analyzer.integrated_audit_runner - INFO - Total URLs: 1
+2025-11-18 23:44:20,876 - src.analyzer.integrated_audit_runner - INFO - Successfully analyzed: 1
+2025-11-18 23:44:20,876 - src.analyzer.integrated_audit_runner - INFO - Axe-Core Score: 70.8%
+2025-11-18 23:44:20,876 - src.analyzer.integrated_audit_runner - INFO - Extended Audit Defects: 77
+2025-11-18 23:44:20,876 - src.analyzer.integrated_audit_runner - INFO - Extended Defects by Category:
+2025-11-18 23:44:20,877 - src.analyzer.integrated_audit_runner - INFO -   - Keyboard: 12
+2025-11-18 23:44:20,877 - src.analyzer.integrated_audit_runner - INFO -   - Screen Reader: 58
+2025-11-18 23:44:20,877 - src.analyzer.integrated_audit_runner - INFO -   - Landmark: 3
+2025-11-18 23:44:20,877 - src.analyzer.integrated_audit_runner - INFO -   - Skip Links: 4
+2025-11-18 23:44:20,877 - src.analyzer.integrated_audit_runner - INFO - Extended Defects by Severity:
+2025-11-18 23:44:20,878 - src.analyzer.integrated_audit_runner - INFO -   - CRITICAL: 66
+2025-11-18 23:44:20,878 - src.analyzer.integrated_audit_runner - INFO -   - HIGH: 7
+2025-11-18 23:44:20,878 - src.analyzer.integrated_audit_runner - INFO -   - MEDIUM: 4
+2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO - Axe-Core Violations: 7
+2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO - Axe Violations by Level:
+2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO -   - CRITICAL: 1
+2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO -   - SERIOUS: 2
+2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO -   - MODERATE: 3
+2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO -   - MINOR: 1
+2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO - Audit Duration: 453.54s
+2025-11-18 23:44:20,880 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-18 23:44:20,888 - src.analyzer.result_processor - INFO - Audit results saved to: storage\reports\comprehensive_accessibility_audit.json

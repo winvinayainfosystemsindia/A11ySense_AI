@@ -1,4 +1,3 @@
-#main.py
 # main.py
 import yaml
 import os
@@ -9,6 +8,7 @@ from dotenv import load_dotenv
 from typing import List, Dict, Any
 from src.crawler.playwright_crawler import PlaywrightCrawler
 from src.analyzer.audit_runner import AuditRunner
+from src.analyzer.integrated_audit_runner import IntegratedAuditRunner
 from src.analyzer.result_processor import ResultProcessor
 from src.utils.logger import setup_logger
 
@@ -76,6 +76,7 @@ class AccessibilityAuditTool:
                 await self.crawler.close()
 
     async def run_accessibility_audit(self, urls: List[str]) -> Dict[str, Any]:
+        """Run basic accessibility audit using axe-core"""
         if not urls:
             return {
                 'report': {
@@ -134,11 +135,64 @@ class AccessibilityAuditTool:
                 'output_path': None
             }
     
-    async def run_full_audit(self):
+    async def run_comprehensive_audit(self, urls: List[str]) -> Dict[str, Any]:
+        """Run comprehensive audit including extended tests"""
+        if not urls:
+            return {
+                'report': {
+                    'summary': {
+                        'total_pages': 0,
+                        'pages_audited': 0,
+                        'total_violations': 0,
+                        'average_score': 0,
+                        'audit_duration': 0
+                    },
+                    'page_results': [],
+                    'metadata': {
+                        'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
+                        'total_pages_analyzed': 0
+                    }
+                },
+                'output_path': None
+            }
+        
+        try:
+            from src.analyzer.integrated_audit_runner import IntegratedAuditRunner
+            self.result_processor = ResultProcessor(self.config)
+            
+            integrated_runner = IntegratedAuditRunner(self.config)
+            comprehensive_results = await integrated_runner.run_comprehensive_audit(urls)
+            
+            output_dir = Path("storage/reports")
+            output_dir.mkdir(parents=True, exist_ok=True)
+            output_path = output_dir / "comprehensive_accessibility_audit.json"
+
+            self.result_processor.save_audit_results(comprehensive_results, str(output_path))
+            
+            return {
+                'report': comprehensive_results,
+                'output_path': str(output_path)
+            }
+            
+        except Exception as e:
+            self.logger.error(f"Comprehensive audit failed: {e}")
+            # Fall back to basic audit
+            self.logger.info("Falling back to basic axe-core audit...")
+            return await self.run_accessibility_audit(urls)
+    
+    async def run_full_audit(self, audit_type: str = "comprehensive"):
+        """Run full audit with crawling and specified audit type"""
         urls = await self.run_crawl()
+        
+        if audit_type == "comprehensive":
+            audit_results = await self.run_comprehensive_audit(urls)
+        else:
+            audit_results = await self.run_accessibility_audit(urls)
+            
         return {
             'crawled_urls': urls,
-            'audit_results': await self.run_accessibility_audit(urls)
+            'audit_results': audit_results,
+            'audit_type': audit_type
         }
 
 def print_banner():
@@ -146,6 +200,7 @@ def print_banner():
     ╔══════════════════════════════════════════════════════════════╗
     ║                 Accessibility Audit Tool                     ║
     ║           Phase 1 (Async Crawl) + Phase 2 (Sync Analysis)    ║
+    ║                  With Extended Audits                        ║
     ╚══════════════════════════════════════════════════════════════╝
     """
     print(banner)
@@ -154,7 +209,43 @@ async def main():
     print_banner()
     try:
         tool = AccessibilityAuditTool()
-        await tool.run_full_audit()
+        
+        # Ask user for audit type
+        print("\nSelect audit type:")
+        print("1. Basic Audit (axe-core only)")
+        print("2. Comprehensive Audit (axe-core + extended tests)")
+        
+        choice = input("Enter choice (1 or 2, default 2): ").strip()
+        
+        if choice == "1":
+            audit_type = "basic"
+            print("🚀 Starting basic accessibility audit...")
+        else:
+            audit_type = "comprehensive"
+            print("🚀 Starting comprehensive accessibility audit...")
+        
+        results = await tool.run_full_audit(audit_type)
+        
+        # Print summary
+        report = results['audit_results']['report']
+        summary = report['summary']
+        
+        print(f"\n📊 AUDIT COMPLETED:")
+        print(f"   URLs Crawled: {len(results['crawled_urls'])}")
+        print(f"   Pages Audited: {summary['pages_audited']}")
+        
+        if audit_type == "comprehensive":
+            print(f"   Overall Score: {summary.get('overall_comprehensive_score', summary['average_score']):.1f}%")
+            print(f"   - Axe-Core: {summary['average_score']:.1f}%")
+            print(f"   - Keyboard: {summary.get('average_keyboard_score', 0):.1f}%")
+            print(f"   - Screen Reader: {summary.get('average_screen_reader_score', 0):.1f}%")
+            print(f"   - Structure: {summary.get('average_structure_score', 0):.1f}%")
+        else:
+            print(f"   Overall Score: {summary['average_score']:.1f}%")
+        
+        print(f"   Total Violations: {summary['total_violations']}")
+        print(f"   Report saved to: {results['audit_results']['output_path']}")
+        
     except Exception as e:
         print(f"❌ Error: {e}")
         return 1
