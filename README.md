@@ -1,82 +1,132 @@
 ```
 accessibility-audit-tool/
+├── .env.example
+├── .gitignore
+├── AccessibilityAuditTool.spec
+├── build.py
+├── create_structure.ps1
+├── GetProjectFiles.ps1
+├── main.py
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── setup_tool.py
+│
+├── AccessibilityAuditTool_Package/
+│   ├── AccessibilityAuditTool.exe
+│   ├── Setup.bat
+│   ├── setup_tool.py
+│   └── config/
+│       ├── config.yaml
+│       ├── license_config.json
+│       └── __init__.py
+│
 ├── config/
 │   ├── config.yaml
+│   ├── license_config.json
 │   └── __init__.py
-├── src/
-│   ├── __init__.py
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── exceptions.py
-│   │   └── constants.py
-│   ├── crawler/
-│   │   ├── __init__.py
-│   │   ├── base_crawler.py
-│   │   ├── playwright_crawler.py
-│   │   ├── enhanced_playwright_crawler.py
-│   │   ├── sitemap_parser.py
-│   │   ├── url_filter.py
-│   │   ├── error_handler.py
-│   │   ├── advanced_url_discovery.py
-│   │   ├── performance_monitor.py
-│   │   ├── content_analyzer.py
-│   │   └── anti_blocking/
-│   │       ├── __init__.py
-│   │       ├── cloudflare_bypass.py
-│   │       └── stealth_handler.py
-│   ├── analyzer/
-│   │   ├── __init__.py
-│   │   ├── audit_runner.py
-│   │	├── working_axe_analyzer.py
-│   │	├── violation_categorizer.py
-│   │	├── result_processor.py
-│   │	└── models/
-│   │		├── __init__.py
-│   │		└── audit_models.py
-│   ├── llm/
-│   │   ├── __init__.py
-│   │   └── groq_client.py
-│   ├── reporting/
-│   │   ├── __init__.py
-│   │   ├── excel_reporter.py
-│   │   └── report_generator.py
-│   └── utils/
-│       ├── __init__.py
-│       ├── logger.py
-│       ├── file_utils.py
-│       ├── validators.py
-│       └── config_manager.py
-├── tests/
-│   ├── __init__.py
-│   ├── conftest.py
-│   ├── test_crawler/
-│   │   ├── __init__.py
-│   │   ├── test_playwright_crawler.py
-│   │   ├── test_sitemap_parser.py
-│   │   └── test_url_filter.py
-│   ├── test_analyzer/
-│   ├── test_llm/
-│   └── test_reporting/
-├── storage/
-│   ├── logs/
-│   │   └── audit_tool.log
-│   ├── reports/
-│   ├── temp/
-│   └── crawled_urls.txt
-├── scripts/
-│   ├── run_audit.py
-│   └── setup.py
+│
+├── dist/
+│   └── AccessibilityAuditTool.exe
+│
+├── docs/
+│   ├── architecture.md
+│   └── logo/
+│       ├── Generated Image November 18, 2025 - 5_04PM (1).png
+│       ├── Generated Image November 18, 2025 - 5_04PM.png
+│       ├── Generated Image November 18, 2025 - 5_05PM.png
+│       └── Generated Image November 18, 2025 - 5_06PM.png
+│
+├── others/
+│   └── analyzers/
+│       ├── cognitive_analyzer.py
+│       ├── content_analyzer.py
+│       ├── dynamic_interaction_analyzer.py
+│       ├── interactive_analyzer.py
+│       ├── navigation_analyzer.py
+│       ├── performance_analyzer.py
+│       └── __init__.py
+│
 ├── requirements/
 │   ├── base.txt
 │   ├── dev.txt
 │   └── prod.txt
-├── docs/
-│   └── architecture.md
-├── .env.example
-├── .gitignore
-├── pyproject.toml
-├── README.md
-└── main.py
+│
+├── scripts/
+│   ├── run_audit.py
+│   └── setup.py
+│
+├── src/
+│   ├── __init__.py
+│   ├── core/
+│   │   ├── constants.py
+│   │   ├── exceptions.py
+│   │   └── __init__.py
+│   │
+│   ├── crawler/
+│   │   ├── advanced_url_discovery.py
+│   │   ├── base_crawler.py
+│   │   ├── content_analyzer.py
+│   │   ├── error_handler.py
+│   │   ├── performance_monitor.py
+│   │   ├── playwright_crawler.py
+│   │   ├── sitemap_parser.py
+│   │   ├── url_filter.py
+│   │   ├── __init__.py
+│   │   └── anti_blocking/
+│   │       ├── cloudflare_bypass.py
+│   │       ├── stealth_handler.py
+│   │       └── __init__.py
+│   │
+│   ├── analyzer/
+│   │   ├── audit_runner.py
+│   │   ├── extended_audit_runner.py
+│   │   ├── integrated_audit_runner.py
+│   │   ├── result_processor.py
+│   │   ├── violation_categorizer.py
+│   │   ├── working_axe_analyzer.py
+│   │   ├── __init__.py
+│   │   ├── extended_audits/
+│   │   │   ├── base_audit.py
+│   │   │   ├── extended_audit_runner.py
+│   │   │   ├── keyboard_audit.py
+│   │   │   ├── landmark_audit.py
+│   │   │   ├── screen_reader_audit.py
+│   │   │   ├── skip_link_audit.py
+│   │   │   └── __init__.py
+│   │   └── models/
+│   │       ├── audit_models.py
+│   │       ├── extended_audit_models.py
+│   │       └── __init__.py
+│   │
+│   ├── llm/
+│   │   ├── groq_client.py
+│   │   └── __init__.py
+│   │
+│   ├── reporting/
+│   │   ├── excel_reporter.py
+│   │   ├── report_generator.py
+│   │   ├── report_writer.py
+│   │   └── __init__.py
+│   │
+│   └── utils/
+│       ├── config_manager.py
+│       ├── file_utils.py
+│       ├── license_manager.py
+│       ├── logger.py
+│       ├── validators.py
+│       └── __init__.py
+│
+├── storage/
+│   ├── crawled_urls.txt
+│   ├── logs/
+│   │   └── audit_tool.log
+│   └── reports/
+│
+└── tests/
+    ├── conftest.py
+    └── __init__.py
+
 ```
 
 ## Create directory
