@@ -6505,3 +6505,180 @@ Symbols not available. Dumping unresolved backtrace:
 2025-11-18 23:44:20,879 - src.analyzer.integrated_audit_runner - INFO - Audit Duration: 453.54s
 2025-11-18 23:44:20,880 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
 2025-11-18 23:44:20,888 - src.analyzer.result_processor - INFO - Audit results saved to: storage\reports\comprehensive_accessibility_audit.json
+2025-11-25 22:19:32,529 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-25 22:19:38,216 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-25 22:19:38,702 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-25 22:19:39,740 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-25 22:19:40,170 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-25 22:19:40,171 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-25 22:19:40,171 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 1
+2025-11-25 22:19:44,189 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-25 22:19:44,278 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-25 22:19:44,301 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-25 22:19:45,315 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-25 22:19:45,316 - src.crawler.base_crawler - INFO - Crawling completed. Found 1 URLs
+2025-11-25 22:19:45,316 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-25 22:19:45,316 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-25 22:19:45,396 - src.analyzer.audit_runner - INFO - Starting accessibility audit for 1 URLs
+2025-11-25 22:19:45,397 - src.analyzer.audit_runner - INFO - URLs to analyze: ['https://kyngcapitalmanagement.com']
+2025-11-25 22:19:45,397 - src.analyzer.audit_runner - INFO - Starting analysis phase...
+2025-11-25 22:19:45,397 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 1 pages with 3 workers
+2025-11-25 22:19:45,397 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/1 (1 URLs)
+2025-11-25 22:19:45,400 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-25 22:19:49,977 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-25 22:19:53,872 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-25 22:19:54,627 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 9.23s
+2025-11-25 22:19:56,761 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 1 pages: 1 successful, 0 failed
+2025-11-25 22:19:56,762 - src.analyzer.audit_runner - INFO - Generating audit report...
+2025-11-25 22:19:56,762 - src.analyzer.audit_runner - INFO - Audit completed: 1/1 pages successful, 7 violations, duration: 11.37s
+2025-11-25 22:19:56,762 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-25 22:19:56,763 - src.analyzer.audit_runner - INFO - AUDIT SUMMARY
+2025-11-25 22:19:56,763 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-25 22:19:56,763 - src.analyzer.audit_runner - INFO - Total URLs: 1
+2025-11-25 22:19:56,763 - src.analyzer.audit_runner - INFO - Successfully analyzed: 1
+2025-11-25 22:19:56,763 - src.analyzer.audit_runner - INFO - Failed analyses: 0
+2025-11-25 22:19:56,763 - src.analyzer.audit_runner - INFO - Total violations: 7
+2025-11-25 22:19:56,763 - src.analyzer.audit_runner - INFO - Average score: 70.8%
+2025-11-25 22:19:56,764 - src.analyzer.audit_runner - INFO - Best score: 70.8%
+2025-11-25 22:19:56,764 - src.analyzer.audit_runner - INFO - Worst score: 70.8%
+2025-11-25 22:19:56,764 - src.analyzer.audit_runner - INFO - Audit duration: 11.37s
+2025-11-25 22:19:56,764 - src.analyzer.audit_runner - INFO - Violations by severity:
+2025-11-25 22:19:56,764 - src.analyzer.audit_runner - INFO -   - CRITICAL: 1
+2025-11-25 22:19:56,765 - src.analyzer.audit_runner - INFO -   - SERIOUS: 2
+2025-11-25 22:19:56,765 - src.analyzer.audit_runner - INFO -   - MODERATE: 3
+2025-11-25 22:19:56,765 - src.analyzer.audit_runner - INFO -   - MINOR: 1
+2025-11-25 22:19:56,765 - src.analyzer.audit_runner - INFO - Top violating rules:
+2025-11-25 22:19:56,765 - src.analyzer.audit_runner - INFO -   - empty-heading: 1
+2025-11-25 22:19:56,765 - src.analyzer.audit_runner - INFO -   - frame-title: 1
+2025-11-25 22:19:56,766 - src.analyzer.audit_runner - INFO -   - landmark-one-main: 1
+2025-11-25 22:19:56,766 - src.analyzer.audit_runner - INFO -   - link-name: 1
+2025-11-25 22:19:56,766 - src.analyzer.audit_runner - INFO -   - meta-viewport: 1
+2025-11-25 22:19:56,766 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-25 22:19:56,770 - src.analyzer.result_processor - INFO - Audit results saved to: storage\reports\accessibility_audit.json
+2025-11-25 22:37:54,587 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-25 22:37:58,080 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-25 22:37:58,268 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-25 22:37:58,343 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-25 22:37:59,525 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-25 22:37:59,528 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-25 22:37:59,528 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 1
+2025-11-25 22:38:03,136 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-25 22:38:03,413 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-25 22:38:03,548 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-25 22:38:04,562 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-25 22:38:04,563 - src.crawler.base_crawler - INFO - Crawling completed. Found 1 URLs
+2025-11-25 22:38:04,564 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-25 22:38:04,565 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-25 22:38:04,730 - src.analyzer.audit_runner - INFO - Starting accessibility audit for 1 URLs
+2025-11-25 22:38:04,732 - src.analyzer.audit_runner - INFO - URLs to analyze: ['https://kyngcapitalmanagement.com']
+2025-11-25 22:38:04,733 - src.analyzer.audit_runner - INFO - Starting analysis phase...
+2025-11-25 22:38:04,733 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 1 pages with 3 workers
+2025-11-25 22:38:04,733 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/1 (1 URLs)
+2025-11-25 22:38:04,734 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-25 22:38:08,494 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-25 22:38:12,972 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-25 22:38:13,812 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 9.08s
+2025-11-25 22:38:16,043 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 1 pages: 1 successful, 0 failed
+2025-11-25 22:38:16,045 - src.analyzer.audit_runner - INFO - Generating audit report...
+2025-11-25 22:38:16,045 - src.analyzer.audit_runner - INFO - Audit completed: 1/1 pages successful, 7 violations, duration: 11.32s
+2025-11-25 22:38:16,045 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-25 22:38:16,046 - src.analyzer.audit_runner - INFO - AUDIT SUMMARY
+2025-11-25 22:38:16,046 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-25 22:38:16,046 - src.analyzer.audit_runner - INFO - Total URLs: 1
+2025-11-25 22:38:16,046 - src.analyzer.audit_runner - INFO - Successfully analyzed: 1
+2025-11-25 22:38:16,047 - src.analyzer.audit_runner - INFO - Failed analyses: 0
+2025-11-25 22:38:16,047 - src.analyzer.audit_runner - INFO - Total violations: 7
+2025-11-25 22:38:16,047 - src.analyzer.audit_runner - INFO - Average score: 70.8%
+2025-11-25 22:38:16,047 - src.analyzer.audit_runner - INFO - Best score: 70.8%
+2025-11-25 22:38:16,047 - src.analyzer.audit_runner - INFO - Worst score: 70.8%
+2025-11-25 22:38:16,047 - src.analyzer.audit_runner - INFO - Audit duration: 11.32s
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO - Violations by severity:
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO -   - CRITICAL: 1
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO -   - SERIOUS: 2
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO -   - MODERATE: 3
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO -   - MINOR: 1
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO - Top violating rules:
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO -   - empty-heading: 1
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO -   - frame-title: 1
+2025-11-25 22:38:16,048 - src.analyzer.audit_runner - INFO -   - landmark-one-main: 1
+2025-11-25 22:38:16,051 - src.analyzer.audit_runner - INFO -   - link-name: 1
+2025-11-25 22:38:16,051 - src.analyzer.audit_runner - INFO -   - meta-viewport: 1
+2025-11-25 22:38:16,052 - src.analyzer.audit_runner - INFO - ============================================================
+2025-11-25 22:38:16,061 - src.reporting.report_writer - INFO - JSON report saved to: storage\reports\json\accessibility_audit_20251125_223816.json
+2025-11-25 22:38:17,863 - src.reporting.report_writer - INFO - Excel report saved to: storage\reports\excel\accessibility_audit_20251125_223816.xlsx
+2025-11-25 22:38:17,863 - src.analyzer.result_processor - INFO - Audit results saved:
+2025-11-25 22:38:17,863 - src.analyzer.result_processor - INFO -   JSON: storage\reports\json\accessibility_audit_20251125_223816.json
+2025-11-25 22:38:17,863 - src.analyzer.result_processor - INFO -   Excel: storage\reports\excel\accessibility_audit_20251125_223816.xlsx
+2025-11-25 22:49:32,601 - src.crawler.base_crawler - INFO - Starting crawl from: https://kyngcapitalmanagement.com
+2025-11-25 22:49:36,799 - src.crawler.sitemap_parser - INFO - Found sitemap at: https://kyngcapitalmanagement.com/sitemap_index.xml
+2025-11-25 22:49:36,966 - src.crawler.sitemap_parser - INFO - Found 5 URLs in sitemap
+2025-11-25 22:49:37,043 - src.crawler.sitemap_parser - INFO - Found 11 URLs in sitemap
+2025-11-25 22:49:37,477 - src.crawler.sitemap_parser - INFO - Found 1 URLs in sitemap
+2025-11-25 22:49:37,477 - src.crawler.sitemap_parser - INFO - Found 17 URLs in sitemap
+2025-11-25 22:49:37,479 - src.crawler.base_crawler - INFO - Crawling limits - Max pages: 1000, Max depth: 1
+2025-11-25 22:49:41,172 - src.crawler.anti_blocking.cloudflare_bypass - INFO - Checking for CloudFlare protection...
+2025-11-25 22:49:41,419 - src.crawler.anti_blocking.cloudflare_bypass - INFO - CloudFlare challenge resolved
+2025-11-25 22:49:41,573 - src.crawler.base_crawler - INFO - Crawled https://kyngcapitalmanagement.com (Depth: 0, Total: 1)
+2025-11-25 22:49:42,574 - src.crawler.base_crawler - INFO - Completed depth 1. Found 11 new URLs for next depth
+2025-11-25 22:49:42,574 - src.crawler.base_crawler - INFO - Crawling completed. Found 1 URLs
+2025-11-25 22:49:42,574 - src.crawler.base_crawler - INFO - Coverage: 0.00%
+2025-11-25 22:49:42,574 - src.crawler.base_crawler - WARNING - Missed 17 URLs from sitemap
+2025-11-25 22:49:42,751 - src.analyzer.integrated_audit_runner - INFO - Starting comprehensive audit for 1 URLs
+2025-11-25 22:49:42,751 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for 1 pages with 3 workers
+2025-11-25 22:49:42,751 - src.analyzer.working_axe_analyzer - INFO - Processing batch 1/1 (1 URLs)
+2025-11-25 22:49:42,751 - src.analyzer.working_axe_analyzer - INFO - Starting analysis for: https://kyngcapitalmanagement.com (attempt 1)
+2025-11-25 22:49:47,590 - src.analyzer.working_axe_analyzer - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-25 22:49:51,150 - src.analyzer.working_axe_analyzer - INFO - Page title: Portfolio Management Company | KYNG Capital Management
+2025-11-25 22:49:51,150 - src.analyzer.working_axe_analyzer - INFO - Running axe-core analysis for: https://kyngcapitalmanagement.com
+2025-11-25 22:49:51,974 - src.analyzer.working_axe_analyzer - INFO - Analysis completed for https://kyngcapitalmanagement.com: 7 violations, score: 70.8, time: 9.22s
+2025-11-25 22:49:54,230 - src.analyzer.working_axe_analyzer - INFO - Completed analysis for 1 pages: 1 successful, 0 failed
+2025-11-25 22:49:54,230 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting extended audit for: https://kyngcapitalmanagement.com
+2025-11-25 22:49:57,807 - src.analyzer.extended_audits.extended_audit_runner - INFO - Browser setup completed
+2025-11-25 22:49:57,807 - src.analyzer.extended_audits.extended_audit_runner - INFO - Navigating to: https://kyngcapitalmanagement.com
+2025-11-25 22:50:02,469 - src.analyzer.extended_audits.extended_audit_runner - INFO - Waiting for page to stabilize...
+2025-11-25 22:50:07,477 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting keyboard navigation audit...
+2025-11-25 22:51:59,489 - KeyboardAudit - INFO - Testing 8 unique focusable elements
+2025-11-25 22:52:01,644 - KeyboardAudit - INFO - Successfully tested 8/8 elements
+2025-11-25 22:52:01,644 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting screen reader audit...
+2025-11-25 22:54:34,481 - ScreenReaderAudit - INFO - Screen reader audit: tested 69/69 elements
+2025-11-25 22:54:34,482 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting landmark audit...
+2025-11-25 22:56:05,436 - LandmarkAudit - INFO - Landmark audit: found 3 defects across 8 landmark types
+2025-11-25 22:56:05,436 - src.analyzer.extended_audits.extended_audit_runner - INFO - Starting skip link audit...
+2025-11-25 22:57:26,507 - SkipLinkAudit - INFO - Skip link audit: checked 10 elements, found 4 skip links
+2025-11-25 22:57:26,507 - src.analyzer.extended_audits.extended_audit_runner - INFO - Extended audit completed for https://kyngcapitalmanagement.com in 452.28s: Found 77 defects (Keyboard: 12, Screen Reader: 58, Landmark: 3, Skip Links: 4)
+2025-11-25 22:57:26,507 - src.analyzer.extended_audits.extended_audit_runner - INFO - Defects by severity:
+2025-11-25 22:57:26,507 - src.analyzer.extended_audits.extended_audit_runner - INFO -   CRITICAL: 66 defects
+2025-11-25 22:57:26,510 - src.analyzer.extended_audits.extended_audit_runner - INFO -   HIGH: 7 defects
+2025-11-25 22:57:26,510 - src.analyzer.extended_audits.extended_audit_runner - INFO -   MEDIUM: 4 defects
+2025-11-25 22:57:28,953 - src.analyzer.extended_audits.extended_audit_runner - INFO - Browser closed successfully
+2025-11-25 22:57:28,954 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO - COMPREHENSIVE ACCESSIBILITY AUDIT SUMMARY
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO - Total URLs: 1
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO - Successfully analyzed: 1
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO - Axe-Core Score: 70.8%
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO - Extended Audit Defects: 77
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO - Extended Defects by Category:
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO -   - Keyboard: 12
+2025-11-25 22:57:28,955 - src.analyzer.integrated_audit_runner - INFO -   - Screen Reader: 58
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO -   - Landmark: 3
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO -   - Skip Links: 4
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO - Extended Defects by Severity:
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO -   - CRITICAL: 66
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO -   - HIGH: 7
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO -   - MEDIUM: 4
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO - Axe-Core Violations: 7
+2025-11-25 22:57:28,958 - src.analyzer.integrated_audit_runner - INFO - Axe Violations by Level:
+2025-11-25 22:57:28,961 - src.analyzer.integrated_audit_runner - INFO -   - CRITICAL: 1
+2025-11-25 22:57:28,963 - src.analyzer.integrated_audit_runner - INFO -   - SERIOUS: 2
+2025-11-25 22:57:28,963 - src.analyzer.integrated_audit_runner - INFO -   - MODERATE: 3
+2025-11-25 22:57:28,963 - src.analyzer.integrated_audit_runner - INFO -   - MINOR: 1
+2025-11-25 22:57:28,964 - src.analyzer.integrated_audit_runner - INFO - Audit Duration: 466.2s
+2025-11-25 22:57:28,964 - src.analyzer.integrated_audit_runner - INFO - ======================================================================
+2025-11-25 22:57:28,978 - src.reporting.report_writer - INFO - JSON report saved to: storage\reports\json\comprehensive_accessibility_audit_20251125_225728.json
+2025-11-25 22:57:29,475 - src.reporting.report_writer - INFO - Excel report saved to: storage\reports\excel\comprehensive_accessibility_audit_20251125_225728.xlsx
+2025-11-25 22:57:29,625 - src.reporting.report_writer - INFO - Comprehensive audit Excel report saved to: storage\reports\excel\detailed_audit_report_20251125_225729.xlsx
+2025-11-25 22:57:29,643 - src.analyzer.result_processor - INFO - Comprehensive audit results saved:
+2025-11-25 22:57:29,647 - src.analyzer.result_processor - INFO -   JSON: storage\reports\json\comprehensive_accessibility_audit_20251125_225728.json
+2025-11-25 22:57:29,650 - src.analyzer.result_processor - INFO -   Excel (Basic): storage\reports\excel\comprehensive_accessibility_audit_20251125_225728.xlsx
+2025-11-25 22:57:29,650 - src.analyzer.result_processor - INFO -   Excel (Detailed): storage\reports\excel\detailed_audit_report_20251125_225729.xlsx

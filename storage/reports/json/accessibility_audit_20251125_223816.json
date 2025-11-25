@@ -22,7 +22,7 @@
     "worst_score": 70.83,
     "best_score": 70.83,
     "pages_with_errors": [],
-    "audit_duration": 11.37
+    "audit_duration": 11.32
   },
   "categorization": {
     "by_level": {
@@ -55,7 +55,7 @@
       "score": 70.83333333333334,
       "violation_count": 7,
       "error": null,
-      "load_time": 9.23,
+      "load_time": 9.08,
       "violations": [
         {
           "id": "empty-heading",
@@ -124,7 +124,7 @@
     }
   ],
   "metadata": {
-    "timestamp": "2025-11-25 22:19:56",
+    "timestamp": "2025-11-25 22:38:16",
     "total_pages_analyzed": 1,
     "successful_analyses": 1,
     "failed_analyses": 0,

@@ -1,3 +1,4 @@
+# src/analyzer/models/audit_models.py
 from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional
 from enum import Enum
@@ -44,12 +45,16 @@ class Violation:
 
 @dataclass
 class PageAuditResult:
+    # Fields without default values must come first
     url: str
     timestamp: str
     violations: List[Violation]
     passes: List[Dict[str, Any]]
     incomplete: List[Dict[str, Any]]
     inapplicable: List[Dict[str, Any]]
+    
+    # Fields with default values come after
+    page_title: str = "Unknown"
     score: float = 0.0
     error: Optional[str] = None
     load_time: float = 0.0

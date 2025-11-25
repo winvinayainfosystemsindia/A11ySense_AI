@@ -82,6 +82,10 @@ class WorkingAxeAnalyzer:
             # Wait for page to be interactive
             time.sleep(2)  # Reduced wait time
             
+            # Get page title before running axe analysis
+            page_title = driver.title
+            self.logger.info(f"Page title: {page_title}")
+            
             # Initialize and run axe
             self.logger.info(f"Running axe-core analysis for: {url}")
             axe = Axe(driver)
@@ -98,6 +102,7 @@ class WorkingAxeAnalyzer:
             
             audit_result = PageAuditResult(
                 url=url,
+                page_title=page_title,  # Add page title
                 timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                 violations=violations,
                 passes=passes,
@@ -126,6 +131,7 @@ class WorkingAxeAnalyzer:
             else:
                 return PageAuditResult(
                     url=url,
+                    page_title="Error - Page load timeout",  # Add error page title
                     timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                     violations=[],
                     passes=[],
@@ -145,6 +151,7 @@ class WorkingAxeAnalyzer:
             else:
                 return PageAuditResult(
                     url=url,
+                    page_title="Error - WebDriver exception",  # Add error page title
                     timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                     violations=[],
                     passes=[],
@@ -158,6 +165,7 @@ class WorkingAxeAnalyzer:
             self.logger.error(f"Unexpected error analyzing {url}: {e}")
             return PageAuditResult(
                 url=url,
+                page_title="Error - Analysis failed",  # Add error page title
                 timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                 violations=[],
                 passes=[],
@@ -216,6 +224,7 @@ class WorkingAxeAnalyzer:
             self.logger.error(f"Analysis timed out for {url} (overall timeout)")
             return PageAuditResult(
                 url=url,
+                page_title="Error - Analysis timeout",  # Add timeout page title
                 timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                 violations=[],
                 passes=[],
@@ -228,6 +237,7 @@ class WorkingAxeAnalyzer:
             self.logger.error(f"Unexpected error in analyze_page for {url}: {e}")
             return PageAuditResult(
                 url=url,
+                page_title="Error - Analysis failed",  # Add error page title
                 timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                 violations=[],
                 passes=[],
@@ -261,6 +271,7 @@ class WorkingAxeAnalyzer:
                     self.logger.error(f"Analysis task failed for {batch[j]}: {result}")
                     all_results.append(PageAuditResult(
                         url=batch[j],
+                        page_title="Error - Task execution failed",  # Add error page title
                         timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
                         violations=[],
                         passes=[],
@@ -288,7 +299,7 @@ class WorkingAxeAnalyzer:
         return all_results
     
     def generate_audit_report(self, audit_results: List[PageAuditResult]) -> Dict[str, Any]:
-        """Generate comprehensive audit report"""
+        """Generate comprehensive audit report with page titles"""
         successful_results = [r for r in audit_results if not r.error]
         failed_results = [r for r in audit_results if r.error]
         
@@ -307,19 +318,23 @@ class WorkingAxeAnalyzer:
             'page_results': [
                 {
                     'url': result.url,
+                    'page_title': result.page_title,  # Include page title in report
                     'score': result.score,
                     'violation_count': len(result.violations),
                     'error': result.error,
                     'load_time': round(result.load_time, 2),
+                    'timestamp': result.timestamp,
                     'violations': [
                         {
                             'id': v.id,
                             'impact': v.impact,
-                            'level': v.level.value,
+                            'level': v.level.value if hasattr(v.level, 'value') else str(v.level),
                             'description': v.description,
                             'help': v.help,
                             'help_url': v.help_url,
-                            'nodes_count': len(v.nodes)
+                            'nodes_count': len(v.nodes),
+                            'tags': v.tags,  # Include tags for WCAG criteria extraction
+                            'nodes': v.nodes  # Include nodes for element selector extraction
                         } for v in result.violations
                     ]
                 } for result in audit_results

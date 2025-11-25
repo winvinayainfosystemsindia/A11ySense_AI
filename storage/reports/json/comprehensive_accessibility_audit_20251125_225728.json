@@ -1,0 +1,1437 @@
+{
+  "summary": {
+    "total_pages": 1,
+    "pages_audited": 1,
+    "total_violations": 7,
+    "violations_by_level": {
+      "critical": 1,
+      "serious": 2,
+      "moderate": 3,
+      "minor": 1
+    },
+    "violations_by_rule": {
+      "empty-heading": 1,
+      "frame-title": 1,
+      "landmark-one-main": 1,
+      "link-name": 1,
+      "meta-viewport": 1,
+      "page-has-heading-one": 1,
+      "region": 1
+    },
+    "average_score": 70.83,
+    "worst_score": 70.83,
+    "best_score": 70.83,
+    "pages_with_errors": [],
+    "audit_duration": 466.2,
+    "total_extended_defects": 77,
+    "extended_defects_by_category": {
+      "keyboard": 12,
+      "screen_reader": 58,
+      "landmark": 3,
+      "skip_links": 4
+    },
+    "extended_defects_by_severity": {
+      "critical": 66,
+      "high": 7,
+      "medium": 4,
+      "low": 0
+    }
+  },
+  "categorization": {
+    "by_level": {
+      "critical": 1,
+      "serious": 2,
+      "moderate": 3,
+      "minor": 1
+    },
+    "by_rule": {
+      "empty-heading": 1,
+      "frame-title": 1,
+      "landmark-one-main": 1,
+      "link-name": 1,
+      "meta-viewport": 1,
+      "page-has-heading-one": 1,
+      "region": 1
+    },
+    "by_wcag": {
+      "wcag2a": 2,
+      "wcag2aa": 1
+    },
+    "by_category": {
+      "Other": 6,
+      "Navigation": 1
+    }
+  },
+  "page_results": [
+    {
+      "url": "https://kyngcapitalmanagement.com",
+      "page_title": "Portfolio Management Company | KYNG Capital Management",
+      "score": 70.83333333333334,
+      "violation_count": 7,
+      "error": null,
+      "load_time": 9.22,
+      "timestamp": "2025-11-25 22:49:51",
+      "violations": [
+        {
+          "id": "empty-heading",
+          "impact": "minor",
+          "level": "minor",
+          "description": "Ensures headings have discernible text",
+          "help": "Headings must not be empty",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/empty-heading?application=axeAPI",
+          "nodes_count": 1,
+          "tags": [
+            "cat.name-role-value",
+            "best-practice"
+          ],
+          "nodes": [
+            {
+              "all": [],
+              "any": [
+                {
+                  "data": null,
+                  "id": "has-visible-text",
+                  "impact": "minor",
+                  "message": "Element does not have text that is visible to screen readers",
+                  "relatedNodes": []
+                }
+              ],
+              "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers",
+              "html": "<h3></h3>",
+              "impact": "minor",
+              "none": [],
+              "target": [
+                ".et_pb_text_0 > .et_pb_text_inner > h3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+          "help": "Frames must have title attribute",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI",
+          "nodes_count": 1,
+          "tags": [
+            "cat.text-alternatives",
+            "wcag2a",
+            "wcag241",
+            "wcag412",
+            "section508",
+            "section508.22.i"
+          ],
+          "nodes": [
+            {
+              "all": [],
+              "any": [
+                {
+                  "data": null,
+                  "id": "aria-label",
+                  "impact": "serious",
+                  "message": "aria-label attribute does not exist or is empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "aria-labelledby",
+                  "impact": "serious",
+                  "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "non-empty-title",
+                  "impact": "serious",
+                  "message": "Element has no title attribute or the title attribute is empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-presentation",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"presentation\"",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-none",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"none\"",
+                  "relatedNodes": []
+                }
+              ],
+              "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty\n  Element's default semantics were not overridden with role=\"presentation\"\n  Element's default semantics were not overridden with role=\"none\"",
+              "html": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.740039281449!2d80.20937437413885!3d13.052212213107694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52646ca0ffc69d%3A0x449ac7622f70e674!2s100%20Feet%20Rd%2C%20Vadapalani%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1693555447957!5m2!1sen!2sin\" width=\"400\" height=\"250\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\">",
+              "impact": "serious",
+              "none": [],
+              "target": [
+                "iframe[width=\"\\34 00\"]"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+          "help": "Page must have one main landmark",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+          "nodes_count": 1,
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "nodes": [
+            {
+              "all": [
+                {
+                  "data": null,
+                  "id": "page-has-main",
+                  "impact": "moderate",
+                  "message": "Page does not have a main landmark",
+                  "relatedNodes": []
+                }
+              ],
+              "any": [],
+              "failureSummary": "Fix all of the following:\n  Page does not have a main landmark",
+              "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\" class=\"js\">",
+              "impact": "moderate",
+              "none": [],
+              "target": [
+                "html"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "level": "serious",
+          "description": "Ensures links have discernible text",
+          "help": "Links must have discernible text",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+          "nodes_count": 3,
+          "tags": [
+            "cat.name-role-value",
+            "wcag2a",
+            "wcag412",
+            "wcag244",
+            "section508",
+            "section508.22.a"
+          ],
+          "nodes": [
+            {
+              "all": [],
+              "any": [
+                {
+                  "data": null,
+                  "id": "has-visible-text",
+                  "impact": "minor",
+                  "message": "Element does not have text that is visible to screen readers",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "aria-label",
+                  "impact": "serious",
+                  "message": "aria-label attribute does not exist or is empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "aria-labelledby",
+                  "impact": "serious",
+                  "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-presentation",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"presentation\"",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-none",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"none\"",
+                  "relatedNodes": []
+                }
+              ],
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"presentation\"\n  Element's default semantics were not overridden with role=\"none\"",
+              "html": "<a href=\"https://kyngcapitalmanagement.com\">",
+              "impact": "serious",
+              "none": [
+                {
+                  "data": null,
+                  "id": "focusable-no-name",
+                  "impact": "serious",
+                  "message": "Element is in tab order and does not have accessible text",
+                  "relatedNodes": []
+                }
+              ],
+              "target": [
+                ".et_pb_menu_1_tb_header > .et_pb_menu_inner_container.clearfix > .et_pb_menu__logo-wrap > .et_pb_menu__logo > a"
+              ]
+            },
+            {
+              "all": [],
+              "any": [
+                {
+                  "data": null,
+                  "id": "has-visible-text",
+                  "impact": "minor",
+                  "message": "Element does not have text that is visible to screen readers",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "aria-label",
+                  "impact": "serious",
+                  "message": "aria-label attribute does not exist or is empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "aria-labelledby",
+                  "impact": "serious",
+                  "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-presentation",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"presentation\"",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-none",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"none\"",
+                  "relatedNodes": []
+                }
+              ],
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"presentation\"\n  Element's default semantics were not overridden with role=\"none\"",
+              "html": "<a class=\"et-pb-arrow-prev\" href=\"#\"><span>Previous</span></a>",
+              "impact": "serious",
+              "none": [
+                {
+                  "data": null,
+                  "id": "focusable-no-name",
+                  "impact": "serious",
+                  "message": "Element is in tab order and does not have accessible text",
+                  "relatedNodes": []
+                }
+              ],
+              "target": [
+                ".et-pb-arrow-prev"
+              ]
+            },
+            {
+              "all": [],
+              "any": [
+                {
+                  "data": null,
+                  "id": "has-visible-text",
+                  "impact": "minor",
+                  "message": "Element does not have text that is visible to screen readers",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "aria-label",
+                  "impact": "serious",
+                  "message": "aria-label attribute does not exist or is empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "aria-labelledby",
+                  "impact": "serious",
+                  "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-presentation",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"presentation\"",
+                  "relatedNodes": []
+                },
+                {
+                  "data": null,
+                  "id": "role-none",
+                  "impact": "minor",
+                  "message": "Element's default semantics were not overridden with role=\"none\"",
+                  "relatedNodes": []
+                }
+              ],
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"presentation\"\n  Element's default semantics were not overridden with role=\"none\"",
+              "html": "<a class=\"et-pb-arrow-next\" href=\"#\"><span>Next</span></a>",
+              "impact": "serious",
+              "none": [
+                {
+                  "data": null,
+                  "id": "focusable-no-name",
+                  "impact": "serious",
+                  "message": "Element is in tab order and does not have accessible text",
+                  "relatedNodes": []
+                }
+              ],
+              "target": [
+                ".et-pb-arrow-next"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "critical",
+          "level": "critical",
+          "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+          "help": "Zooming and scaling must not be disabled",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=axeAPI",
+          "nodes_count": 1,
+          "tags": [
+            "cat.sensory-and-visual-cues",
+            "wcag2aa",
+            "wcag144"
+          ],
+          "nodes": [
+            {
+              "all": [],
+              "any": [
+                {
+                  "data": "maximum-scale",
+                  "id": "meta-viewport",
+                  "impact": "critical",
+                  "message": "maximum-scale on <meta> tag disables zooming on mobile devices",
+                  "relatedNodes": []
+                }
+              ],
+              "failureSummary": "Fix any of the following:\n  maximum-scale on <meta> tag disables zooming on mobile devices",
+              "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0\">",
+              "impact": "critical",
+              "none": [],
+              "target": [
+                "meta[name=\"viewport\"]"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+          "help": "Page must contain a level-one heading",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=axeAPI",
+          "nodes_count": 1,
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "nodes": [
+            {
+              "all": [
+                {
+                  "data": null,
+                  "id": "page-has-heading-one",
+                  "impact": "moderate",
+                  "message": "Page must have a level-one heading",
+                  "relatedNodes": []
+                }
+              ],
+              "any": [],
+              "failureSummary": "Fix all of the following:\n  Page must have a level-one heading",
+              "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\" class=\"js\">",
+              "impact": "moderate",
+              "none": [],
+              "target": [
+                "html"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "level": "moderate",
+          "description": "Ensures all page content is contained by landmarks",
+          "help": "All page content must be contained by landmarks",
+          "help_url": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+          "nodes_count": 1,
+          "tags": [
+            "cat.keyboard",
+            "best-practice"
+          ],
+          "nodes": [
+            {
+              "all": [],
+              "any": [
+                {
+                  "data": null,
+                  "id": "region",
+                  "impact": "moderate",
+                  "message": "Some page content is not contained by landmarks",
+                  "relatedNodes": [
+                    {
+                      "html": "<strong>Risk comes from not knowing </strong>",
+                      "target": [
+                        "h2:nth-child(1) > span > strong"
+                      ]
+                    },
+                    {
+                      "html": "<strong>what you’re doing</strong>",
+                      "target": [
+                        "h2:nth-child(2) > span > strong"
+                      ]
+                    },
+                    {
+                      "html": "<span>– Warren Buffet</span>",
+                      "target": [
+                        ".et_pb_header_content_wrapper > p:nth-child(3) > span"
+                      ]
+                    },
+                    {
+                      "html": "<a class=\"et_pb_button et_pb_more_button et_pb_button_one\" href=\"https://kyngcapitalmanagement.com/contact/\">Contact Us</a>",
+                      "target": [
+                        ".et_pb_more_button"
+                      ]
+                    },
+                    {
+                      "html": "<h2>At KYNG,&nbsp;</h2>",
+                      "target": [
+                        ".et_pb_text_0 > .et_pb_text_inner > h2"
+                      ]
+                    },
+                    {
+                      "html": "<p>We make investments on stocks trading below intrinsic value, based on Opportunity cost, following the principles of Warren Buffet and Charlie Munger. We also try to make major investments in great companies, when they occasionally trade at favourable prices.</p>",
+                      "target": [
+                        ".et_pb_text_0 > .et_pb_text_inner > p:nth-child(3)"
+                      ]
+                    },
+                    {
+                      "html": "<b>Our investment philosophy is built on three core ideas:</b>",
+                      "target": [
+                        "p:nth-child(4) > b"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_0 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3>Capital Protection</h3>",
+                      "target": [
+                        ".et_multi_view_swapped > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p>Safeguarding your wealth is at the heart of our strategies. We constantly adjust investments to ensure they remain protected through market volatility.<br></p>",
+                      "target": [
+                        ".et_multi_view_swapped > p"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_1 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Graham’s Techniques</h3>",
+                      "target": [
+                        ".et_pb_text_2 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">We thoroughly research the market to identify undervalued stocks with strong fundamentals. We buy these assets at their current values and exit when they reach a fair value.</p>",
+                      "target": [
+                        ".et_pb_text_2 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_2 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Alignment of Interest</h3>",
+                      "target": [
+                        ".et_pb_text_3 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">We offer a 0% management fee and only charge a performance fee for our portfolio management service for returns exceeding 10% CAGR.</p>",
+                      "target": [
+                        ".et_pb_text_3 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<h2 class=\"et_pb_module_heading\">All You Need to Know About KYNG Portfolio Management services </h2>",
+                      "target": [
+                        ".et_pb_module_heading"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_3 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Principal Preservation</h3>",
+                      "target": [
+                        ".et_pb_text_4 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">We are committed to protecting our clients’ downside to prevent any permanent loss of capital.</p>",
+                      "target": [
+                        ".et_pb_text_4 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_4 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Value Investing</h3>",
+                      "target": [
+                        ".et_pb_text_5 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">Our focus on identifying undervalued assets that have strong fundamentals, offering long-term growth potential.</p>",
+                      "target": [
+                        ".et_pb_text_5 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_5 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Synergy of Interests</h3>",
+                      "target": [
+                        ".et_pb_text_6 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">0% Management FEE and Performance FEE only with Returns more than 10% CAGR</p>",
+                      "target": [
+                        ".et_pb_text_6 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_6 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Risk-Managed Growth</h3>",
+                      "target": [
+                        ".et_pb_text_7 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">A strategic risk-managed growth approach to minimise risk and promote long-term appreciation.</p>",
+                      "target": [
+                        ".et_pb_text_7 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_7 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Growth at Reasonable Price</h3>",
+                      "target": [
+                        ".et_pb_text_8 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">We use GARP to invest in high-quality, growing companies at fair prices, avoiding inflated premiums.</p>",
+                      "target": [
+                        ".et_pb_text_8 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<span class=\"et-pb-icon\"></span>",
+                      "target": [
+                        ".et_pb_icon_8 > .et_pb_icon_wrap > .et-pb-icon"
+                      ]
+                    },
+                    {
+                      "html": "<h3 style=\"text-align: center;\">Transparent Communication</h3>",
+                      "target": [
+                        ".et_pb_text_9 > .et_pb_text_inner > h3"
+                      ]
+                    },
+                    {
+                      "html": "<p style=\"text-align: center;\">Clear, consistent communication with investors, offering regular portfolio and market updates.</p>",
+                      "target": [
+                        ".et_pb_text_9 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<h2>KYNG Capital Management Approach</h2>",
+                      "target": [
+                        ".et_pb_text_10 > .et_pb_text_inner > h2"
+                      ]
+                    },
+                    {
+                      "html": "<p>",
+                      "target": [
+                        ".et_pb_text_10 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<a class=\"et_pb_button et_pb_button_0 et_pb_bg_layout_light\" href=\"https://kyngcapitalmanagement.com/offerings/\">Learn More</a>",
+                      "target": [
+                        ".et_pb_button_0"
+                      ]
+                    },
+                    {
+                      "html": "<img decoding=\"async\" width=\"425\" height=\"290\" src=\"https://kyngcapitalmanagement.com/wp-content/uploads/2024/11/KYNG-Capital-Management-Approach-1.webp\" alt=\"KYNG Capital Management Approach\" title=\"KYNG Capital Management Approach\" srcset=\"https://kyngcapitalmanagement.com/wp-content/uploads/2024/11/KYNG-Capital-Management-Approach-1.webp 425w, https://kyngcapitalmanagement.com/wp-content/uploads/2024/11/KYNG-Capital-Management-Approach-1-300x205.webp 300w\" sizes=\"(max-width: 425px) 100vw, 425px\" class=\"wp-image-238339\">",
+                      "target": [
+                        ".wp-image-238339"
+                      ]
+                    },
+                    {
+                      "html": "<h2>Why Choose Portfolio Management Service by KYNG?</h2>",
+                      "target": [
+                        ".et_pb_text_11 > .et_pb_text_inner > h2"
+                      ]
+                    },
+                    {
+                      "html": "<p>We try to make simple investment decisions that can produce extraordinary results from compounding over long periods. <br>We like to keep things simple.</p>",
+                      "target": [
+                        ".et_pb_text_11 > .et_pb_text_inner > p"
+                      ]
+                    },
+                    {
+                      "html": "<h3 class=\"et_pb_slide_title\">Long-Term Focus</h3>",
+                      "target": [
+                        ".et_pb_slide_0 > .et_pb_container.clearfix > .et_pb_slider_container_inner > .et_pb_slide_description > .et_pb_slide_title"
+                      ]
+                    },
+                    {
+                      "html": "<p>We focus on long-term investing strategies outperform short-term tactics , aligning with KYNG’s philosophy of holding onto a few great businesses for extended periods to maximise returns</p>",
+                      "target": [
+                        ".et_pb_slide_content > p"
+                      ]
+                    },
+                    {
+                      "html": "<a href=\"#\" class=\"et-pb-active-control\">1</a>",
+                      "target": [
+                        ".et-pb-active-control"
+                      ]
+                    },
+                    {
+                      "html": "<a href=\"#\">2</a>",
+                      "target": [
+                        ".et-pb-controllers > a[href=\"#\"]:nth-child(2)"
+                      ]
+                    },
+                    {
+                      "html": "<a href=\"#\">3</a>",
+                      "target": [
+                        "a[href=\"#\"]:nth-child(3)"
+                      ]
+                    },
+                    {
+                      "html": "<b>We are looking to partner with people who share our values</b>",
+                      "target": [
+                        "h2 > b"
+                      ]
+                    },
+                    {
+                      "html": "<span style=\"font-weight: 400;\">At KYNG Capital Management, we are trying to make simple, prudent investment decisions. We would love to associate with people who share our values. If you feel that way, do connect with us.</span>",
+                      "target": [
+                        ".et_pb_text_12 > .et_pb_text_inner > p > span"
+                      ]
+                    },
+                    {
+                      "html": "<a class=\"et_pb_button et_pb_button_1 et_pb_bg_layout_light\" href=\"https://kyngcapitalmanagement.com/contact/\">Contact Us</a>",
+                      "target": [
+                        ".et_pb_button_1"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\" class=\"js\">",
+              "impact": "moderate",
+              "none": [],
+              "target": [
+                "html"
+              ]
+            }
+          ]
+        }
+      ],
+      "extended_audit": {
+        "total_defects": 77,
+        "defects_by_category": {
+          "keyboard": 12,
+          "screen_reader": 58,
+          "landmark": 3,
+          "skip_links": 4
+        },
+        "defects_by_severity": {
+          "critical": 66,
+          "high": 7,
+          "medium": 4,
+          "low": 0
+        },
+        "keyboard_defects": [
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et_pb_button",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a.et_pb_button.et_pb_button_0_tb_header.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et_pb_button.et_pb_more_button.et_pb_button_one"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et_pb_button.et_pb_more_button.et_pb_button_one"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Learn More",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et_pb_button.et_pb_button_0.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Learn More",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et_pb_button.et_pb_button_0.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-prev",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a.et-pb-arrow-prev"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-next",
+            "issue": "Interactive element is not keyboard focusable",
+            "severity": "critical",
+            "recommendation": "Ensure element is visible and enabled, check tabindex",
+            "selector": "a.et-pb-arrow-next"
+          },
+          {
+            "element_type": "a",
+            "element_description": "1",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et-pb-active-control"
+          },
+          {
+            "element_type": "a",
+            "element_description": "1",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et-pb-active-control"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "No visible focus indicator",
+            "severity": "high",
+            "recommendation": "Add CSS outline or border changes on :focus state",
+            "selector": "a.et_pb_button.et_pb_button_1.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "Contact Us",
+            "issue": "Element doesn't respond to keyboard input",
+            "severity": "critical",
+            "recommendation": "Ensure element can be activated with Enter/Space keys",
+            "selector": "a.et_pb_button.et_pb_button_1.et_pb_bg_layout_light"
+          }
+        ],
+        "screen_reader_defects": [
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et_pb_button",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a.et_pb_button.et_pb_button_0_tb_header.et_pb_bg_layout_light"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-prev",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a.et-pb-arrow-prev"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a.et-pb-arrow-next",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a.et-pb-arrow-next"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "a",
+            "element_description": "a",
+            "issue": "Link missing accessible name",
+            "severity": "critical",
+            "recommendation": "Add link text or aria-label to describe link destination",
+            "selector": "a"
+          },
+          {
+            "element_type": "img",
+            "element_description": "img.wp-image-170",
+            "issue": "Image missing alt text or aria-label",
+            "severity": "critical",
+            "recommendation": "Add descriptive alt text or aria-label for screen readers",
+            "selector": "img.wp-image-170"
+          },
+          {
+            "element_type": "img",
+            "element_description": "img.wp-image-170",
+            "issue": "Image missing alt text or aria-label",
+            "severity": "critical",
+            "recommendation": "Add descriptive alt text or aria-label for screen readers",
+            "selector": "img.wp-image-170"
+          }
+        ],
+        "landmark_defects": [
+          {
+            "landmark_type": "region",
+            "element_description": "Risk comes from not knowing\nwhat you’re doing\n– Warren Buffet\nContact Us",
+            "issue": "Landmark missing accessible label",
+            "severity": "medium",
+            "recommendation": "Add aria-label or aria-labelledby to describe landmark purpose",
+            "selector": "section.et_pb_module.et_pb_fullwidth_header.et_pb_fullwidth_header_0.et_pb_text_align_left.et_pb_bg_layout_dark"
+          },
+          {
+            "landmark_type": "main",
+            "element_description": "Page structure",
+            "issue": "Missing main landmark",
+            "severity": "high",
+            "recommendation": "Add <main> element or role='main' to identify main content area",
+            "selector": null
+          },
+          {
+            "landmark_type": "navigation",
+            "element_description": "Page structure",
+            "issue": "Multiple navigation landmarks without distinguishing labels",
+            "severity": "medium",
+            "recommendation": "Add aria-label to distinguish between multiple navigation landmarks",
+            "selector": null
+          }
+        ],
+        "skip_link_defects": [
+          {
+            "issue": "Skip link target not found",
+            "severity": "high",
+            "recommendation": "Ensure target element with id='' exists on the page",
+            "target_id": ""
+          },
+          {
+            "issue": "Skip link is not visible when focused",
+            "severity": "medium",
+            "recommendation": "Ensure skip link becomes visible when it receives keyboard focus",
+            "target_id": ""
+          },
+          {
+            "issue": "Skip link target not found",
+            "severity": "high",
+            "recommendation": "Ensure target element with id='' exists on the page",
+            "target_id": ""
+          },
+          {
+            "issue": "Skip link is not visible when focused",
+            "severity": "medium",
+            "recommendation": "Ensure skip link becomes visible when it receives keyboard focus",
+            "target_id": ""
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "2025-11-25 22:49:54",
+    "total_pages_analyzed": 1,
+    "successful_analyses": 1,
+    "failed_analyses": 0,
+    "analysis_config": {
+      "max_workers": 3,
+      "timeout_per_page": 90,
+      "max_retries": 2
+    },
+    "audit_type": "comprehensive"
+  }
+}

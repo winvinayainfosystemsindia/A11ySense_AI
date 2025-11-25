@@ -78,23 +78,7 @@ class AccessibilityAuditTool:
     async def run_accessibility_audit(self, urls: List[str]) -> Dict[str, Any]:
         """Run basic accessibility audit using axe-core"""
         if not urls:
-            return {
-                'report': {
-                    'summary': {
-                        'total_pages': 0,
-                        'pages_audited': 0,
-                        'total_violations': 0,
-                        'average_score': 0,
-                        'audit_duration': 0
-                    },
-                    'page_results': [],
-                    'metadata': {
-                        'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
-                        'total_pages_analyzed': 0
-                    }
-                },
-                'output_path': None
-            }
+            return self._create_empty_report()
         
         try:
             self.audit_runner = AuditRunner(self.config)
@@ -102,59 +86,22 @@ class AccessibilityAuditTool:
             
             audit_report = await self.audit_runner.run_audit(urls)
             
-            output_dir = Path("storage/reports")
-            output_dir.mkdir(parents=True, exist_ok=True)
-            output_path = output_dir / "accessibility_audit.json"
-
-            self.result_processor.save_audit_results(audit_report, str(output_path))
+            # Save results using the enhanced report writer
+            report_paths = self.result_processor.save_audit_results(audit_report)
             
             return {
                 'report': audit_report,
-                'output_path': str(output_path)
+                'output_paths': report_paths
             }
         
         except Exception as e:
             self.logger.error(f"Accessibility audit failed: {e}")
-            return {
-                'report': {
-                    'summary': {
-                        'total_pages': len(urls),
-                        'pages_audited': 0,
-                        'total_violations': 0,
-                        'average_score': 0,
-                        'audit_duration': 0,
-                        'pages_with_errors': urls
-                    },
-                    'page_results': [],
-                    'metadata': {
-                        'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
-                        'total_pages_analyzed': len(urls),
-                        'error': str(e)
-                    }
-                },
-                'output_path': None
-            }
+            return self._create_error_report(urls, str(e))
     
     async def run_comprehensive_audit(self, urls: List[str]) -> Dict[str, Any]:
         """Run comprehensive audit including extended tests"""
         if not urls:
-            return {
-                'report': {
-                    'summary': {
-                        'total_pages': 0,
-                        'pages_audited': 0,
-                        'total_violations': 0,
-                        'average_score': 0,
-                        'audit_duration': 0
-                    },
-                    'page_results': [],
-                    'metadata': {
-                        'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
-                        'total_pages_analyzed': 0
-                    }
-                },
-                'output_path': None
-            }
+            return self._create_empty_report()
         
         try:
             from src.analyzer.integrated_audit_runner import IntegratedAuditRunner
@@ -163,15 +110,12 @@ class AccessibilityAuditTool:
             integrated_runner = IntegratedAuditRunner(self.config)
             comprehensive_results = await integrated_runner.run_comprehensive_audit(urls)
             
-            output_dir = Path("storage/reports")
-            output_dir.mkdir(parents=True, exist_ok=True)
-            output_path = output_dir / "comprehensive_accessibility_audit.json"
-
-            self.result_processor.save_audit_results(comprehensive_results, str(output_path))
+            # Save comprehensive results
+            report_paths = self.result_processor.save_comprehensive_results(comprehensive_results)
             
             return {
                 'report': comprehensive_results,
-                'output_path': str(output_path)
+                'output_paths': report_paths
             }
             
         except Exception as e:
@@ -193,6 +137,48 @@ class AccessibilityAuditTool:
             'crawled_urls': urls,
             'audit_results': audit_results,
             'audit_type': audit_type
+        }
+    
+    def _create_empty_report(self) -> Dict[str, Any]:
+        """Create empty report for no URLs"""
+        return {
+            'report': {
+                'summary': {
+                    'total_pages': 0,
+                    'pages_audited': 0,
+                    'total_violations': 0,
+                    'average_score': 0,
+                    'audit_duration': 0
+                },
+                'page_results': [],
+                'metadata': {
+                    'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
+                    'total_pages_analyzed': 0
+                }
+            },
+            'output_paths': {}
+        }
+    
+    def _create_error_report(self, urls: List[str], error: str) -> Dict[str, Any]:
+        """Create error report when audit fails"""
+        return {
+            'report': {
+                'summary': {
+                    'total_pages': len(urls),
+                    'pages_audited': 0,
+                    'total_violations': 0,
+                    'average_score': 0,
+                    'audit_duration': 0,
+                    'pages_with_errors': urls
+                },
+                'page_results': [],
+                'metadata': {
+                    'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
+                    'total_pages_analyzed': len(urls),
+                    'error': error
+                }
+            },
+            'output_paths': {}
         }
 
 def print_banner():
@@ -229,6 +215,7 @@ async def main():
         # Print summary
         report = results['audit_results']['report']
         summary = report['summary']
+        output_paths = results['audit_results'].get('output_paths', {})
         
         print(f"\n📊 AUDIT COMPLETED:")
         print(f"   URLs Crawled: {len(results['crawled_urls'])}")
@@ -237,14 +224,49 @@ async def main():
         if audit_type == "comprehensive":
             print(f"   Overall Score: {summary.get('overall_comprehensive_score', summary['average_score']):.1f}%")
             print(f"   - Axe-Core: {summary['average_score']:.1f}%")
-            print(f"   - Keyboard: {summary.get('average_keyboard_score', 0):.1f}%")
-            print(f"   - Screen Reader: {summary.get('average_screen_reader_score', 0):.1f}%")
-            print(f"   - Structure: {summary.get('average_structure_score', 0):.1f}%")
+            print(f"   Total Violations: {summary['total_violations']}")
+            if 'total_extended_defects' in summary:
+                print(f"   Extended Defects: {summary['total_extended_defects']}")
+                
+                # Show extended defects breakdown
+                defects_by_category = summary.get('extended_defects_by_category', {})
+                if defects_by_category:
+                    print(f"   Extended Defects Breakdown:")
+                    for category, count in defects_by_category.items():
+                        if count > 0:
+                            print(f"     - {category.replace('_', ' ').title()}: {count}")
         else:
             print(f"   Overall Score: {summary['average_score']:.1f}%")
+            print(f"   Total Violations: {summary['total_violations']}")
         
-        print(f"   Total Violations: {summary['total_violations']}")
-        print(f"   Report saved to: {results['audit_results']['output_path']}")
+        print(f"\n💾 REPORTS SAVED:")
+        if output_paths.get('json'):
+            print(f"   JSON Report: {output_paths['json']}")
+        if output_paths.get('excel'):
+            print(f"   Excel Report: {output_paths['excel']}")
+        if output_paths.get('excel_basic'):
+            print(f"   Excel Basic: {output_paths['excel_basic']}")
+        if output_paths.get('excel_detailed'):
+            print(f"   Excel Detailed: {output_paths['excel_detailed']}")
+        
+        # Show violations breakdown if any
+        violations_by_level = summary.get('violations_by_level', {})
+        if violations_by_level and any(count > 0 for count in violations_by_level.values()):
+            print(f"\n🔴 VIOLATIONS BREAKDOWN:")
+            for level, count in violations_by_level.items():
+                if count > 0:
+                    print(f"   - {level.upper()}: {count}")
+        
+        # Show pages with errors if any
+        pages_with_errors = summary.get('pages_with_errors', [])
+        if pages_with_errors:
+            print(f"\n❌ PAGES WITH ERRORS ({len(pages_with_errors)}):")
+            for url in pages_with_errors[:3]:  # Show first 3
+                print(f"   - {url}")
+            if len(pages_with_errors) > 3:
+                print(f"   - ... and {len(pages_with_errors) - 3} more")
+        
+        print(f"\n⏱️  Audit Duration: {summary.get('audit_duration', 0):.1f}s")
         
     except Exception as e:
         print(f"❌ Error: {e}")

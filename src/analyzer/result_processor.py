@@ -1,31 +1,65 @@
+# src/analyzer/result_processor.py
 import json
 import time
 from typing import List, Dict, Any
 from pathlib import Path
 from ..utils.logger import setup_logger
+from ..reporting.report_writer import ReportWriter
 from .models.audit_models import PageAuditResult, AuditSummary
 
 class ResultProcessor:
     def __init__(self, config: Dict[str, Any]):
         self.config = config
         self.logger = setup_logger(__name__)
+        self.report_writer = ReportWriter()
     
-    def save_audit_results(self, audit_report: Dict[str, Any], output_path: str):
-        """Save audit results to JSON file"""
+    def save_audit_results(self, audit_report: Dict[str, Any], output_path: str = None):
+        """Save audit results to JSON and Excel formats"""
         try:
-            output_dir = Path(output_path).parent
-            output_dir.mkdir(parents=True, exist_ok=True)
+            # Generate comprehensive reports
+            report_paths = self.report_writer.save_comprehensive_audit_report(
+                audit_report, 
+                "accessibility_audit"
+            )
             
-            # Make sure the report is JSON serializable
-            serializable_report = self._make_serializable(audit_report)
+            self.logger.info(f"Audit results saved:")
+            self.logger.info(f"  JSON: {report_paths['json']}")
+            self.logger.info(f"  Excel: {report_paths['excel']}")
             
-            with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(serializable_report, f, indent=2, ensure_ascii=False)
-            
-            self.logger.info(f"Audit results saved to: {output_path}")
+            return report_paths
             
         except Exception as e:
             self.logger.error(f"Failed to save audit results: {e}")
+            raise
+    
+    def save_comprehensive_results(self, comprehensive_results: Dict[str, Any]) -> Dict[str, str]:
+        """Save comprehensive audit results with extended details"""
+        try:
+            # Save main report
+            report_paths = self.report_writer.save_comprehensive_audit_report(
+                comprehensive_results,
+                "comprehensive_accessibility_audit"
+            )
+            
+            # Generate detailed Excel report
+            excel_path = self.report_writer.generate_audit_excel_report(
+                comprehensive_results,
+                "detailed_audit_report"
+            )
+            
+            self.logger.info(f"Comprehensive audit results saved:")
+            self.logger.info(f"  JSON: {report_paths['json']}")
+            self.logger.info(f"  Excel (Basic): {report_paths['excel']}")
+            self.logger.info(f"  Excel (Detailed): {excel_path}")
+            
+            return {
+                'json': report_paths['json'],
+                'excel_basic': report_paths['excel'],
+                'excel_detailed': excel_path
+            }
+            
+        except Exception as e:
+            self.logger.error(f"Failed to save comprehensive results: {e}")
             raise
     
     def _make_serializable(self, obj: Any) -> Any:
@@ -66,6 +100,14 @@ class ResultProcessor:
         violations_by_level = summary.get('violations_by_level', {})
         for level, count in violations_by_level.items():
             report_lines.append(f"  • {level.upper()}: {count}")
+        
+        # Add extended defects if available
+        if 'total_extended_defects' in summary:
+            report_lines.append(f"\n🔴 EXTENDED AUDIT DEFECTS: {summary['total_extended_defects']}")
+            defects_by_category = summary.get('extended_defects_by_category', {})
+            for category, count in defects_by_category.items():
+                if count > 0:
+                    report_lines.append(f"  • {category.replace('_', ' ').title()}: {count}")
         
         # Add top violating rules
         report_lines.append("\n🔴 TOP VIOLATING RULES:")
