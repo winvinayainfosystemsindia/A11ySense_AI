@@ -140,4 +140,8 @@ cython_debug/
 
 # Project specific
 storage/reports/
+storage/logs/
+storage/temp/
+storage/crawled_urls.txt
 *.log
+
