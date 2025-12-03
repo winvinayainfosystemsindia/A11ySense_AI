@@ -81,14 +81,29 @@ class AccessibilityAuditTool:
             return await self.run_accessibility_audit(urls)
     
     async def run_full_audit(self, audit_type: str = "comprehensive"):
+
         urls = await self.run_crawl()
-        
+
         if audit_type == "comprehensive":
-            audit_results = await self.run_comprehensive_audit(urls)
+
+            comprehensive_results = await self.run_comprehensive_audit(urls)
+            basic_results = await self.run_accessibility_audit(urls)
+            return {
+                "crawled_urls": urls,
+                "comprehensive_audit": comprehensive_results,
+                "basic_audit": basic_results,
+                "audit_type": audit_type
+            }
+
         else:
-            audit_results = await self.run_accessibility_audit(urls)
-            
-        return
+            # Only run basic audit
+            basic_results = await self.run_accessibility_audit(urls)
+            return {
+                "crawled_urls": urls,
+                "basic_audit": basic_results,
+                "audit_type": audit_type
+            }
+
 
 async def main():
     print_banner()
