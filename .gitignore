@@ -145,3 +145,5 @@ storage/temp/
 storage/crawled_urls.txt
 *.log
 
+
+/docs

@@ -30,8 +30,41 @@ class GroqClient:
         else:
             self.enabled = True
     
+    async def analyze_audit_results(self, audit_results: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Entry point for microservice to analyze raw audit report"""
+        if not self.enabled:
+            return []
+            
+        # Convert raw dict format to a simpler structure for LLM if needed
+        # For now, we'll try to use generate_accessibility_insights with a mock object
+        # that has .url and .violations attributes
+        
+        from types import SimpleNamespace
+        
+        mock_results = []
+        for page in audit_results.get('page_results', []):
+            mock_results.append(SimpleNamespace(
+                url=page.get('url', 'unknown'),
+                violations=page.get('violations', []),
+                unique_insights=page.get('extended_audit', {})
+            ))
+            
+        insights = await self.generate_accessibility_insights(mock_results)
+        
+        # Convert back to list of dicts for JSON serialization
+        return [
+            {
+                "url": insight.url,
+                "priority_issues": insight.priority_issues,
+                "productivity_impact": insight.productivity_impact,
+                "code_recommendations": insight.code_recommendations,
+                "business_impact": insight.business_impact,
+                "roi_calculation": insight.roi_calculation
+            } for insight in insights
+        ]
+    
     async def generate_accessibility_insights(self, 
-                                           analysis_results: List[AdvancedAccessibilityResult]) -> List[LLMInsight]:
+                                           analysis_results: List[Any]) -> List[LLMInsight]:
         """Generate advanced insights using LLM"""
         if not self.enabled:
             self.logger.warning("LLM features are disabled. Returning empty insights.")
@@ -50,7 +83,7 @@ class GroqClient:
         
         return insights
     
-    async def _analyze_single_result(self, result: AdvancedAccessibilityResult) -> LLMInsight:
+    async def _analyze_single_result(self, result: Any) -> LLMInsight:
         """Analyze single accessibility result using LLM"""
         
         prompt = self._build_productivity_prompt(result)
@@ -59,7 +92,7 @@ class GroqClient:
         
         return self._parse_llm_response(response, result.url)
     
-    def _build_productivity_prompt(self, result: AdvancedAccessibilityResult) -> str:
+    def _build_productivity_prompt(self, result: Any) -> str:
         """Build productivity-focused prompt for LLM"""
         
         violations_summary = "\n".join([
@@ -207,7 +240,7 @@ class GroqClient:
             # Return basic insight structure
             return self._create_basic_insight_from_response(response, url)
     
-    def _create_basic_insight(self, result: AdvancedAccessibilityResult) -> LLMInsight:
+    def _create_basic_insight(self, result: Any) -> LLMInsight:
         """Create basic insight when LLM is disabled or fails"""
         return LLMInsight(
             url=result.url,
