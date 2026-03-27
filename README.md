@@ -1,6 +1,12 @@
 # A11ySense AI: Accessibility Audit Tool
 
+![Logo](docs/logo/Generated%20Image%20November%2018,%202025%20-%205_05PM.png)
+
 A powerful, microservices-based automated accessibility auditing solution designed to crawl websites, analyze pages for WCAG compliance, and generate comprehensive reports with actionable insights. 
+
+---
+📖 **Documentation**: [Architecture](docs/architecture.md) | [Modules & Roadmap](docs/modules.md)
+---
 
 This tool leverages **Playwright** for crawling, **axe-core** for accessibility testing, and **LLM (Large Language Model)** integration for business insights and ROI calculations.
 
