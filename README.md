@@ -134,4 +134,8 @@ A11ySense_AI/
 
 ## 📄 License
 
-[MIT License](LICENSE)
+This project is protected under a **Corporate Proprietary License**. 
+
+Copyright © 2026 Win Vinaya Info Systems India. All rights reserved. 
+
+Unauthorized copying, distribution, or modification of any part of this software is strictly prohibited. For licensing inquiries, please contact **Win Vinaya Info Systems India**.
