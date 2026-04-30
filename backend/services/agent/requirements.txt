@@ -4,3 +4,5 @@ pydantic==2.10.6
 pydantic-settings==2.7.1
 python-dotenv==1.0.1
 httpx==0.28.1
+playwright==1.41.2
+axe-core-python==0.1.0
