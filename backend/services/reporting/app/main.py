@@ -1,41 +1,109 @@
 from fastapi import FastAPI
-from common.schemas.audit import AuditResult
+from common.schemas.audit import AuditResult, Violation
 import os
 import json
 import uuid
+import time
 
 app = FastAPI(title="Reporting Service")
 
 ALLURE_RESULTS_DIR = "/app/storage/reports/allure-results"
 
+def map_severity(impact: str) -> str:
+    mapping = {
+        "critical": "blocker",
+        "serious": "critical",
+        "moderate": "normal",
+        "minor": "minor"
+    }
+    return mapping.get(impact, "normal")
+
 @app.post("/generate")
 async def generate_report(result: AuditResult):
-    report_id = str(uuid.uuid4())
+    task_id = str(uuid.uuid4())
     os.makedirs(ALLURE_RESULTS_DIR, exist_ok=True)
     
-    # Create an Allure result file
-    # This is a simplified version; real Allure results are more complex
-    result_filename = f"{report_id}-result.json"
-    filepath = os.path.join(ALLURE_RESULTS_DIR, result_filename)
+    # 1. Prepare Allure Result JSON
+    start_time = int(result.timestamp.timestamp() * 1000)
     
-    # Transform AuditResult to Allure format
-    allure_data = {
-        "uuid": report_id,
+    allure_result = {
+        "uuid": task_id,
         "historyId": str(uuid.uuid4()),
-        "name": f"Accessibility Audit for {result.url}",
-        "status": "passed" if not result.violations else "failed",
-        "start": int(result.timestamp.timestamp() * 1000),
-        "stop": int(result.timestamp.timestamp() * 1000) + 1000,
-        "steps": [
-            {
-                "name": f"Violation: {v.id}",
-                "status": "broken",
-                "statusDetails": {"message": v.description, "trace": v.help}
-            } for v in result.violations
-        ]
+        "name": f"A11y Audit: {result.url}",
+        "status": "failed" if result.violations else "passed",
+        "statusDetails": {
+            "message": f"Found {len(result.violations)} accessibility violations." if result.violations else "No violations found."
+        },
+        "stage": "finished",
+        "steps": [],
+        "attachments": [],
+        "parameters": [
+            {"name": "Audited URL", "value": str(result.url)},
+            {"name": "Scan Depth", "value": str(result.metadata.get("depth", 1))}
+        ],
+        "labels": [
+            {"name": "feature", "value": "Accessibility Audit"},
+            {"name": "epic", "value": "Compliance"},
+            {"name": "framework", "value": "Axe-core + OpenClaw"},
+            {"name": "host", "value": "A11ySense-AI-Agent"}
+        ],
+        "links": [],
+        "start": start_time,
+        "stop": start_time + 5000  # Simulated duration
     }
+
+    # 2. Add violations as steps
+    for v in result.violations:
+        # Map severity label based on highest impact node
+        allure_result["labels"].append({
+            "name": "severity", 
+            "value": map_severity(v.impact)
+        })
+        
+        # Add WCAG Link
+        allure_result["links"].append({
+            "name": f"WCAG Help: {v.id}",
+            "url": str(v.helpUrl),
+            "type": "issue"
+        })
+
+        # Add Violation Step
+        remediation = v.metadata.get("remediation", "No AI suggestion available.")
+        impact_desc = v.metadata.get("business_impact", "")
+
+        step = {
+            "name": f"Violation: {v.id} - {v.help}",
+            "status": "failed",
+            "statusDetails": {
+                "message": f"IMPACT: {impact_desc}\n\nFIX: {remediation}",
+                "trace": f"Description: {v.description}\nNodes: {len(v.nodes)}"
+            },
+            "attachments": [],
+            "start": start_time,
+            "stop": start_time + 100
+        }
+        allure_result["steps"].append(step)
+
+    # 3. Save Allure Result File
+    result_path = os.path.join(ALLURE_RESULTS_DIR, f"{task_id}-result.json")
+    with open(result_path, "w") as f:
+        json.dump(allure_result, f, indent=4)
+
+    # 4. Save Raw Audit Data as Attachment
+    attachment_id = str(uuid.uuid4())
+    attachment_path = os.path.join(ALLURE_RESULTS_DIR, f"{attachment_id}-attachment.json")
+    with open(attachment_path, "w") as f:
+        json.dump(result.dict(), f, indent=4, default=str)
     
-    with open(filepath, "w") as f:
-        json.dump(allure_data, f)
+    # Register attachment in result
+    allure_result["attachments"].append({
+        "name": "Raw Audit Data",
+        "source": f"{attachment_id}-attachment.json",
+        "type": "application/json"
+    })
     
-    return {"status": "success", "report_url": f"/reports/{report_id}"}
+    # Re-save with attachment reference
+    with open(result_path, "w") as f:
+        json.dump(allure_result, f, indent=4)
+
+    return {"status": "success", "task_id": task_id, "report_path": ALLURE_RESULTS_DIR}
