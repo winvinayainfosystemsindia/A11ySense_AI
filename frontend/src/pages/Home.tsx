@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
+import { Link } from '@tanstack/react-router';
 import { Button } from '../components/common/Button';
 
 const Home: React.FC = () => {
@@ -13,9 +14,11 @@ const Home: React.FC = () => {
           Autonomous AI-Driven Accessibility Auditing
         </Typography>
         <Box sx={{ mt: 4 }}>
-          <Button variant="contained" color="primary" size="large">
-            Get Started
-          </Button>
+          <Link to="/audit">
+            <Button variant="contained" color="primary" size="large">
+              Start Accessibility Audit
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Container>

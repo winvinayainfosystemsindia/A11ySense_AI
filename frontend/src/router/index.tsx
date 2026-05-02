@@ -5,6 +5,7 @@ import {
   Outlet 
 } from '@tanstack/react-router';
 import Home from '../pages/Home';
+import Audit from '../pages/Audit';
 
 // Create a root route
 const rootRoute = createRootRoute({
@@ -16,15 +17,21 @@ const rootRoute = createRootRoute({
   ),
 });
 
-// Create index route
+// Create routes
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
   component: Home,
 });
 
+const auditRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/audit',
+  component: Audit,
+});
+
 // Create the route tree
-const routeTree = rootRoute.addChildren([indexRoute]);
+const routeTree = rootRoute.addChildren([indexRoute, auditRoute]);
 
 // Create the router
 export const router = createRouter({ routeTree });
