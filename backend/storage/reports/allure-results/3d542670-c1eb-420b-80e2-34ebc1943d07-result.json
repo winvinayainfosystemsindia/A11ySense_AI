@@ -1,0 +1,131 @@
+{
+    "uuid": "3d542670-c1eb-420b-80e2-34ebc1943d07",
+    "historyId": "36760576-2c71-4bbb-82ed-40d1fbfa72a7",
+    "name": "A11y Audit: https://winvinayafoundation.org/",
+    "status": "failed",
+    "statusDetails": {
+        "message": "Found 4 accessibility violations."
+    },
+    "stage": "finished",
+    "steps": [
+        {
+            "name": "AI Finding: Low Color Contrast",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nThe color contrast between text and background makes it difficult for users with visual impairments, including those who are legally blind or have low vision, to read the text on this page. This can cause eye strain and may prevent users from accessing important information.\n\nREMEDIATION PLAN:\n[{'step': 1, 'action': \"Inspect the CSS style property 'color' and the background color of the element\", 'code': '<p style='}, {'step': 2, 'action': \"Check the color contrast using a tool like WebAIM's Color Contrast Checker or a Color Contrast Checker browser extension\", 'code': ''}, {'step': 3, 'action': 'Use the hex code #888 for the text color, which has a low contrast with the background', 'code': 'color: #333;', 'replace': 'color: #888;'}, {'step': 4, 'action': \"Replace the #333 hex code for the button's text color which currently has low contrast\", 'code': 'color: #fff;', 'replace': 'color: #fff;'}, {'step': 5, 'action': 'Apply the required background and text color values in the CSS styles for the elements to achieve sufficient color contrast.', 'code': '/* For the button */\\n.et_pb_button {\\n  background-color: #333;\\n  color: #fff;\\n}\\n/* For the paragraphs */\\n.et_pb_column {\\n  color: #333\\n};'}]",
+                "trace": "Technical ID: color-contrast\nPriority: High\nNodes Found: 18"
+            },
+            "attachments": [],
+            "start": 1777682680695,
+            "stop": 1777682680795
+        },
+        {
+            "name": "AI Finding: Heading Hierarchy Error: Incorrect Order",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nA person using a screen reader or other assistive technology may encounter difficulty navigating the content structure because headings do not follow a logical order. This can lead to confusion about the importance and grouping of related content.\n\nREMEDIATION PLAN:\n[{'step': 'Check the current order of headings on the page.', 'example': None}]",
+                "trace": "Technical ID: heading-order\nPriority: High\nNodes Found: 1"
+            },
+            "attachments": [],
+            "start": 1777682680695,
+            "stop": 1777682680795
+        },
+        {
+            "name": "AI Finding: Missing Link Text",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nThis issue prevents screen reader users from understanding the purpose of a link, potentially causing confusion or disorientation. Additionally, users with low vision may have difficulty differentiating between different links if their text is not clear.\n\nREMEDIATION PLAN:\n[{'step': 'Identify all <a> tags without text content', 'action': 'Locate the <a> tags in the affected HTML, such as <a class=\"icon\"><span>Facebook</span></a>', 'code_example': '<a class=\"icon\">Facebook</a>'}, {'step': 'Remove the unnecessary span tags', 'action': 'Remove the <span> tags around the link text, making sure the text content is directly within the <a> tag', 'code_example': '<a class=\"icon\">Facebook</a>'}, {'step': 'Verify that the link text is clear and concise', 'action': \"Ensure the link text accurately describes the link's destination and is descriptive enough for users to understand the purpose of the link\", 'code_example': '<a href=\"https://www.facebook.com/WinVinayaFoundation/?fref=nf\">Go to Facebook</a>'}]",
+                "trace": "Technical ID: link-name\nPriority: High\nNodes Found: 5"
+            },
+            "attachments": [],
+            "start": 1777682680695,
+            "stop": 1777682680795
+        },
+        {
+            "name": "AI Finding: Landmark Navigation Issue: Uncontained Link Content",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nThis issue makes it difficult for users who rely on screen readers to navigate the page as they need to understand the structure and hierarchy of the page content. Without landmarks, screen readers may not provide proper navigation cues, making it hard for users to find the link to New Candidate Registration.\n\nREMEDIATION PLAN:\n{'step_1': \"Replace the <div> containing the link with a proper landmark element such as <main>, <nav>, or <footer> depending on its purpose on the page. In this case, we'll assume that it's the primary content and use <main>.\", 'step_2': 'Wrap the link in the new landmark element, like this:\\n\\n<main id=\"et-info\">\\n    <a href=\"https://tinyurl.com/C-reg-2026-27\">New Candidate Registration</a>\\n</main>', 'step_3': 'Review the rest of the page and ensure all other content is properly contained within landmarks, such as <header>, <nav>, <main>, and <footer> to maintain a clear structure and hierarchy.'}",
+                "trace": "Technical ID: region\nPriority: High\nNodes Found: 2"
+            },
+            "attachments": [],
+            "start": 1777682680695,
+            "stop": 1777682680795
+        }
+    ],
+    "attachments": [
+        {
+            "name": "Raw Audit Data",
+            "source": "60db04d1-f642-4a83-a3f6-bbf5107bf960-attachment.json",
+            "type": "application/json"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "Audited URL",
+            "value": "https://winvinayafoundation.org/"
+        },
+        {
+            "name": "Scan Depth",
+            "value": "1"
+        }
+    ],
+    "labels": [
+        {
+            "name": "feature",
+            "value": "Accessibility Audit"
+        },
+        {
+            "name": "epic",
+            "value": "Compliance"
+        },
+        {
+            "name": "framework",
+            "value": "Axe-core + OpenClaw"
+        },
+        {
+            "name": "host",
+            "value": "A11ySense-AI-Agent"
+        },
+        {
+            "name": "severity",
+            "value": "critical"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        },
+        {
+            "name": "severity",
+            "value": "critical"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        }
+    ],
+    "links": [
+        {
+            "name": "WCAG Help: color-contrast",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/color-contrast?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: heading-order",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/heading-order?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: link-name",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/link-name?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: region",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/region?application=axeAPI",
+            "type": "issue"
+        }
+    ],
+    "start": 1777682680695,
+    "stop": 1777682685695
+}

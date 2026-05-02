@@ -14,7 +14,7 @@ if (Test-Path "$PSScriptRoot\..\.env") {
         if ($_ -match "^\s*([^#\s][^=]*)\s*=\s*(.*)\s*$") {
             $name = $matches[1].Trim()
             $value = $matches[2].Trim()
-            $env:$name = $value
+            Set-Item "env:$name" $value
         }
     }
 }
