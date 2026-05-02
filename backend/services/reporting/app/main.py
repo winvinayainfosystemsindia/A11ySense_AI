@@ -7,7 +7,8 @@ import time
 
 app = FastAPI(title="Reporting Service")
 
-ALLURE_RESULTS_DIR = "/app/storage/reports/allure-results"
+# Use an environment variable for the results directory, fallback to a local relative path
+ALLURE_RESULTS_DIR = os.getenv("ALLURE_RESULTS_DIR", "storage/reports/allure-results")
 
 def map_severity(impact: str) -> str:
     mapping = {
@@ -68,15 +69,17 @@ async def generate_report(result: AuditResult):
         })
 
         # Add Violation Step
+        friendly_title = v.metadata.get("friendly_name", f"{v.id} - {v.help}")
         remediation = v.metadata.get("remediation", "No AI suggestion available.")
         impact_desc = v.metadata.get("business_impact", "")
+        ai_severity = v.metadata.get("ai_severity", map_severity(v.impact))
 
         step = {
-            "name": f"Violation: {v.id} - {v.help}",
+            "name": f"AI Finding: {friendly_title}",
             "status": "failed",
             "statusDetails": {
-                "message": f"IMPACT: {impact_desc}\n\nFIX: {remediation}",
-                "trace": f"Description: {v.description}\nNodes: {len(v.nodes)}"
+                "message": f"USER IMPACT:\n{impact_desc}\n\nREMEDIATION PLAN:\n{remediation}",
+                "trace": f"Technical ID: {v.id}\nPriority: {ai_severity}\nNodes Found: {len(v.nodes)}"
             },
             "attachments": [],
             "start": start_time,

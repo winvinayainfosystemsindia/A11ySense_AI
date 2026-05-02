@@ -6,3 +6,6 @@ python-dotenv==1.0.1
 httpx==0.28.1
 playwright==1.41.2
 axe-core-python==0.1.0
+groq==0.4.2
+anthropic==0.18.1
+google-generativeai==0.3.2

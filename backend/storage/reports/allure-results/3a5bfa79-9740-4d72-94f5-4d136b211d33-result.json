@@ -1,0 +1,111 @@
+{
+    "uuid": "3a5bfa79-9740-4d72-94f5-4d136b211d33",
+    "historyId": "88500e4f-b304-4803-90c2-fcf30bd51f93",
+    "name": "A11y Audit: https://demo.winvinaya.com/",
+    "status": "failed",
+    "statusDetails": {
+        "message": "Found 3 accessibility violations."
+    },
+    "stage": "finished",
+    "steps": [
+        {
+            "name": "Violation: color-contrast - Elements must meet minimum color contrast ratio thresholds",
+            "status": "failed",
+            "statusDetails": {
+                "message": "IMPACT: This issue significantly affects users with visual impairments relying on screen readers. It prevents them from understanding the purpose of the color-contrast element.\n\nFIX: To fix this, add a descriptive 'aria-label' or 'alt' attribute to the element. Example: <element aria-label='Elements must meet minimum color contrast ratio thresholds'>...</element>",
+                "trace": "Description: Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\nNodes: 5"
+            },
+            "attachments": [],
+            "start": 1777681121750,
+            "stop": 1777681121850
+        },
+        {
+            "name": "Violation: heading-order - Heading levels should only increase by one",
+            "status": "failed",
+            "statusDetails": {
+                "message": "IMPACT: This issue significantly affects users with visual impairments relying on screen readers. It prevents them from understanding the purpose of the heading-order element.\n\nFIX: To fix this, add a descriptive 'aria-label' or 'alt' attribute to the element. Example: <element aria-label='Heading levels should only increase by one'>...</element>",
+                "trace": "Description: Ensures the order of headings is semantically correct\nNodes: 9"
+            },
+            "attachments": [],
+            "start": 1777681121750,
+            "stop": 1777681121850
+        },
+        {
+            "name": "Violation: region - All page content should be contained by landmarks",
+            "status": "failed",
+            "statusDetails": {
+                "message": "IMPACT: This issue significantly affects users with visual impairments relying on screen readers. It prevents them from understanding the purpose of the region element.\n\nFIX: To fix this, add a descriptive 'aria-label' or 'alt' attribute to the element. Example: <element aria-label='All page content should be contained by landmarks'>...</element>",
+                "trace": "Description: Ensures all page content is contained by landmarks\nNodes: 6"
+            },
+            "attachments": [],
+            "start": 1777681121750,
+            "stop": 1777681121850
+        }
+    ],
+    "attachments": [
+        {
+            "name": "Raw Audit Data",
+            "source": "5b7230bf-161c-4798-88f4-c3b913b5cca5-attachment.json",
+            "type": "application/json"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "Audited URL",
+            "value": "https://demo.winvinaya.com/"
+        },
+        {
+            "name": "Scan Depth",
+            "value": "1"
+        }
+    ],
+    "labels": [
+        {
+            "name": "feature",
+            "value": "Accessibility Audit"
+        },
+        {
+            "name": "epic",
+            "value": "Compliance"
+        },
+        {
+            "name": "framework",
+            "value": "Axe-core + OpenClaw"
+        },
+        {
+            "name": "host",
+            "value": "A11ySense-AI-Agent"
+        },
+        {
+            "name": "severity",
+            "value": "critical"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        }
+    ],
+    "links": [
+        {
+            "name": "WCAG Help: color-contrast",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/color-contrast?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: heading-order",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/heading-order?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: region",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/region?application=axeAPI",
+            "type": "issue"
+        }
+    ],
+    "start": 1777681121750,
+    "stop": 1777681126750
+}
