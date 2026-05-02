@@ -1,0 +1,131 @@
+{
+    "uuid": "10241a42-e075-4bd6-81c0-41cefe756acc",
+    "historyId": "5aea02c1-f4ad-4ef4-b140-8ed977405d39",
+    "name": "A11y Audit: https://winvinayafoundation.org/",
+    "status": "failed",
+    "statusDetails": {
+        "message": "Found 4 accessibility violations."
+    },
+    "stage": "finished",
+    "steps": [
+        {
+            "name": "AI Finding: Insufficient Color Contrast",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nDue to insufficient color contrast, screen reader users may not be able to distinguish between the text color and the background color, while users with low vision may experience eye strain and difficulty reading the text.\n\nREMEDIATION PLAN:\n[{'step': 'Identify the specific element(s) causing the color contrast issue.', 'description': 'Review the provided HTML and identify the `p`, `a`, and `span` elements with class `.percent-value` that are causing the color contrast issue.'}, {'step': 'Check the WCAG 2 AA color contrast thresholds.', 'description': 'WCAG 2 AA recommends a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text (18pt or 14pt bold).'}, {'step': \"Adjust the element's style to meet the WCAG 2 AA color contrast thresholds.\", 'description': 'To fix the issue, you can either:\\n         - Change the `color` property to a color with sufficient contrast or\\n         - Change the `background-color` property to a color with sufficient contrast or\\n         - Adjust the `letter-spacing` or `text-transform` properties to improve readability\\n         '}, {'step': 'Write new CSS rules to override the existing styles.', 'description': 'Add a new CSS rule to override the existing `color` property with a color that meets the WCAG 2 AA color contrast thresholds. For example:\\n         ```css\\n         .percent-value {\\n            color: #333;\\n         }\\n         ```\\n         '}, {'step': 'Test the updated styles.', 'description': 'Re-run the accessibility audit to ensure that the color contrast issue is resolved.'}]",
+                "trace": "Technical ID: color-contrast\nPriority: Moderate\nNodes Found: 18"
+            },
+            "attachments": [],
+            "start": 1777697025917,
+            "stop": 1777697026017
+        },
+        {
+            "name": "AI Finding: Heading Levels Are Inconsistent",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nA screen reader user or someone with low vision may have difficulty understanding the page structure and navigation. The skipping of heading levels (e.g., from h2 to h4) can lead to confusion and make it harder for them to jump to specific sections. This can cause frustration and hinder their ability to access information on the site.\n\nREMEDIATION PLAN:\n{'step_1': 'Identify the headings on the page and determine their semantic order.', 'step_2': \"Update the HTML to ensure the heading levels increase by one: from h3 to h4 is correct, but h2 to h3 is not (it should be h1). For example, change the line <h3 class='title'>Trained</h3> to either a lower level heading or correct its position in the hierarchy.\", 'remediation_code_example': \"<!-- Incorrect code --> <h3 class='title'>Trained</h3>, <h4>Section</h4>\\n\\n<!-- Corrected code --> <h3 class='title'>Trained</h3>, <h3>Section</h3>\"}",
+                "trace": "Technical ID: heading-order\nPriority: High\nNodes Found: 1"
+            },
+            "attachments": [],
+            "start": 1777697025917,
+            "stop": 1777697026017
+        },
+        {
+            "name": "AI Finding: Links should have text that screen readers can announce",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nScreen reader users may not be able to understand the purpose of a link, and users with low vision may struggle to locate links. This can cause frustration and hinder navigation through your site.\n\nREMEDIATION PLAN:\n{'Step 1': 'Remove the icon class from the link. This will allow the link text to be visible and announced by screen readers.', 'Step 2': \"In its place, use an <img> element with an alt attribute to represent the link's icon. This will allow the icon to be seen by users and yet still be accessible to screen reader users.\", 'Example': '<a href=\"https://www.facebook.com/WinVinayaFoundation/?fref=nf\" title=\"Facebook Link\">\\n            Facebook\\n            <img src=\"facebook-icon.png\" alt=\"Facebook Icon\" />\\n         </a>'}",
+                "trace": "Technical ID: link-name\nPriority: High\nNodes Found: 5"
+            },
+            "attachments": [],
+            "start": 1777697025917,
+            "stop": 1777697026017
+        },
+        {
+            "name": "AI Finding: region - All page content should be contained by landmarks",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nTechnical scan found violation.\n\nREMEDIATION PLAN:\nAI analysis unavailable.",
+                "trace": "Technical ID: region\nPriority: normal\nNodes Found: 2"
+            },
+            "attachments": [],
+            "start": 1777697025917,
+            "stop": 1777697026017
+        }
+    ],
+    "attachments": [
+        {
+            "name": "Raw Audit Data",
+            "source": "bd847bea-ddbf-4753-b092-05f66c201f56-attachment.json",
+            "type": "application/json"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "Audited URL",
+            "value": "https://winvinayafoundation.org/"
+        },
+        {
+            "name": "Scan Depth",
+            "value": "1"
+        }
+    ],
+    "labels": [
+        {
+            "name": "feature",
+            "value": "Accessibility Audit"
+        },
+        {
+            "name": "epic",
+            "value": "Compliance"
+        },
+        {
+            "name": "framework",
+            "value": "Axe-core + OpenClaw"
+        },
+        {
+            "name": "host",
+            "value": "A11ySense-AI-Agent"
+        },
+        {
+            "name": "severity",
+            "value": "critical"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        },
+        {
+            "name": "severity",
+            "value": "critical"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        }
+    ],
+    "links": [
+        {
+            "name": "WCAG Help: color-contrast",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/color-contrast?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: heading-order",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/heading-order?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: link-name",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/link-name?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: region",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/region?application=axeAPI",
+            "type": "issue"
+        }
+    ],
+    "start": 1777697025917,
+    "stop": 1777697030917
+}
