@@ -14,6 +14,7 @@ class Violation(BaseModel):
     help: str
     helpUrl: HttpUrl
     nodes: List[Dict[str, Any]]
+    metadata: Dict[str, Any] = {}
 
 class AuditResult(BaseModel):
     url: HttpUrl

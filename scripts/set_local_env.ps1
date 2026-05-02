@@ -1,3 +1,6 @@
+# Set PYTHONPATH to include the backend directory so 'common' module can be found
+$env:PYTHONPATH="$PSScriptRoot\..\backend"
+
 # Set Environment Variables for Service Discovery on Localhost
 $env:AGENT_SERVICE_URL="http://localhost:8001"
 $env:REPORTING_SERVICE_URL="http://localhost:8002"

@@ -26,7 +26,9 @@ async def orchestrate_agent_audit(task_id: str, request: AuditRequest):
         
         # 3. Send to Reporting Service
         async with httpx.AsyncClient() as client:
-            await client.post(f"{REPORTING_SERVICE_URL}/generate", json=refined_result.dict())
+            # Use model_dump(mode='json') to ensure complex types are serialized
+            report_data = refined_result.model_dump(mode='json')
+            await client.post(f"{REPORTING_SERVICE_URL}/generate", json=report_data)
             
         print(f"Task {task_id} completed successfully.")
     except Exception as e:
