@@ -10,6 +10,10 @@ app = FastAPI(title="OpenClaw Agent Service")
 
 REPORTING_SERVICE_URL = os.getenv("REPORTING_SERVICE_URL", "http://reporting:8000")
 
+from app.agents.manager import ManagerAgent
+
+manager_agent = ManagerAgent()
+
 @app.post("/audit", response_model=AuditTask)
 async def start_audit(request: AuditRequest, background_tasks: BackgroundTasks):
     task_id = str(uuid.uuid4())
@@ -18,15 +22,11 @@ async def start_audit(request: AuditRequest, background_tasks: BackgroundTasks):
 
 async def orchestrate_agent_audit(task_id: str, request: AuditRequest):
     try:
-        # 1. Execute the Technical Audit (Axe-core)
-        raw_result = await audit_service.run_audit(request)
+        # Execute the Multi-Agent Audit
+        refined_result = await manager_agent.run_audit(request)
         
-        # 2. Apply Agent Intelligence (AI Remediation)
-        refined_result = await agent_intelligence.analyze_violations(raw_result)
-        
-        # 3. Send to Reporting Service
+        # Send to Reporting Service
         async with httpx.AsyncClient() as client:
-            # Use model_dump(mode='json') to ensure complex types are serialized
             report_data = refined_result.model_dump(mode='json')
             await client.post(f"{REPORTING_SERVICE_URL}/generate", json=report_data)
             

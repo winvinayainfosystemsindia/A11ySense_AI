@@ -40,7 +40,8 @@ async def generate_report(result: AuditResult):
         "attachments": [],
         "parameters": [
             {"name": "Audited URL", "value": str(result.url)},
-            {"name": "Scan Depth", "value": str(result.metadata.get("depth", 1))}
+            {"name": "Scan Depth", "value": str(result.metadata.get("depth", 1))},
+            {"name": "Manager Thought", "value": str(result.metadata.get("manager_thought", "Autonomous audit plan."))}
         ],
         "labels": [
             {"name": "feature", "value": "Accessibility Audit"},
