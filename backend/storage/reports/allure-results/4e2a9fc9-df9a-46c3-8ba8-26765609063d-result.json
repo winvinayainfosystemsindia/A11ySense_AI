@@ -1,0 +1,111 @@
+{
+    "uuid": "4e2a9fc9-df9a-46c3-8ba8-26765609063d",
+    "historyId": "7b9c63b9-1cc6-47bc-b5b0-7b4715b6f9ba",
+    "name": "A11y Audit: https://demo.winvinaya.com/",
+    "status": "failed",
+    "statusDetails": {
+        "message": "Found 3 accessibility violations."
+    },
+    "stage": "finished",
+    "steps": [
+        {
+            "name": "AI Finding: Inadequate Color Contrast - WCAG Non-Compliance",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nThis issue prevents users with visual impairments or colorblindness from effectively using the website. Specifically, the color contrast between the background and foreground colors may be insufficient for users with certain types of visual impairments, making it challenging or impossible for them to perceive text and other visual elements. This may include users who rely on screen readers or individuals with severe visual dyslexia.\n\nREMEDIATION PLAN:\n[{'step': 'Select the affected element (in this case, a <span> with class MuiTypography-root MuiTypography-overline css-1onwpjj) in your code editor.', 'instruction': 'In the Styles or CSS file, add the following code to increase the font color contrast:', 'code': 'span.MuiTypography-root.MuiTypography-overline.css-1onwpjj { color: #000; }', 'additional_info': 'If the background color is dynamic or generated CSS, use a tool like contrast-ratio.com to find the best color value. For a more automated solution, explore CSS-in-JS libraries like styled-components or Emotion.js that provide built-in contrast checking.'}, {'step': 'Review other impacted elements (e.g., <a> tags with classes MuiBox-root css-icjfax, MuiTypograpy-root MuiTypograpy-overline css-53kdfa, MuiTypograpy-root MuiTypograpy-overline css-qcjubg) and ensure they meet the required contrast ratio threshold.', 'instruction': 'Apply similar font color adjustments to these elements as needed.', 'code': 'a.MuiBox-root.css-icjfax, a.MuiTypograpy-root.MuiTypograpy-overline.css-53kdfa, a.MuiTypograpy-root.MuiTypograpy-overline.css-qcjubg { color: #000; }', 'additional_info': 'If these elements are generated dynamically or using JavaScript, consider using a JavaScript solution to update the color automatically.'}, {'step': 'Test the website with an automated accessibility tool or manually check the contrast ratio with a tool or your own eyes.', 'instruction': 'Verify that the color contrast meets the minimum threshold of 4.5:1 for regular text and 3:1 for larger text (18pt or 14pt bold).', 'code': '', 'additional_info': \"Consider using automated testing tools like axe, Lighthouse, or a11y to ensure the issue doesn't reappear upon future updates.\"}]",
+                "trace": "Technical ID: color-contrast\nPriority: Critical\nNodes Found: 5"
+            },
+            "attachments": [],
+            "start": 1777794586154,
+            "stop": 1777794586254
+        },
+        {
+            "name": "AI Finding: Heading Order Not Logical",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nScreen reader users may experience confusing navigation due to incorrect heading order, making it difficult to understand the site's structure and content.\n\nREMEDIATION PLAN:\n['Step 1: Inspect the current heading structure. Identify each heading element (h1, h2, h3, etc.) and its corresponding text.', 'Step 2: Correct the heading order by applying the logical hierarchy: h1, h2, h3, etc. Start with the primary title and work your way down to the subheadings.', 'Step 3: Update the relevant code to match the corrected heading order. For example, the current code <h4 class=\"MuiTypography-root MuiTypography-h4 css-189c4a6\">India\\'s first inclusive tech learning platform</h4> should be <h1 class=\"MuiTypography-root MuiTypography-h1 css-189c4a6\">India\\'s first inclusive tech learning platform</h1>.', \"Step 4: Review the updated code with the Axe help text in mind: 'Heading levels should only increase by one.' Ensure that there are no consecutive heading elements with the same level (e.g., h2 followed by h3 without an h2 in between).\"]",
+                "trace": "Technical ID: heading-order\nPriority: Medium\nNodes Found: 9"
+            },
+            "attachments": [],
+            "start": 1777794586154,
+            "stop": 1777794586254
+        },
+        {
+            "name": "AI Finding: Content not contained within a landmark element",
+            "status": "failed",
+            "statusDetails": {
+                "message": "USER IMPACT:\nScreen reader users may not be able to navigate the page effectively, as the content is not organized with clear and recognizable structure. This can cause confusion and make it difficult to understand the page's layout and purpose.\n\nREMEDIATION PLAN:\n[{'step': 'Identify the container element that contains the content that needs to be landmarked.', 'code': \"<div class='MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-1ye6pip'>\", 'instruction': \"Look for the parent element of the content (<p class='MuiTypography-root MuiTypography-body1 css-1shhign'>Location</p>).\"}, {'step': 'Replace the container element with a landmark element (such as <main>, <nav>, <section>, etc.).', 'code': \"<main role='main' aria-label='Main Content'>\", 'instruction': 'Wrap the existing content with a landmark element. In this case, we will use a <main> element.'}, {'step': 'Add an accessible name to the landmark element.', 'code': \"<main role='main' aria-label='Main Content'><p class='MuiTypography-root MuiTypography-body1 css-1shhign'>Location</p></main>\", 'instruction': 'Add an `aria-label` attribute to the landmark element to provide a clear and accessible name.'}]",
+                "trace": "Technical ID: region\nPriority: Medium\nNodes Found: 6"
+            },
+            "attachments": [],
+            "start": 1777794586154,
+            "stop": 1777794586254
+        }
+    ],
+    "attachments": [
+        {
+            "name": "Raw Audit Data",
+            "source": "35ff44a1-71b7-4ab4-a36d-b00177e1922b-attachment.json",
+            "type": "application/json"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "Audited URL",
+            "value": "https://demo.winvinaya.com/"
+        },
+        {
+            "name": "Scan Depth",
+            "value": "1"
+        }
+    ],
+    "labels": [
+        {
+            "name": "feature",
+            "value": "Accessibility Audit"
+        },
+        {
+            "name": "epic",
+            "value": "Compliance"
+        },
+        {
+            "name": "framework",
+            "value": "Axe-core + OpenClaw"
+        },
+        {
+            "name": "host",
+            "value": "A11ySense-AI-Agent"
+        },
+        {
+            "name": "severity",
+            "value": "critical"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        },
+        {
+            "name": "severity",
+            "value": "normal"
+        }
+    ],
+    "links": [
+        {
+            "name": "WCAG Help: color-contrast",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/color-contrast?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: heading-order",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/heading-order?application=axeAPI",
+            "type": "issue"
+        },
+        {
+            "name": "WCAG Help: region",
+            "url": "https://dequeuniversity.com/rules/axe/4.8/region?application=axeAPI",
+            "type": "issue"
+        }
+    ],
+    "start": 1777794586154,
+    "stop": 1777794591154
+}

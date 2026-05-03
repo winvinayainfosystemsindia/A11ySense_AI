@@ -53,6 +53,7 @@ class AuditorAgent(BaseAgent):
         
         # Merge AI data into metadata
         violation.metadata = {
+            "friendly_name": data.get("friendly_name", violation.help),
             "business_impact": data.get("business_impact", "Significant impact on assistive technology users."),
             "remediation": data.get("remediation_plan", "Update the element to meet WCAG standards."),
             "wcag_mapping": data.get("wcag_mapping", "N/A"),
