@@ -110,41 +110,34 @@ class BaseAgent:
 
     def parse_json(self, text: str) -> Dict[str, Any]:
         """
-        Parses JSON from LLM response with high resilience.
+        Parses JSON from LLM response with balanced resilience.
         """
         try:
-            # 1. Clean markdown and whitespace
+            # 1. Clean markdown code blocks
             text = text.strip()
             if "```json" in text:
                 text = text.split("```json")[1].split("```")[0].strip()
             elif "```" in text:
                 text = text.split("```")[1].split("```")[0].strip()
             
-            # 2. Locate JSON object
+            # 2. Find the JSON boundaries
             start = text.find('{')
             end = text.rfind('}') + 1
             if start == -1 or end == 0:
-                logger.error(f"No JSON object found in text: {text[:100]}...")
+                logger.error(f"No JSON found in LLM response: {text[:100]}...")
                 return {"error": "No JSON found"}
 
             json_str = text[start:end]
 
-            # 3. Aggressive cleaning of common LLM JSON mistakes
-            # Fix unescaped newlines inside strings
-            json_str = json_str.replace('\n', '\\n').replace('\r', '\\r')
-            # But don't escape existing escapes
-            json_str = json_str.replace('\\\\n', '\\n').replace('\\\\r', '\\r')
-            
-            # 4. Standard parse with strict=False
-            return json.loads(json_str, strict=False)
-            
-        except Exception as e:
-            logger.error(f"JSON Parse Failure: {str(e)} | Raw: {text[:200]}")
-            
-            # 5. Last resort: Try a very lenient manual cleaning
+            # 3. Attempt standard parse (handles formatting newlines correctly)
             try:
-                # Remove actual control chars that json.loads hates
-                cleaned = "".join(ch for ch in text[start:end] if ord(ch) >= 32 or ch in '\n\r\t')
+                return json.loads(json_str, strict=False)
+            except json.JSONDecodeError:
+                # 4. Fallback: Aggressive cleaning only if standard parse fails
+                # Remove actual control characters except allowed whitespace
+                cleaned = "".join(ch for ch in json_str if ord(ch) >= 32 or ch in '\n\r\t')
                 return json.loads(cleaned, strict=False)
-            except:
-                return {"error": "Parsing failed", "raw": text}
+                
+        except Exception as e:
+            logger.error(f"Ultimate JSON Parse Failure: {str(e)} | Raw snippet: {text[:200]}")
+            return {"error": "Critical parsing failure", "raw": text}
