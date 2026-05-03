@@ -86,7 +86,7 @@ class BaseAgent:
     async def _call_groq(self, prompt: str, system_message: str) -> str:
         client = Groq(api_key=self.groq_key)
         completion = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+            model="llama-3.1-8b-instant",
             messages=[
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": prompt}

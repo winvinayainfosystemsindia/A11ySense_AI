@@ -34,8 +34,14 @@ class ScannerSkill:
             
         return {
             "violations": violations,
+            "passes": results.get("passes", []),
+            "incomplete": results.get("incomplete", []),
+            "inapplicable": results.get("inapplicable", []),
             "summary": {
-                "total": len(violations),
+                "total_violations": len(violations),
+                "total_passes": len(results.get("passes", [])),
+                "total_incomplete": len(results.get("incomplete", [])),
+                "total_inapplicable": len(results.get("inapplicable", [])),
                 "engine": results.get("testEngine", {}).get("name", "axe-core")
             }
         }

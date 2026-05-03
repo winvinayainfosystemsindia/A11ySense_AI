@@ -30,18 +30,25 @@ class ManagerAgent(BaseAgent):
         async with browser_manager.get_page() as page:
             # Navigate
             await browser_skill.navigate(page, str(request.url))
+            page_title = await page.title()
             
             # Delegate to Technical Auditor
             violations = await self.auditor.audit_page(page, str(request.url))
             
-            # (Future) Delegate to Vision Auditor here...
+            # Get other results from scanner (we might need to refactor auditor to return full results)
+            scan_data = await scanner_skill.run_axe(page)
 
         # 3. Final Result
         return AuditResult(
             url=request.url,
             violations=violations,
+            passes=scan_data.get("passes", []),
+            incomplete=scan_data.get("incomplete", []),
+            inapplicable=scan_data.get("inapplicable", []),
             metadata={
+                "page_title": page_title,
                 "manager_thought": thought_response,
+                "summary": scan_data.get("summary", {}),
                 "audit_type": "Multi-Agent / OpenClaw",
                 "engine": "A11ySense-MAS-v1"
             }

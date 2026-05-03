@@ -30,57 +30,69 @@ async def generate_report(result: AuditResult):
     allure_result = {
         "uuid": task_id,
         "historyId": str(uuid.uuid4()),
-        "name": f"A11y Audit: {result.url}",
+        "name": f"A11y Audit: {result.metadata.get('page_title', result.url)}",
         "status": "failed" if result.violations else "passed",
         "statusDetails": {
-            "message": f"Found {len(result.violations)} accessibility violations." if result.violations else "No violations found."
+            "message": f"Summary: {len(result.violations)} Violations, {len(result.passes or [])} Passes."
         },
         "stage": "finished",
         "steps": [],
         "attachments": [],
         "parameters": [
             {"name": "Audited URL", "value": str(result.url)},
-            {"name": "Scan Depth", "value": str(result.metadata.get("depth", 1))},
+            {"name": "Page Title", "value": str(result.metadata.get("page_title", "Unknown"))},
             {"name": "Manager Thought", "value": str(result.metadata.get("manager_thought", "Autonomous audit plan."))}
         ],
         "labels": [
             {"name": "feature", "value": "Accessibility Audit"},
             {"name": "epic", "value": "Compliance"},
-            {"name": "framework", "value": "Axe-core + OpenClaw"},
-            {"name": "host", "value": "A11ySense-AI-Agent"}
+            {"name": "framework", "value": "A11ySense MAS / OpenClaw"}
         ],
         "links": [],
         "start": start_time,
-        "stop": start_time + 5000  # Simulated duration
+        "stop": start_time + 5000
     }
 
-    # 2. Add violations as steps
-    for v in result.violations:
-        # Map severity label based on highest impact node
-        allure_result["labels"].append({
-            "name": "severity", 
-            "value": map_severity(v.impact)
-        })
-        
-        # Add WCAG Link
-        allure_result["links"].append({
-            "name": f"WCAG Help: {v.id}",
-            "url": str(v.helpUrl),
-            "type": "issue"
-        })
+    # 2. Add Passes as passed steps
+    if result.passes:
+        for p in result.passes:
+            allure_result["steps"].append({
+                "name": f"PASS: {p.get('help', p.get('id'))}",
+                "status": "passed",
+                "statusDetails": {"message": p.get("description", "Criterion met.")},
+                "start": start_time,
+                "stop": start_time + 10
+            })
 
-        # Add Violation Step
-        friendly_title = v.metadata.get("friendly_name", f"{v.id} - {v.help}")
-        remediation = v.metadata.get("remediation", "No AI suggestion available.")
+    # 3. Add violations as failed steps with detailed data
+    for v in result.violations:
+        friendly_title = v.metadata.get("friendly_name", v.help)
+        wcag_criteria = v.metadata.get("wcag_criteria", "N/A")
+        wcag_level = v.metadata.get("wcag_level", "AA")
+        severity = v.metadata.get("severity", "Normal")
         impact_desc = v.metadata.get("business_impact", "")
-        ai_severity = v.metadata.get("ai_severity", map_severity(v.impact))
+        expected = v.metadata.get("expected_result", "")
+        actual = v.metadata.get("actual_result", "")
+        steps = v.metadata.get("steps_to_reproduce", "")
+        remediation = v.metadata.get("remediation", "")
+
+        allure_result["labels"].append({"name": "severity", "value": map_severity(severity.lower())})
+        
+        message = (
+            f"WCAG CRITERIA: {wcag_criteria} (Level {wcag_level})\n"
+            f"USER IMPACT: {impact_desc}\n\n"
+            f"EXPECTED: {expected}\n"
+            f"ACTUAL: {actual}\n\n"
+            f"STEPS TO REPRODUCE:\n{steps}\n\n"
+            f"REMEDIATION:\n{remediation}"
+        )
 
         step = {
-            "name": f"AI Finding: {friendly_title}",
+            "name": f"VIOLATION: {friendly_title}",
             "status": "failed",
             "statusDetails": {
-                "message": f"USER IMPACT:\n{impact_desc}\n\nREMEDIATION PLAN:\n{remediation}",
-                "trace": f"Technical ID: {v.id}\nPriority: {ai_severity}\nNodes Found: {len(v.nodes)}"
+                "message": message,
+                "trace": f"Technical ID: {v.id}\nNodes Affected: {len(v.nodes)}"
             },
             "attachments": [],
             "start": start_time,

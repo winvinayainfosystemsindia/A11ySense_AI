@@ -21,7 +21,12 @@
 <output_format>
     Return a JSON object with:
     - friendly_name: A empathetic title (e.g., "Non-Descriptive Image" -> "Information Hidden from Screen Readers").
-    - business_impact: Describe exactly how a blind user would experience this failure (e.g., "The user is forced to guess the purpose of this checkout button").
+    - wcag_criteria: The WCAG 2.2 Success Criteria ID and Name.
+    - wcag_level: The compliance level (A, AA, or AAA).
+    - severity: The impact severity (Critical, High, Medium, Low).
+    - business_impact: Describe exactly how a blind user would experience this failure.
+    - expected_result: What should happen for a screen reader user (e.g., "The button should announce its purpose").
+    - actual_result: What currently happens (e.g., "The screen reader just says 'Button'").
+    - steps_to_reproduce: Clear steps for a developer to see/hear the issue.
     - remediation_plan: A technical fix using semantic HTML and ARIA best practices.
-    - wcag_mapping: The specific success criteria violated.
 </output_format>
