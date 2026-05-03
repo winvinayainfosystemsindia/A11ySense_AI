@@ -85,12 +85,14 @@ class BaseAgent:
 
     async def _call_groq(self, prompt: str, system_message: str) -> str:
         client = Groq(api_key=self.groq_key)
+        # Enable JSON mode for more reliable formatting
         completion = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
-                {"role": "system", "content": system_message},
+                {"role": "system", "content": system_message + "\nReturn response in valid JSON format."},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            response_format={"type": "json_object"}
         )
         return completion.choices[0].message.content
 
@@ -101,29 +103,48 @@ class BaseAgent:
         
         parts = [system_message, prompt]
         if use_vision and image_data:
-            # Note: simplified for example, real gemini needs proper image part
             parts.append({"mime_type": "image/png", "data": image_data})
             
         response = model.generate_content(parts)
         return response.text
 
     def parse_json(self, text: str) -> Dict[str, Any]:
+        """
+        Parses JSON from LLM response with high resilience.
+        """
         try:
-            # Basic cleaning: remove common LLM prefixes/suffixes if present
+            # 1. Clean markdown and whitespace
             text = text.strip()
             if "```json" in text:
                 text = text.split("```json")[1].split("```")[0].strip()
             elif "```" in text:
                 text = text.split("```")[1].split("```")[0].strip()
-                
+            
+            # 2. Locate JSON object
             start = text.find('{')
             end = text.rfind('}') + 1
             if start == -1 or end == 0:
-                return {"error": "No JSON found", "raw": text}
-                
-            # strict=False allows control characters like newlines within strings
-            return json.loads(text[start:end], strict=False)
+                logger.error(f"No JSON object found in text: {text[:100]}...")
+                return {"error": "No JSON found"}
+
+            json_str = text[start:end]
+
+            # 3. Aggressive cleaning of common LLM JSON mistakes
+            # Fix unescaped newlines inside strings
+            json_str = json_str.replace('\n', '\\n').replace('\r', '\\r')
+            # But don't escape existing escapes
+            json_str = json_str.replace('\\\\n', '\\n').replace('\\\\r', '\\r')
+            
+            # 4. Standard parse with strict=False
+            return json.loads(json_str, strict=False)
+            
         except Exception as e:
-            logger.error(f"Failed to parse JSON from LLM: {str(e)}")
-            # Fallback: try to fix common issues like unescaped newlines manually if needed
-            return {"error": str(e), "raw": text}
+            logger.error(f"JSON Parse Failure: {str(e)} | Raw: {text[:200]}")
+            
+            # 5. Last resort: Try a very lenient manual cleaning
+            try:
+                # Remove actual control chars that json.loads hates
+                cleaned = "".join(ch for ch in text[start:end] if ord(ch) >= 32 or ch in '\n\r\t')
+                return json.loads(cleaned, strict=False)
+            except:
+                return {"error": "Parsing failed", "raw": text}
