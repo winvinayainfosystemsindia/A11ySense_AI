@@ -1,6 +1,7 @@
 from app.agents.base import BaseAgent
 from app.agents.auditor import AuditorAgent
 from app.skills.implementations.browser import browser_skill
+from app.skills.implementations.scanner import scanner_skill
 from common.schemas.audit import AuditRequest, AuditResult
 from app.utils.browser import browser_manager
 import logging

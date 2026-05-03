@@ -109,9 +109,21 @@ class BaseAgent:
 
     def parse_json(self, text: str) -> Dict[str, Any]:
         try:
+            # Basic cleaning: remove common LLM prefixes/suffixes if present
+            text = text.strip()
+            if "```json" in text:
+                text = text.split("```json")[1].split("```")[0].strip()
+            elif "```" in text:
+                text = text.split("```")[1].split("```")[0].strip()
+                
             start = text.find('{')
             end = text.rfind('}') + 1
-            return json.loads(text[start:end])
+            if start == -1 or end == 0:
+                return {"error": "No JSON found", "raw": text}
+                
+            # strict=False allows control characters like newlines within strings
+            return json.loads(text[start:end], strict=False)
         except Exception as e:
             logger.error(f"Failed to parse JSON from LLM: {str(e)}")
-            return {"error": "Invalid JSON response", "raw": text}
+            # Fallback: try to fix common issues like unescaped newlines manually if needed
+            return {"error": str(e), "raw": text}
