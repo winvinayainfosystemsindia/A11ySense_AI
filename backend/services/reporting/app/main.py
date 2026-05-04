@@ -2,6 +2,10 @@ from fastapi import FastAPI
 from common.schemas.audit import AuditResult
 from app.services.report_service import report_service
 import logging
+from common.config import setup_environment
+
+# Initialize environment
+setup_environment()
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO)

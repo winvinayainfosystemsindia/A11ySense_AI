@@ -5,6 +5,10 @@ from app.services.agent_logic import agent_intelligence
 import uuid
 import httpx
 import os
+from common.config import setup_environment
+
+# Initialize environment
+setup_environment()
 
 app = FastAPI(title="OpenClaw Agent Service")
 

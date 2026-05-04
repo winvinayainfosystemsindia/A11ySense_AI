@@ -3,6 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from common.schemas.audit import AuditRequest, AuditTask
 import httpx
 import os
+from common.config import setup_environment
+
+# Initialize environment
+setup_environment()
 
 app = FastAPI(title="A11ySense AI Gateway")
 
