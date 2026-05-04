@@ -6,15 +6,15 @@ Write-Host "Starting A11ySense AI Backend Services..." -ForegroundColor Cyan
 
 # Start Gateway (Port 8000)
 Write-Host "Starting Gateway on port 8000..."
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd $scriptPath\..\backend/services/gateway; & '$scriptPath\set_env.ps1'; uvicorn app.main:app --port 8000" -WindowStyle Normal
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd $scriptPath\..\backend/services/gateway; & '$scriptPath\set_env.ps1'; uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --loop asyncio" -WindowStyle Normal
 
 # Start Agent (Port 8001)
 Write-Host "Starting Agent on port 8001..."
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd $scriptPath\..\backend/services/agent; & '$scriptPath\set_env.ps1'; uvicorn app.main:app --port 8001" -WindowStyle Normal
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd $scriptPath\..\backend/services/agent; & '$scriptPath\set_env.ps1'; uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload --loop asyncio" -WindowStyle Normal
 
 # Start Reporting (Port 8002)
 Write-Host "Starting Reporting on port 8002..."
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd $scriptPath\..\backend/services/reporting; & '$scriptPath\set_env.ps1'; uvicorn app.main:app --port 8002" -WindowStyle Normal
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd $scriptPath\..\backend/services/reporting; & '$scriptPath\set_env.ps1'; uvicorn app.main:app --host 0.0.0.0 --port 8002 --reload --loop asyncio" -WindowStyle Normal
 
 # Start Allure Server
 Write-Host "Starting Allure Report Server..."

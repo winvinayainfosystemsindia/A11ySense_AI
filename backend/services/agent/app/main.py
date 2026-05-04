@@ -1,3 +1,7 @@
+from common.config import setup_environment
+# Initialize environment
+setup_environment()
+
 from fastapi import FastAPI, BackgroundTasks
 from common.schemas.audit import AuditRequest, AuditTask
 from app.services.audit_service import audit_service
@@ -5,17 +9,12 @@ from app.services.agent_logic import agent_intelligence
 import uuid
 import httpx
 import os
-from common.config import setup_environment
-
-# Initialize environment
-setup_environment()
 
 app = FastAPI(title="OpenClaw Agent Service")
 
-REPORTING_SERVICE_URL = os.getenv("REPORTING_SERVICE_URL", "http://reporting:8000")
+REPORTING_SERVICE_URL = os.getenv("REPORTING_SERVICE_URL", "http://localhost:8002")
 
 from app.agents.manager import ManagerAgent
-
 manager_agent = ManagerAgent()
 
 @app.post("/audit", response_model=AuditTask)

@@ -1,9 +1,17 @@
 import os
+import asyncio
+import sys
 from dotenv import load_dotenv
+
+# Fix for Playwright/Subprocess on Windows
+# Set policy at module level to ensure it runs as soon as this config is imported
+if sys.platform == 'win32':
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
 def setup_environment():
     """
     Loads environment variables from the appropriate .env file based on APP_ENV.
+
     Priority:
     1. .env.[APP_ENV] if APP_ENV is set
     2. .env (default)

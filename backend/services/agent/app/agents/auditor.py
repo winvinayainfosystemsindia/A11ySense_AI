@@ -20,36 +20,65 @@ class AuditorAgent(BaseAgent):
         
         # 1. Technical Scan
         scan_results = await scanner_skill.run_axe(page)
-        raw_violations = scan_results["violations"]
+        raw_violations = scan_results.get("violations", [])
         
         if not raw_violations:
             return []
 
+        # Convert to Violation objects early
+        violations = [Violation(**v) for v in raw_violations]
+
         # 2. AI Refinement (Optional but powerful)
-        # For simplicity in this first iteration, we refine them one by one or in batches
         refined_violations = []
-        for violation in raw_violations[:10]: # Limit to 10 for performance in demo
-            ai_refined = await self.refine_violation(violation)
-            refined_violations.append(ai_refined)
+        for v in violations[:10]: # Limit to 10 for performance in demo
+            try:
+                ai_refined = await self.refine_violation(v)
+                refined_violations.append(ai_refined)
+            except Exception as e:
+                logger.error(f"Failed to refine violation {v.id}: {str(e)}")
+                # Fallback to the unrefined violation so we don't lose data
+                refined_violations.append(v)
             
         return refined_violations
 
     async def refine_violation(self, violation: Violation) -> Violation:
         prompt = f"""
-        Refine the following accessibility violation:
+        Refine the following accessibility violation into a professional audit report entry.
+        
+        CRITICAL RULES:
+        1. Return ONLY a valid JSON object.
+        2. Do NOT include markdown code blocks (like ```json).
+        3. Escape all double quotes within strings.
+        4. If you include HTML snippets, use backticks (`) instead of quotes.
+        
+        INPUT DATA:
         Violation ID: {violation.id}
         Description: {violation.description}
-        Help: {violation.help}
+        Help Text: {violation.help}
         
-        Provide:
-        1. Business Impact (how it affects users)
-        2. Remediation Plan (code fix)
-        3. WCAG Mapping
-        
-        Return JSON.
+        JSON SCHEMA:
+        {{
+            "friendly_name": "Professional title (e.g. Missing Alt Text on Logo)",
+            "wcag_criteria": "The Success Criterion number",
+            "wcag_level": "A, AA, or AAA",
+            "severity": "Critical, High, Medium, or Low",
+            "business_impact": "How this affects users with specific disabilities (e.g. screen reader users)",
+            "expected_result": "Standard compliant behavior",
+            "actual_result": "Description of the current failure",
+            "steps_to_reproduce": "Numbered list of steps",
+            "remediation_plan": "Recommended fix with code example if applicable"
+        }}
         """
-        ai_response = await self.call_llm(prompt, system_message=self.system_prompt)
-        data = self.parse_json(ai_response)
+        try:
+            ai_response = await self.call_llm(prompt, system_message=self.system_prompt)
+            data = self.parse_json(ai_response)
+            
+            # If parse_json returned an error dict, use fallback
+            if "error" in data:
+                return violation
+        except Exception as e:
+            logger.error(f"LLM Call failed for {violation.id}: {str(e)}")
+            return violation
         
         # Merge AI data into metadata
         violation.metadata = {

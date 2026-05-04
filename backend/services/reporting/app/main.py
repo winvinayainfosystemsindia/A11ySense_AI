@@ -1,27 +1,26 @@
-from fastapi import FastAPI
-from common.schemas.audit import AuditResult
-from app.services.report_service import report_service
-import logging
 from common.config import setup_environment
-
-# Initialize environment
 setup_environment()
 
-# Configure Logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from fastapi import FastAPI, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from common.schemas.audit import AuditResult
+from app.services.report_service import report_service
+import os
 
-app = FastAPI(title="A11ySense Enterprise Reporting Service")
+app = FastAPI(title="A11ySense AI Reporting Service")
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    print(f"Validation Error: {exc.errors()}")
+    return JSONResponse(
+        status_code=422,
+        content={"detail": exc.errors()},
+    )
 
 @app.post("/generate")
 async def generate_report(result: AuditResult):
     """
-    Industry-standard endpoint for generating accessibility audit reports.
-    Delegates logic to the ReportService and AllureManager.
+    Industry-standard Allure report generation.
     """
-    logger.info(f"Generating report for URL: {result.url}")
     return await report_service.create_audit_report(result)
-
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy", "service": "reporting"}

@@ -26,6 +26,7 @@ class BrowserManager:
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
         )
         page = await context.new_page()
+        page.set_default_timeout(60000)
         try:
             yield page
         finally:

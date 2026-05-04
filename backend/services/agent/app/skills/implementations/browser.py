@@ -12,7 +12,8 @@ class BrowserSkill:
     
     async def navigate(self, page: Page, url: str):
         logger.info(f"Navigating to {url}")
-        await page.goto(url, wait_until="networkidle")
+        # Use a more relaxed wait condition and longer timeout
+        await page.goto(url, wait_until="domcontentloaded", timeout=60000)
         
     async def click(self, page: Page, selector: str):
         logger.info(f"Clicking {selector}")

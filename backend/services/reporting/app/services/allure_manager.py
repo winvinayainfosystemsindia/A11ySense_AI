@@ -26,7 +26,8 @@ class AllureManager:
 
     def generate_allure_json(self, result: AuditResult) -> str:
         task_id = str(uuid.uuid4())
-        start_time = int(result.timestamp.timestamp() * 1000)
+        # Use a stable start time for Allure
+        start_time = int(time.time() * 1000)
         
         # 1. Create Environment Metadata
         self._write_environment_properties(result)
@@ -34,7 +35,7 @@ class AllureManager:
         # 2. Build the main test result
         allure_result = {
             "uuid": task_id,
-            "historyId": f"{result.url}-{int(time.time())}",
+            "historyId": f"{result.url}-audit",
             "name": f"Accessibility Audit: {result.metadata.get('page_title', result.url)}",
             "status": "failed" if result.violations else "passed",
             "statusDetails": {
@@ -51,6 +52,8 @@ class AllureManager:
                 {"name": "feature", "value": "Compliance Audit"},
                 {"name": "epic", "value": "Enterprise Accessibility"},
                 {"name": "story", "value": "WCAG 2.2 Standards Verification"},
+                {"name": "suite", "value": "A11ySense Audit Suite"},
+                {"name": "subSuite", "value": result.url},
                 {"name": "owner", "value": "A11ySense-Reporting-Service"}
             ],
             "links": [{"name": "Audited Page", "url": str(result.url)}],
@@ -93,16 +96,20 @@ class AllureManager:
         scenario = {
             "name": name,
             "status": status,
-            "statusDetails": {"message": description},
+            "statusDetails": {"message": str(description)},
             "steps": [],
             "start": start_time,
             "stop": start_time + 100
         }
         for item in items:
+            # Safely handle items which could be dicts or objects
+            item_help = item.get('help', item.get('id')) if isinstance(item, dict) else getattr(item, 'help', getattr(item, 'id', 'Unknown'))
+            item_desc = item.get('description', 'Standard followed.') if isinstance(item, dict) else getattr(item, 'description', 'Standard followed.')
+            
             scenario["steps"].append({
-                "name": f"Test Case: {item.get('help', item.get('id'))}",
+                "name": f"Test Case: {item_help}",
                 "status": status,
-                "statusDetails": {"message": item.get("description", "Standard followed.")},
+                "statusDetails": {"message": str(item_desc)},
                 "start": start_time,
                 "stop": start_time + 10
             })
@@ -113,13 +120,25 @@ class AllureManager:
         scenario = {
             "name": name,
             "status": "failed",
-            "statusDetails": {"message": description},
+            "statusDetails": {"message": str(description)},
             "steps": [],
             "start": start_time,
             "stop": start_time + 1000
         }
         
         for v in violations:
+            # Safety check: if remediation or other AI data is a dict, stringify it
+            wcag_info = v.metadata.get('wcag_criteria', 'N/A')
+            exp_res = v.metadata.get('expected_result', '')
+            act_res = v.metadata.get('actual_result', '')
+            repro = v.metadata.get('steps_to_reproduce', '')
+            remedy = v.metadata.get('remediation', '')
+
+            # Convert to string if they are complex objects
+            if not isinstance(remedy, str): remedy = json.dumps(remedy, indent=2)
+            if not isinstance(repro, str): repro = json.dumps(repro, indent=2)
+            if not isinstance(act_res, str): act_res = json.dumps(act_res, indent=2)
+
             test_case = {
                 "name": f"Test Case: {v.metadata.get('friendly_name', v.id)}",
                 "status": "failed",
@@ -127,25 +146,25 @@ class AllureManager:
                     {
                         "name": "Execution: Contextual Analysis",
                         "status": "passed",
-                        "statusDetails": {"message": f"WCAG: {v.metadata.get('wcag_criteria')} (Level {v.metadata.get('wcag_level')})"},
+                        "statusDetails": {"message": f"WCAG: {wcag_info} (Level {v.metadata.get('wcag_level', 'AA')})"},
                         "start": start_time, "stop": start_time + 5
                     },
                     {
                         "name": "Execution: Experience Gap Identification",
                         "status": "failed",
-                        "statusDetails": {"message": f"Expected: {v.metadata.get('expected_result')}\nActual: {v.metadata.get('actual_result')}"},
+                        "statusDetails": {"message": f"Expected: {exp_res}\nActual: {act_res}"},
                         "start": start_time, "stop": start_time + 5
                     },
                     {
                         "name": "Defect Report: Reproduction Steps",
                         "status": "passed",
-                        "statusDetails": {"message": v.metadata.get('steps_to_reproduce')},
+                        "statusDetails": {"message": str(repro)},
                         "start": start_time, "stop": start_time + 5
                     },
                     {
                         "name": "Defect Report: Remediation Strategy",
                         "status": "passed",
-                        "statusDetails": {"message": v.metadata.get('remediation')},
+                        "statusDetails": {"message": str(remedy)},
                         "start": start_time, "stop": start_time + 5
                     }
                 ],

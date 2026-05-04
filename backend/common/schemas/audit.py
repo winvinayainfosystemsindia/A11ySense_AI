@@ -3,7 +3,7 @@ from typing import List, Optional, Dict, Any
 from datetime import datetime
 
 class AuditRequest(BaseModel):
-    url: HttpUrl
+    url: str
     depth: int = Field(default=1, ge=1, le=5)
     audit_type: str = Field(default="standard", pattern="^(standard|comprehensive)$")
 
@@ -12,12 +12,12 @@ class Violation(BaseModel):
     impact: Optional[str]
     description: str
     help: str
-    helpUrl: HttpUrl
+    helpUrl: Optional[str] = None
     nodes: List[Dict[str, Any]]
     metadata: Dict[str, Any] = {}
 
 class AuditResult(BaseModel):
-    url: HttpUrl
+    url: str
     timestamp: datetime = Field(default_factory=datetime.utcnow)
     violations: List[Violation]
     passes: Optional[List[Any]] = None

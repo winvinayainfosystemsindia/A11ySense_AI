@@ -89,7 +89,7 @@ class BaseAgent:
         completion = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
-                {"role": "system", "content": system_message + "\nReturn response in valid JSON format."},
+                {"role": "system", "content": system_message + "\nYou are a JSON-only response generator. Output must be a single valid JSON object. Do not include preamble, explanations, or markdown formatting."},
                 {"role": "user", "content": prompt}
             ],
             response_format={"type": "json_object"}
