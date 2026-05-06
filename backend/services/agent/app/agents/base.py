@@ -77,7 +77,7 @@ class BaseAgent:
         
         message = client.messages.create(
             model="claude-3-5-sonnet-20240620" if use_vision else "claude-3-haiku-20240307",
-            max_tokens=2048,
+            max_tokens=4096,
             system=system_message,
             messages=[{"role": "user", "content": content}]
         )
@@ -85,14 +85,15 @@ class BaseAgent:
 
     async def _call_groq(self, prompt: str, system_message: str) -> str:
         client = Groq(api_key=self.groq_key)
-        # Enable JSON mode for more reliable formatting
+        # We handle JSON parsing manually in parse_json for better resilience 
+        # against markdown blocks and preamble text which can crash strict JSON mode.
         completion = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
-                {"role": "system", "content": system_message + "\nYou are a JSON-only response generator. Output must be a single valid JSON object. Do not include preamble, explanations, or markdown formatting."},
+                {"role": "system", "content": system_message + "\nYou are a technical auditor. Return ONLY raw JSON data. No markdown, no preamble."},
                 {"role": "user", "content": prompt}
             ],
-            response_format={"type": "json_object"}
+            max_tokens=4096
         )
         return completion.choices[0].message.content
 
@@ -129,14 +130,27 @@ class BaseAgent:
 
             json_str = text[start:end]
 
-            # 3. Attempt standard parse (handles formatting newlines correctly)
+            # 3. Attempt standard parse
             try:
                 return json.loads(json_str, strict=False)
             except json.JSONDecodeError:
-                # 4. Fallback: Aggressive cleaning only if standard parse fails
-                # Remove actual control characters except allowed whitespace
-                cleaned = "".join(ch for ch in json_str if ord(ch) >= 32 or ch in '\n\r\t')
-                return json.loads(cleaned, strict=False)
+                # 4. Fallback: Aggressive cleaning for common LLM mistakes
+                import re
+                
+                # Replace backticks used as string delimiters: `"key": `value`` -> `"key": "value"`
+                # This regex looks for a colon followed by optional space, then a backtick, 
+                # then some content, then a backtick, then optional space and a comma or closing brace.
+                cleaned = re.sub(r':\s*`([^`]*)`(\s*[,}])', r': "\1"\2', json_str)
+                
+                # Also try to handle unescaped quotes inside values (dangerous but sometimes needed)
+                # This is a bit complex, let's stick to backticks first.
+                
+                try:
+                    return json.loads(cleaned, strict=False)
+                except json.JSONDecodeError:
+                    # Final attempt: strip control characters
+                    final_cleaned = "".join(ch for ch in cleaned if ord(ch) >= 32 or ch in '\n\r\t')
+                    return json.loads(final_cleaned, strict=False)
                 
         except Exception as e:
             logger.error(f"Ultimate JSON Parse Failure: {str(e)} | Raw snippet: {text[:200]}")

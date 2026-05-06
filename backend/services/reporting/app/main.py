@@ -1,3 +1,9 @@
+import asyncio
+import sys
+
+if sys.platform == 'win32':
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+
 from common.config import setup_environment
 setup_environment()
 

@@ -25,8 +25,8 @@ class AuditorAgent(BaseAgent):
         if not raw_violations:
             return []
 
-        # Convert to Violation objects early
-        violations = [Violation(**v) for v in raw_violations]
+        # Use Violation objects directly from scan results
+        violations = raw_violations
 
         # 2. AI Refinement (Optional but powerful)
         refined_violations = []
@@ -45,36 +45,50 @@ class AuditorAgent(BaseAgent):
         prompt = f"""
         Refine the following accessibility violation into a professional audit report entry.
         
-        CRITICAL RULES:
-        1. Return ONLY a valid JSON object.
-        2. Do NOT include markdown code blocks (like ```json).
-        3. Escape all double quotes within strings.
-        4. If you include HTML snippets, use backticks (`) instead of quotes.
+        STRICT OUTPUT RULES:
+        1. Return ONLY a single raw JSON object.
+        2. DO NOT use markdown code blocks (e.g., NO ```json).
+        3. DO NOT include any conversational text before or after the JSON.
+        4. Ensure all double quotes inside JSON values are escaped with a backslash (\").
+        5. Use standard JSON double quotes (") for all string delimiters.
         
         INPUT DATA:
         Violation ID: {violation.id}
         Description: {violation.description}
         Help Text: {violation.help}
         
-        JSON SCHEMA:
+        EXPECTED JSON STRUCTURE:
         {{
-            "friendly_name": "Professional title (e.g. Missing Alt Text on Logo)",
-            "wcag_criteria": "The Success Criterion number",
-            "wcag_level": "A, AA, or AAA",
-            "severity": "Critical, High, Medium, or Low",
-            "business_impact": "How this affects users with specific disabilities (e.g. screen reader users)",
-            "expected_result": "Standard compliant behavior",
-            "actual_result": "Description of the current failure",
-            "steps_to_reproduce": "Numbered list of steps",
-            "remediation_plan": "Recommended fix with code example if applicable"
+            "friendly_name": "Title",
+            "wcag_criteria": "Criterion",
+            "wcag_level": "Level",
+            "severity": "Severity",
+            "business_impact": "Impact",
+            "expected_result": "Expected",
+            "actual_result": "Actual",
+            "steps_to_reproduce": "Steps",
+            "remediation_plan": "Fix"
+        }}
+
+        GOOD OUTPUT EXAMPLE:
+        {{
+            "friendly_name": "Images must have alternate text",
+            "wcag_criteria": "1.1.1 Non-text Content",
+            "wcag_level": "A",
+            "severity": "Critical",
+            "business_impact": "Users with visual impairments cannot understand the content of the image.",
+            "expected_result": "All images should have a descriptive alt attribute.",
+            "actual_result": "The main logo image is missing an alt attribute.",
+            "steps_to_reproduce": "1. Open the page. 2. Inspect the logo image.",
+            "remediation_plan": "Add alt='Company Logo' to the img tag."
         }}
         """
         try:
             ai_response = await self.call_llm(prompt, system_message=self.system_prompt)
             data = self.parse_json(ai_response)
             
-            # If parse_json returned an error dict, use fallback
             if "error" in data:
+                logger.warning(f"JSON Parse error for {violation.id}, using fallback.")
                 return violation
         except Exception as e:
             logger.error(f"LLM Call failed for {violation.id}: {str(e)}")
